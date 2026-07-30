@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 02</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 760px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .5rem .75rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin-top: 1rem; padding: .5rem 1rem; cursor: pointer; }
+    tr.dominada td { opacity: .45; text-decoration: line-through; }
+    .veredito { border-left: 4px solid #16a34a; padding: .5rem .75rem; margin-top: 1rem;
+                background: #16a34a14; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 02 — dominância</h1>
+  <p>Um quinto candidato (A5 — Colina) entrou na disputa. Antes de discutir pesos,
+     pergunte: alguém aqui é pior que outra alternativa em <em>tudo</em>?</p>
+  <div id="tabela">carregando…</div>
+  <button id="btn">Analisar dominância</button>
+  <div id="resultado"></div>
+  <script>
+    let caso;
+    fetch("/api/caso-ancora").then(r => r.json()).then(c => {
+      caso = c;
+      const seta = d => d === "custo" ? "↓" : "↑";
+      document.getElementById("tabela").innerHTML =
+        `<table id="t"><tr><th>Alternativa</th>${c.criterios.map(cr =>
+          `<th>${cr.nome} (${cr.unidade}) ${seta(cr.direcao)}</th>`).join("")}</tr>` +
+        c.alternativas.map((a, i) =>
+          `<tr data-nome="${a}"><td>${a}</td>${c.desempenhos[i].map(x =>
+            `<td>${x.toLocaleString("pt-BR")}</td>`).join("")}</tr>`).join("") +
+        `</table>`;
+    });
+    document.getElementById("btn").onclick = async () => {
+      const r = await fetch("/api/matriz/dominancia", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          alternativas: caso.alternativas,
+          criterios: caso.criterios,
+          desempenhos: caso.desempenhos,
+        }),
+      });
+      const corpo = await r.json();
+      document.querySelectorAll("#t tr[data-nome]").forEach(tr => {
+        tr.classList.toggle("dominada", tr.dataset.nome in corpo.dominadas);
+      });
+      const dominadas = Object.entries(corpo.dominadas)
+        .map(([d, por]) => `<strong>${d}</strong> é dominada por ${por.join(", ")}`)
+        .join("; ") || "nenhuma alternativa dominada";
+      document.getElementById("resultado").innerHTML =
+        `<div class="veredito">${dominadas}.<br>
+         Fronteira de Pareto: <strong>${corpo.fronteira_pareto.join(" · ")}</strong> —
+         só aqui vale a pena gastar método (caps. 03 em diante).</div>`;
+    };
+  </script>
+</body>
+</html>

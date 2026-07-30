@@ -20,6 +20,7 @@ from sqlmodel import Session, select
 
 from decisor.bd import criar_tabelas, get_sessao
 from decisor.modelos import Decisao
+from decisor.motor.dominancia import analise_dominancia
 from decisor.motor.saw import ranquear_saw
 from decisor.motor.tipos import Problema
 
@@ -103,6 +104,16 @@ def ranquear(
     except ValueError as erro:
         raise HTTPException(422, str(erro)) from erro
     return {"decisao": registro.titulo, "metodo": metodo, "ranking": ranking}
+
+
+@app.post("/api/decisoes/{decisao_id}/dominancia")
+def dominancia(decisao_id: int, sessao: Session = Depends(get_sessao)) -> dict:
+    """Dominadas e fronteira de Pareto — a analise sem pesos do cap. 02."""
+    registro = sessao.get(Decisao, decisao_id)
+    if registro is None:
+        raise HTTPException(404, "decisão não encontrada")
+    resultado = analise_dominancia(Problema(**registro.problema))
+    return {"decisao": registro.titulo, **resultado}
 
 
 @app.get("/", response_class=HTMLResponse)

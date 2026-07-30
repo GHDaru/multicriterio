@@ -14,6 +14,7 @@
 | ✓ | Greco, S.; Ehrgott, M.; Figueira, J. R. (eds.) (2016, 2ª ed.). *Multiple Criteria Decision Analysis: State of the Art Surveys.* Springer. <https://link.springer.com/book/10.1007/978-1-4939-3094-4> | Aprofundamento por método, capítulo a capítulo |
 | ✓ | Hwang, C.-L.; Yoon, K. (1981). *Multiple Attribute Decision Making: Methods and Applications.* Springer, LNEMS 186. <https://link.springer.com/book/10.1007/978-3-642-48318-9> | Fonte seminal do TOPSIS e taxonomia MADM |
 | ✓ | Keeney, R. L.; Raiffa, H. (1976; reed. Cambridge 1993). *Decisions with Multiple Objectives: Preferences and Value Tradeoffs.* Wiley/Cambridge. <https://www.cambridge.org/core/books/decisions-with-multiple-objectives/DEF338459C327778C3F8C4C4A682032F> | Fundação axiomática de MAUT/MAVT (cap. 07) |
+| ✓ | Keeney, R. L. (1992). *Value-Focused Thinking: A Path to Creative Decisionmaking.* Harvard University Press. Exemplar verificado: <https://archive.org/details/valuefocusedthin0000keen> | Objetivos-fim vs objetivos-meio; estruturação de critérios (cap. 02) |
 | ? | Ishizaka, A.; Nemery, P. (2013). *Multi-Criteria Decision Analysis: Methods and Software.* Wiley. DOI 10.1002/9781118644898 | Modelo "método → exemplo numérico → software" que este livro adota |
 | ? | Roy, B. (1996). *Multicriteria Methodology for Decision Aiding.* Springer. <https://link.springer.com/book/10.1007/978-1-4757-2500-1> | Base conceitual da escola europeia; "decision aiding" vs "decision making" |
 | ? | Saaty, T. L. (1980). *The Analytic Hierarchy Process.* McGraw-Hill. <https://archive.org/details/analytichierarch0000saat> | O livro que consolidou o AHP (cap. 05) |
@@ -71,3 +72,6 @@
 - Keeney & Raiffa é originalmente Wiley 1976; a reimpressão Cambridge 1993 é a citável hoje.
 - DEMATEL é relatório técnico sem DOI — nunca citar sozinho.
 - VIKOR tem origem em trabalhos sérvios de Opricovic (1998); o paper EJOR 2004 é a referência internacional.
+- 2026-07-30 (rodada 002): Keeney (1992) promovido a ✓ via exemplar do Internet Archive
+  (HUP retornou página vazia ao robô); Roy (1996) segue ? (Springer redireciona robô
+  para IdP) — o cap. 02 cita a família coerente via Belton & Stewart (2002) ✓.

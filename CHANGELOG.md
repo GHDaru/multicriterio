@@ -24,8 +24,20 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Estruturação e dominância (spec 002)**: capítulo
+  [02](livro/capitulos/02-estruturacao-dominancia.md) (value-focused thinking,
+  checklist de critérios, fronteira de Pareto), etapa `02-dominancia` (motor puro +
+  API, worked example A5 em teste, gabarito do peso negativo aplicado), rota de
+  dominância no produto e Keeney (1992) ✓ na bibliografia.
+
+### Changed
+
+- **Repositório próprio (ADR 0005)**: o seed virou a raiz de `GHDaru/multicriterio`;
+  `site_url`/`repo_url` retargetados; CI e Pages ativos.
+
 ### Follow-up
 
-- Extração do seed para repositório próprio e ativação do GitHub Pages (ADR 0001).
+- Ativar o GitHub Pages no repositório (Settings → Pages → Source: GitHub Actions —
+  única etapa manual; ADR 0005).
 - Promover fontes "?" da bibliografia a ✓ antes de citá-las em capítulos novos.
-- Cap. 02 (estruturação + dominância) — próxima rodada natural.
+- Cap. 03 (normalização e pesos) — próxima rodada natural.
