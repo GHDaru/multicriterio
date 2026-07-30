@@ -17,8 +17,26 @@
 |---|---|---|---|
 | 00 Introdução | 2026-07 | ✓ (etapa 00) | 2026-07-30 |
 | 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-07-30 |
+| 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-07-30 |
 
 ## Edições
+
+### Edição 0.2 — 2026-07-30 · repositório próprio + estruturação e dominância (spec 002)
+
+- O projeto migrou para o repositório próprio **GHDaru/multicriterio** por determinação
+  do Steward — extração registrada no ADR 0005 (supera a pendência do ADR 0001); CI e
+  workflow do Pages ativos na raiz.
+- Capítulo 02 (estruturação: value-focused thinking, checklist da família de critérios,
+  dominância/fronteira de Pareto) no esqueleto v3; Keeney (1992) promovido a ✓ na
+  bibliografia por verificação direta.
+- `decisor-zero` etapa `02-dominancia`: motor de dominância puro + API + página, com o
+  worked example (A5 dominado por A1) em teste; `matriz.py` incorporou o gabarito do
+  exercício do cap. 01 (peso negativo agora é erro).
+- Produto: rota `POST /api/decisoes/{id}/dominancia` com o mesmo motor e teste
+  ponta a ponta.
+- **Verificação**: etapa 02 `8 passed`; app `10 passed`; `mkdocs build --strict` verde
+  (ver `specs/002-estruturacao-dominancia/qa-report.md`).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana pendente de gate de merge.
 
 ### Edição 0.1 — 2026-07-30 · fundação do projeto (spec 001)
 
@@ -39,6 +57,7 @@
 
 | Componente | Existe porque… | Previmos que expira quando… | Estado | Evidência datada |
 |---|---|---|---|---|
+| Seed no harness_engineering (ADR 0001) | não havia repositório próprio no nascimento | o Steward criar o repositório e o seed ser extraído | 🟢 cumprida | 2026-07-30 — GHDaru/multicriterio criado; ADR 0005 |
 | Fallback SQLite no `app/` | a trilha deve rodar a custo zero e offline (Princípio VI) | o cap. 13 tornar o provisionamento Neon parte da trilha | 🔵 aberta | — |
 | Frontend estático v0 | zero build = carga cognitiva mínima nas etapas | a UI do produto exigir estado complexo (comparação multi-método, cap. 11+) → migração conforme ADR 0002 | 🔵 aberta | — |
 | Status "?" na bibliografia | editores bloqueiam verificação por robô | cada fonte "?" for promovida a ✓ antes de ser citada em capítulo novo | 🔵 aberta | — |
