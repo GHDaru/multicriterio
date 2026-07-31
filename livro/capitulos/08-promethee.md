@@ -84,6 +84,15 @@ catálogo. Exercício de completar: implemente o **PROMETHEE I** (pré-ordem par
 $a$ supera $b$ só se φ⁺ e φ⁻ concordarem) e escreva o teste mostrando qual par do caso
 âncora fica **incomparável**.
 
+## Segundo domínio — fluxos na decisão B2B
+
+Fornecedores, função usual: **φ = F2 +0,20 > F3 +0,10 > F1 −0,30**. A leitura par a
+par é instrutiva: F1 (a Hiperescala) perde os dois duelos — só vence no SLA, cujo peso
+(0,25) não monta coalizão contra custo + latência + suporte. Em três alternativas, o
+PROMETHEE II é quase uma eleição de dois turnos por critério — e a Σφ = 0 continua
+valendo (+0,20 + 0,10 − 0,30). *Teste `test_segundo_dominio_f1_perde_os_duelos` da
+etapa 08.*
+
 ## Verificação
 
 1. Por que Σφ = 0 sempre? (Dica: objetivo 2 — cada π(a,b) aparece uma vez como ganho e
@@ -103,3 +112,17 @@ $a$ supera $b$ só se φ⁺ e φ⁻ concordarem) e escreva o teste mostrando qua
   (<https://github.com/Valdecy/pyDecision>).
 - **Visual PROMETHEE / GAIA** é a ferramenta histórica da escola (plano GAIA para
   visualização) — hoje o ecossistema aberto cobre o essencial.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Cada índice π(a,b) entra uma vez em φ⁺(a) e uma vez em φ⁻(b), com o mesmo valor —
+   ao somar os líquidos, todo termo aparece com sinal + e sinal −, e a soma colapsa em
+   zero. É um invariante bom para testes automatizados (e a etapa o testa).
+2. Escolha — e das mais importantes do método. A função usual declara que qualquer
+   diferença é preferência total ("degrau"); se isso incomoda no critério Preço, o
+   modelo está pedindo um limiar (V-shape ou similar). O erro seria usar o degrau sem
+   perceber que ele é uma declaração.
+3. Com limiares, as vantagens *miúdas* dos rivais (poucos milhares de reais, poucos
+   minutos) encolhem para quase zero, enquanto as vantagens *grandes* de A3 (30 m²
+   sobre A4, bairro 5 contra 2) continuam rendendo preferência quase total — o φ⁺ de
+   A3 resiste, o dos rivais derrete, e o líquido de A3 sobe.

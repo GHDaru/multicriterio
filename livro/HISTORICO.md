@@ -37,6 +37,8 @@
 Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
 worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
 
+- **0.22 (spec 022, cap. 08)**: fluxos B2B (F1 perde os duelos); gabarito; etapa 08
+  `6 passed`.
 - **0.21 (spec 021, cap. 07)**: curvas B2B (limiar de SLA, orçamento); gabarito;
   etapa 07 `6 passed`.
 - **0.20 (spec 020, cap. 06)**: TOPSIS B2B com validação pymcdm; gabarito; etapa 06
