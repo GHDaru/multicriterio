@@ -41,3 +41,4 @@ pytest                               # os números do capítulo, verificados
 | `11-sensibilidade` | 11 | Varredura de pesos, Spearman multi-método, ensaio de rank reversal | ✅ |
 | `12-grupo` | 12 | Borda, Copeland, Condorcet e AIJ | ✅ |
 | `13-persistencia` | 13 | Postgres (Neon) atrás de repositório — a ponte para o `app/` | ✅ |
+| `14-simulacao-ordinal` | 14 | AEO: torneio estocástico ordinal, aceitabilidade, crenças (contribuição original) | ✅ iteração 1 |

@@ -49,6 +49,17 @@
 | ✓ | Dyer, J. S. (1990). "Remarks on the Analytic Hierarchy Process." *Management Science*, 36(3), 249–258. DOI 10.1287/mnsc.36.3.249 | A crítica dura ao AHP + réplicas (cap. 05) |
 | ✓ | García-Cascales, M. S.; Lamata, M. T. (2012). "On Rank Reversal and TOPSIS Method." *Math. Comput. Modelling*, 56. DOI 10.1016/j.mcm.2011.12.022 | Rank reversal específico do TOPSIS (caps. 06, 11) |
 
+## Contribuição original (cap. 14 / Apêndice C) — família SMAA e simulação
+
+| Status | Referência | Papel |
+|---|---|---|
+| ✓ | Lahdelma, R.; Hokkanen, J.; Salminen, P. (1998). "SMAA — Stochastic Multiobjective Acceptability Analysis." *EJOR*, 106(1), 137–143. DOI 10.1016/S0377-2217(97)00163-X | O tronco da família; exploração estocástica do espaço de pesos |
+| ✓ | Lahdelma, R.; Salminen, P. (2001). "SMAA-2." *Operations Research*, 49(3), 444–454. DOI 10.1287/opre.49.3.444.11220 | Rank acceptability indices e central weight vector |
+| ✓ | Lahdelma, R.; Miettinen, K.; Salminen, P. (2003). "Ordinal Criteria in SMAA." *EJOR*, 147(1), 117–127. DOI 10.1016/S0377-2217(02)00267-9 | Critérios ordinais — o parente mais próximo da AEO |
+| ✓ | Tervonen, T.; Figueira, J. R. (2008). "A Survey on SMAA Methods." *JMCDA*, 15(1–2), 1–14. DOI 10.1002/mcda.407 | Mapa da família |
+| ✓ | Butler, J.; Jia, J.; Dyer, J. (1997). "Simulation Techniques for the Sensitivity Analysis of Multi-Criteria Decision Models." *EJOR*, 103(3), 531–546. DOI 10.1016/S0377-2217(96)00307-4 | Simulação de pesos como análise de sensibilidade |
+| ✓ | Barron, F. H.; Barrett, B. E. (1996). "Decision Quality Using Ranked Attribute Weights." *Management Science*, 42(11), 1515–1523. DOI 10.1287/mnsc.42.11.1515 | Qualidade decisória com pesos ordinais (ROC) |
+
 ## Software (alvo de leitura de código e comparação)
 
 | Status | Fonte | Nota |

@@ -24,6 +24,10 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Contribuição original — AEO (spec 028, ADR 0008)**: cap.
+  [14](livro/capitulos/14-simulacao-ordinal.md) + artigo vivo
+  ([Apêndice C](livro/apendice-c-artigo-aeo.md), iteração 1), etapa
+  `14-simulacao-ordinal` (motor com semente + /api/aeo) e 6 fontes SMAA ✓.
 - **Aprofundamento por capítulo (specs 014–027, ADR 0007)**: segundo domínio
   (fornecedor de nuvem) worked em cada capítulo com testes, Apêndice B (gabarito
   comentado) e promoções de fonte (Ishizaka & Nemery ✓, Roy 1996 ✓).

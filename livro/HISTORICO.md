@@ -29,8 +29,22 @@
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-07-31 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
+| 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 1 | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.28 — 2026-07-31 · contribuição original: AEO (spec 028, ADR 0008)
+
+- Nasce o cap. 14 — **Agregação Estocástica Ordinal** (método do autor: só ordens,
+  simulação de funções de importância, matriz de aceitabilidade, protocolo de decisão,
+  pesos centrais/"crenças") — e o **Apêndice C**, artigo vivo completo (iteração 1)
+  com formalização, 4 proposições provadas, algoritmo, experimentos e agenda.
+- Posicionamento bibliográfico verificado: família SMAA (6 fontes ✓).
+- Etapa `14-simulacao-ordinal`: motor `simular_aeo` reprodutível por semente +
+  `POST /api/aeo` + página; `8 passed` (dominância com prob. 1, simetria, números do
+  capítulo, divergência entre regras, crenças, reprodutibilidade).
+- **IA**: agente **Claude Code (Anthropic)**; método e direção do autor (Steward);
+  curadoria humana a posteriori.
 
 ### Edições 0.14+ — 2026-07-31 · rodada de aprofundamento (specs 014–027, ADR 0007)
 

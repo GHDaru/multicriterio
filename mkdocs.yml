@@ -63,6 +63,9 @@ nav:
       - "11 — Sensibilidade e rank reversal": capitulos/11-sensibilidade.md
       - "12 — Decisão em grupo": capitulos/12-grupo.md
       - "13 — Do protótipo ao produto": capitulos/13-persistencia.md
+  - Contribuição original:
+      - "14 — Agregação Estocástica Ordinal": capitulos/14-simulacao-ordinal.md
+      - "Apêndice C — o artigo (vivo)": apendice-c-artigo-aeo.md
   - Aparato:
       - Bibliografia: bibliografia.md
       - Histórico (livro vivo): HISTORICO.md

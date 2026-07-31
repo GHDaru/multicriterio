@@ -13,3 +13,4 @@ mérito. Formato: contexto → decisão → alternativas avaliadas → consequê
 | [0005](0005-extracao-repositorio-proprio.md) | Extração concluída: o projeto vive em GHDaru/multicriterio | Aceito |
 | [0006](0006-long-run-autonoma.md) | Long run autônoma: rodadas 005–013 em sequência | Aceito |
 | [0007](0007-rodada-aprofundamento.md) | Rodada de aprofundamento: specs 014–027, uma por capítulo | Aceito |
+| [0008](0008-contribuicao-aeo.md) | Capítulo de contribuição original (AEO) e artigo vivo | Aceito |
