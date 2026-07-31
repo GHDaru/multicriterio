@@ -62,3 +62,26 @@ def test_metodo_desconhecido_aponta_para_o_catalogo():
 def test_decisao_inexistente_e_404():
     with TestClient(app) as client:
         assert client.post("/api/decisoes/99999/ranking").status_code == 404
+
+
+def test_ranking_com_pesos_sobrescritos_troca_o_vencedor():
+    # Cap. 04: mesmo problema salvo, pesos ROC no corpo → A4 vence (era A1).
+    pesos_roc = [0.5208333333333333, 0.2708333333333333, 0.14583333333333331, 0.0625]
+    with TestClient(app) as client:
+        decisao_id = client.post("/api/decisoes", json=DECISAO).json()["id"]
+        salvo = client.post(f"/api/decisoes/{decisao_id}/ranking?metodo=saw").json()
+        assert salvo["ranking"][0]["alternativa"] == "A1 — Centro"
+        com_roc = client.post(
+            f"/api/decisoes/{decisao_id}/ranking?metodo=saw", json={"pesos": pesos_roc}
+        ).json()
+        assert com_roc["ranking"][0]["alternativa"] == "A4 — Estação"
+
+
+def test_pesos_sobrescritos_invalidos_viram_422():
+    with TestClient(app) as client:
+        decisao_id = client.post("/api/decisoes", json=DECISAO).json()["id"]
+        resposta = client.post(
+            f"/api/decisoes/{decisao_id}/ranking?metodo=saw",
+            json={"pesos": [0.7, 0.5, -0.1, -0.1]},
+        )
+        assert resposta.status_code == 422

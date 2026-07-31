@@ -96,16 +96,29 @@ def listar_metodos() -> dict:
     }
 
 
+class RankingIn(BaseModel):
+    pesos: list[float] | None = None  # sobrescreve os pesos salvos (cap. 04)
+
+
 @app.post("/api/decisoes/{decisao_id}/ranking")
 def ranquear(
-    decisao_id: int, metodo: str = "saw", sessao: Session = Depends(get_sessao)
+    decisao_id: int,
+    metodo: str = "saw",
+    entrada: RankingIn | None = None,
+    sessao: Session = Depends(get_sessao),
 ) -> dict:
     registro = sessao.get(Decisao, decisao_id)
     if registro is None:
         raise HTTPException(404, "decisão não encontrada")
     if metodo not in METODOS:
         raise HTTPException(422, f"método {metodo!r} indisponível (ver /api/metodos)")
-    problema = Problema(**registro.problema)
+    dados = dict(registro.problema)
+    if entrada is not None and entrada.pesos is not None:
+        dados["pesos"] = entrada.pesos  # revalidado pelo Problema abaixo
+    try:
+        problema = Problema(**dados)
+    except ValueError as erro:
+        raise HTTPException(422, str(erro)) from erro
     try:
         ranking = METODOS[metodo](problema)
     except ValueError as erro:
