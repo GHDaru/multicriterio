@@ -22,8 +22,17 @@
 | 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-07-31 |
 | 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-07-31 |
 | 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-07-31 |
+| 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.7 — 2026-07-31 · MAVT e Even Swaps (spec 007, long run ADR 0006)
+
+- Capítulo 07 (funções de valor por partes, independência preferencial, Even Swaps);
+  etapa `07-funcoes-de-valor` com as provas "linear ≡ SAW" e "curvas mudam o pódio
+  sem tocar nos pesos" (A2: 4º → 2º). MAVT fora do produto até UI de curvas.
+- **Verificação**: etapa `5 passed` (qa-report 007).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.6 — 2026-07-31 · TOPSIS (spec 006, long run ADR 0006)
 

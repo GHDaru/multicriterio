@@ -23,7 +23,7 @@
 | 04 | [SAW/WSM e SMART(ER) — o método aditivo](capitulos/04-saw.md) | O primeiro ranking completo do caso âncora; premissas da agregação aditiva | `04-saw` | ✅ |
 | 05 | [AHP — comparações par a par](capitulos/05-ahp.md) | Matriz de julgamentos, autovetor, razão de consistência; o debate do rank reversal | `05-ahp` | ✅ |
 | 06 | [TOPSIS — distância ao ideal](capitulos/06-topsis.md) | Solução ideal/anti-ideal, normalização vetorial | `06-topsis` | ✅ |
-| 07 | MAUT/MAVT e Even Swaps | Funções de valor por critério; trade-offs racionais sem pesos mágicos | `07-funcoes-de-valor` | ⬜ |
+| 07 | [MAUT/MAVT e Even Swaps](capitulos/07-funcoes-de-valor.md) | Funções de valor por critério; trade-offs racionais sem pesos mágicos | `07-funcoes-de-valor` | ✅ |
 
 ## Parte III — Métodos de sobreclassificação (escola europeia)
 

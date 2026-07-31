@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 07</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 760px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #d97706; background: #d9770614;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 07 — funções de valor</h1>
+  <p>Mesmos pesos, mesma matriz. Só muda a forma da função de valor de Preço e Área
+     (linear × curva). Veja o pódio reagir.</p>
+  <button data-modo="linear">Funções lineares (≡ SAW)</button>
+  <button data-modo="curva">Funções curvas (cap. 07)</button>
+  <div id="saida"></div>
+  <script>
+    const base = {
+      alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+      criterios: [
+        { nome: "Preço", direcao: "custo", unidade: "R$" },
+        { nome: "Área", direcao: "beneficio", unidade: "m²" },
+        { nome: "Deslocamento", direcao: "custo", unidade: "min" },
+        { nome: "Bairro", direcao: "beneficio", unidade: "1–5" },
+      ],
+      desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+      pesos: [0.35, 0.25, 0.25, 0.15],
+    };
+    const funcoes = {
+      linear: { "Preço": [[340000,1],[520000,0]], "Área": [[55,0],[85,1]],
+                "Deslocamento": [[15,1],[35,0]], "Bairro": [[2,0],[5,1]] },
+      curva:  { "Preço": [[340000,1],[400000,0.8],[520000,0]], "Área": [[55,0],[70,0.8],[85,1]],
+                "Deslocamento": [[15,1],[35,0]], "Bairro": [[2,0],[5,1]] },
+    };
+    document.querySelectorAll("button").forEach(b => b.onclick = async () => {
+      const r = await fetch("/api/matriz/mavt", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...base, funcoes: funcoes[b.dataset.modo] }),
+      });
+      const c = await r.json();
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>#</th><th>Alternativa</th><th>V</th></tr>` +
+        c.ranking.map(l => `<tr><td>${l.posicao}</td><td>${l.alternativa}</td>
+          <td>${l.escore.toFixed(4)}</td></tr>`).join("") + `</table>
+        <div class="nota">${b.dataset.modo === "linear"
+          ? "Linear ancorada em min/max: exatamente o SAW do cap. 04."
+          : "Curvas: preços abaixo de 400 mil valem muito; área satura após 70 m². A2 pula de último para 2º — sem tocar nos pesos."}</div>`;
+    });
+  </script>
+</body>
+</html>
