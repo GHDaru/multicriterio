@@ -37,7 +37,7 @@
 | Cap. | Título | O que nasce | Etapa | Estado |
 |---|---|---|---|---|
 | 10 | [VIKOR e BWM](capitulos/10-vikor-bwm.md) | Solução de compromisso; pesos com menos comparações | `10-vikor-bwm` | ✅ |
-| 11 | Sensibilidade, robustez e rank reversal | Análise de sensibilidade de pesos; por que métodos discordam entre si | `11-sensibilidade` | ⬜ |
+| 11 | [Sensibilidade, robustez e rank reversal](capitulos/11-sensibilidade.md) | Análise de sensibilidade de pesos; por que métodos discordam entre si | `11-sensibilidade` | ✅ |
 | 12 | Decisão em grupo | Agregação de julgamentos e de rankings; votação | `12-grupo` | ⬜ |
 | 13 | Do protótipo ao produto | Persistência (Neon/Postgres), contas e deploy — o `decisor-zero` vira o **Decisor** (`app/`) | `13-persistencia` | ⬜ |
 

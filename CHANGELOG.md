@@ -24,6 +24,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Sensibilidade e rank reversal (spec 011)**: capítulo
+  [11](livro/capitulos/11-sensibilidade.md), etapa `11-sensibilidade` e
+  `POST /api/decisoes/{id}/comparar` (4 métodos + Spearman) no produto.
 - **VIKOR e BWM (spec 010)**: capítulo [10](livro/capitulos/10-vikor-bwm.md), etapa
   `10-vikor-bwm` (compromisso {A1, A4}; BWM via LP) e `vikor` no produto.
 - **ELECTRE (spec 009)**: capítulo [09](livro/capitulos/09-electre.md) e etapa

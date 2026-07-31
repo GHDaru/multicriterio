@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 11</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #dc2626; background: #dc262614;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 11 — sensibilidade e rank reversal</h1>
+  <button id="varredura">Varredura do peso do Preço (SAW)</button>
+  <button id="comparar">Comparar os 4 métodos</button>
+  <button id="reversal">Ensaio de rank reversal (A5 medíocre)</button>
+  <div id="saida"></div>
+  <script>
+    const base = {
+      alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+      criterios: [
+        { nome: "Preço", direcao: "custo" }, { nome: "Área", direcao: "beneficio" },
+        { nome: "Deslocamento", direcao: "custo" }, { nome: "Bairro", direcao: "beneficio" },
+      ],
+      desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+      pesos: [0.35, 0.25, 0.25, 0.15],
+    };
+    const post = (url, corpo) => fetch(url, { method: "POST",
+      headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) })
+      .then(r => r.json());
+    document.getElementById("varredura").onclick = async () => {
+      const c = await post("/api/matriz/varredura?criterio=0&metodo=saw", base);
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>peso do Preço a partir de</th><th>vencedor</th></tr>` +
+        c.faixas.map(f => `<tr><td>${f.a_partir_de.toFixed(3)}</td>
+          <td>${f.vencedor}</td></tr>`).join("") + `</table>
+        <div class="nota">O reinado de A1 é a janela [0,316; 0,358) — e usamos 0,35.
+        Vitória por 0,008 de peso: reporte isso junto com o ranking.</div>`;
+    };
+    document.getElementById("comparar").onclick = async () => {
+      const c = await post("/api/matriz/comparar", base);
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>método</th><th>ranking</th></tr>` +
+        Object.entries(c.rankings).map(([m, o]) =>
+          `<tr><td>${m}</td><td>${o.join(" > ")}</td></tr>`).join("") + `</table>
+        <div class="nota" style="border-color:#16a34a;background:#16a34a14">
+        Com estes pesos, ρ de Spearman = 1 entre todos os pares: concordância total —
+        robustez de método (mas não de pesos, veja a varredura).</div>`;
+    };
+    document.getElementById("reversal").onclick = async () => {
+      const c = await post("/api/matriz/rank-reversal", { ...base,
+        nome_novo: "A5 — Colinas", desempenhos_novo: [430000, 59, 24, 1],
+        metodo: "topsis" });
+      document.getElementById("saida").innerHTML =
+        `<p>Antes: <strong>${c.antes.join(" > ")}</strong></p>
+         <p>Depois (com A5): <strong>${c.depois_completa.join(" > ")}</strong></p>
+         <div class="nota">A5 chegou em ÚLTIMO — e mesmo assim trocou A4 e A3 de
+         lugar (as âncoras ideal/anti-ideal se moveram). No SAW, o mesmo A5 chega a
+         trocar o VENCEDOR. Alternativa irrelevante não é inofensiva.</div>`;
+    };
+  </script>
+</body>
+</html>

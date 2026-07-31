@@ -47,7 +47,7 @@
 | ? | Aires, R. F. F.; Ferreira, L. (2018). "The Rank Reversal Problem in MCDM: A Literature Review." *Pesquisa Operacional* (SciELO). | Rank reversal em AHP/TOPSIS/ELECTRE/PROMETHEE (cap. 11) |
 | ✓ | Belton, V.; Gear, T. (1983). "On a Short-coming of Saaty's Method of Analytic Hierarchies." *Omega*, 11(3), 228–230. DOI 10.1016/0305-0483(83)90047-6 | Primeira demonstração do rank reversal no AHP (caps. 05, 11) |
 | ✓ | Dyer, J. S. (1990). "Remarks on the Analytic Hierarchy Process." *Management Science*, 36(3), 249–258. DOI 10.1287/mnsc.36.3.249 | A crítica dura ao AHP + réplicas (cap. 05) |
-| ? | García-Cascales, M. S.; Lamata, M. T. (2012). "On Rank Reversal and TOPSIS Method." *Math. Comput. Modelling*, 56. | Rank reversal específico do TOPSIS (caps. 06, 11) |
+| ✓ | García-Cascales, M. S.; Lamata, M. T. (2012). "On Rank Reversal and TOPSIS Method." *Math. Comput. Modelling*, 56. DOI 10.1016/j.mcm.2011.12.022 | Rank reversal específico do TOPSIS (caps. 06, 11) |
 
 ## Software (alvo de leitura de código e comparação)
 
