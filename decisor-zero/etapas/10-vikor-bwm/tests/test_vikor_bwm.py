@@ -73,3 +73,27 @@ def test_bwm_inconsistente_tem_xi_positivo():
 def test_bwm_valida_entradas():
     with pytest.raises(ErroDeBWM, match="diferentes"):
         pesos_bwm(0, 0, [1, 2], [2, 1])
+
+
+def test_segundo_dominio_dq_alto_com_poucas_alternativas():
+    """Fornecedores (ADR 0007): vitória robusta que ainda assim não passa no C1."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+        pesos=[0.40, 0.20, 0.25, 0.15],
+    )
+    r = analisar_vikor(fornecedores)
+    q = {l["alternativa"]: l["escore"] for l in r["ranking"]}
+    assert q["F2 — Regional"] == pytest.approx(0.0, abs=1e-6)
+    assert q["F3 — Nicho"] == pytest.approx(0.395702, abs=1e-6)
+    assert q["F1 — Hiperescala"] == pytest.approx(1.0, abs=1e-6)
+    # m = 3 → DQ = 0,5: até 0,3957 de vantagem "não basta" para o C1.
+    assert r["dq"] == pytest.approx(0.5)
+    assert r["vantagem_aceitavel"] is False and r["estavel"] is True
+    assert r["conjunto_compromisso"] == ["F2 — Regional", "F3 — Nicho"]

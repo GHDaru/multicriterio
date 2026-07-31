@@ -39,6 +39,8 @@ worked com números em teste + Apêndice B (gabarito comentado) + promoções de
 
 - **0.23 (spec 023, cap. 09)**: ELECTRE B2B (kernel {F2, F3}); gabarito; etapa 09
   `6 passed`.
+- **0.24 (spec 024, cap. 10)**: VIKOR B2B — DQ embute o tamanho do conjunto;
+  gabarito; etapa 10 `7 passed`.
 - **0.22 (spec 022, cap. 08)**: fluxos B2B (F1 perde os duelos); gabarito; etapa 08
   `6 passed`.
 - **0.21 (spec 021, cap. 07)**: curvas B2B (limiar de SLA, orçamento); gabarito;
