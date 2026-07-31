@@ -41,3 +41,23 @@ def test_url_do_neon_e_adaptada_para_psycopg():
     adaptada = url.replace("postgres://", "postgresql+psycopg://", 1)
     assert adaptada.startswith("postgresql+psycopg://")
     assert modulo.URL_PADRAO_LOCAL.startswith("sqlite")
+
+
+def test_segundo_dominio_acervo_com_os_dois_casos():
+    """ADR 0007: um só esquema persiste B2C (âncora) e B2B (fornecedor)."""
+    repo = _repo()
+    repo.salvar("Escolha de apartamento", {
+        "alternativas": ["A1", "A2", "A3", "A4"],
+        "desempenhos": [[450_000, 62, 15, 4], [380_000, 70, 35, 3],
+                        [520_000, 85, 25, 5], [340_000, 55, 20, 2]],
+    })
+    repo.salvar("Escolha de fornecedor de nuvem", {
+        "alternativas": ["F1", "F2", "F3"],
+        "desempenhos": [[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4],
+                        [7_500, 60, 99.00, 5]],
+    })
+    acervo = repo.listar()
+    assert len(acervo) == 2
+    assert {d.titulo for d in acervo} == {
+        "Escolha de apartamento", "Escolha de fornecedor de nuvem",
+    }
