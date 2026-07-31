@@ -11,3 +11,4 @@ mérito. Formato: contexto → decisão → alternativas avaliadas → consequê
 | [0003](0003-sequencia-didatica.md) | Sequência didática: fundamentos → compensatórios → outranking → robustez | Aceito |
 | [0004](0004-publicacao-mkdocs.md) | Publicação do livro: MkDocs Material no GitHub Pages | Aceito |
 | [0005](0005-extracao-repositorio-proprio.md) | Extração concluída: o projeto vive em GHDaru/multicriterio | Aceito |
+| [0006](0006-long-run-autonoma.md) | Long run autônoma: rodadas 005–013 em sequência | Aceito |
