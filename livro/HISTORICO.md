@@ -37,6 +37,8 @@
 Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
 worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
 
+- **0.16 (spec 016, cap. 02)**: F4 — Revenda dominada por dois candidatos
+  (diagnóstico de redundância); gabarito; etapa 02 `9 passed`.
 - **0.15 (spec 015, cap. 01)**: modelagem e soma crua do segundo domínio ("elege o
   mais caro de novo"); gabarito; etapa 01 `12 passed, 1 skipped`.
 - **0.14 (spec 014, cap. 00)**: segundo domínio apresentado; etapa 00 ganha

@@ -128,6 +128,17 @@ A5 riscado da tabela. Exercício de completar: `analise_dominancia` compara todo
 pares duas vezes ($O(m^2 n)$ com constante dobrada) — corte as comparações redundantes
 sem quebrar nenhum teste existente.
 
+## Segundo domínio — dominância na decisão B2B
+
+No caso do fornecedor, um quarto candidato aparece: **F4 — Revenda** (R$ 12.500/mês,
+50 ms, SLA 99,00%, suporte 3) — um revendedor que empacota a Hiperescala com margem.
+O filtro de dominância o elimina com um requinte que o A5 não tinha: F4 é dominado
+por **dois** candidatos ao mesmo tempo — F1 (mais barato, mais rápido, SLA maior,
+suporte igual) e F2 (melhor em tudo). Fronteira de Pareto: {F1, F2, F3}. Dominadores
+múltiplos são um sinal diagnóstico útil: a alternativa não está apenas mal posicionada
+— ela é redundante no conjunto. *Teste `test_segundo_dominio_f4_dominada_por_dois` da
+etapa 02.*
+
 ## Verificação
 
 1. "Nota no Google Maps do quarteirão" e "Bairro (1–5)" podem coexistir na família de
@@ -154,3 +165,17 @@ sem quebrar nenhum teste existente.
 - Na otimização multiobjetivo (alternativas contínuas, fora do nosso escopo — cap. 01),
   a fronteira de Pareto é o próprio objeto de estudo; o leitor que quiser essa ponte
   encontra o panorama em Greco, Ehrgott & Figueira (2016).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Não deveriam coexistir: a nota do Google Maps e a escala 1–5 de Bairro medem
+   substancialmente o **mesmo objetivo-fim** (qualidade do entorno) — redundância, peso
+   contado duas vezes. Escolha o atributo mais operacional e descarte o outro.
+2. Com a direção do Preço invertida por engano, "mais caro = melhor": A5 (470 mil)
+   passaria a vencer A1 (450 mil) no critério Preço — e como A1 só vencia A5 em tudo,
+   a dominância desapareceria (nenhum dos dois dominaria o outro). Direção errada
+   inverte vereditos em silêncio; por isso a etapa 02 a testa.
+3. Porque uma família de critérios bem construída (não-redundante, discriminante) e
+   uma pré-seleção razoável de alternativas produzem, por construção, opções com
+   perfis conflitantes — se uma alternativa dominasse todas, a decisão nem chegaria à
+   mesa. Fronteira grande é sintoma de problema bem posto.

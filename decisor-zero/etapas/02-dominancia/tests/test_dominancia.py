@@ -82,3 +82,27 @@ def test_peso_negativo_agora_e_erro_de_modelagem():
             desempenhos=ANCORA,
             pesos=[0.7, 0.5, -0.1, -0.1],
         )
+
+
+def test_segundo_dominio_f4_dominada_por_dois():
+    """Fornecedores (ADR 0007): F4 — Revenda é dominada por F1 E F2 ao mesmo tempo."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho", "F4 — Revenda"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[
+            [12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4],
+            [7_500, 60, 99.00, 5], [12_500, 50, 99.00, 3],
+        ],
+    )
+    resultado = analise_dominancia(fornecedores)
+    assert resultado["dominadas"] == {
+        "F4 — Revenda": ["F1 — Hiperescala", "F2 — Regional"]
+    }
+    assert resultado["fronteira_pareto"] == [
+        "F1 — Hiperescala", "F2 — Regional", "F3 — Nicho",
+    ]
