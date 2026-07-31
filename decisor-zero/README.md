@@ -34,7 +34,7 @@ pytest                               # os números do capítulo, verificados
 | `04-saw` | 04 | Primeiro ranking completo (SAW/WSM) + validação cruzada com pymcdm | ✅ |
 | `05-ahp` | 05 | Comparações par a par, autovetor, razão de consistência | ✅ |
 | `06-topsis` | 06 | Distância ao ideal/anti-ideal (+ validação pymcdm) | ✅ |
-| `07-funcoes-de-valor` | 07 | Funções de valor por critério (MAVT) + even swaps | ⬜ |
+| `07-funcoes-de-valor` | 07 | Funções de valor por critério (MAVT) + even swaps | ✅ |
 | `08-promethee` | 08 | Funções de preferência e fluxos | ⬜ |
 | `09-electre` | 09 | Concordância, discordância, veto | ⬜ |
 | `10-vikor-bwm` | 10 | Solução de compromisso + pesos best-worst | ⬜ |

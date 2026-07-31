@@ -56,6 +56,7 @@ nav:
       - "04 — SAW: o método aditivo": capitulos/04-saw.md
       - "05 — AHP: comparações par a par": capitulos/05-ahp.md
       - "06 — TOPSIS: distância ao ideal": capitulos/06-topsis.md
+      - "07 — MAVT e Even Swaps": capitulos/07-funcoes-de-valor.md
   - Aparato:
       - Bibliografia: bibliografia.md
       - Histórico (livro vivo): HISTORICO.md

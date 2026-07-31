@@ -24,6 +24,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **MAVT e Even Swaps (spec 007)**: capítulo
+  [07](livro/capitulos/07-funcoes-de-valor.md) e etapa `07-funcoes-de-valor`
+  (linear ≡ SAW provado; curvas mudam o pódio).
 - **TOPSIS (spec 006)**: capítulo [06](livro/capitulos/06-topsis.md), etapa
   `06-topsis` (validação pymcdm) e `topsis` no catálogo do produto.
 - **AHP (spec 005)**: capítulo [05](livro/capitulos/05-ahp.md), etapa `05-ahp`
@@ -49,6 +52,8 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
   `site_url`/`repo_url` retargetados; CI e Pages ativos.
 
 ### Follow-up
+
+- UI de funções de valor no produto para expor o método `mavt` (spec futura).
 
 - Ativar o GitHub Pages no repositório (Settings → Pages → Source: GitHub Actions —
   única etapa manual; ADR 0005).
