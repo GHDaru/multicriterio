@@ -21,8 +21,16 @@
 | 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-07-30 |
 | 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-07-31 |
 | 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-07-31 |
+| 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.6 — 2026-07-31 · TOPSIS (spec 006, long run ADR 0006)
+
+- Capítulo 06 (ideal/anti-ideal, C_i, rank reversal específico apontado); etapa
+  `06-topsis` com validação pymcdm a 1e-6; `topsis` no catálogo do produto.
+- **Verificação**: etapa `5 passed`; app `18 passed` (qa-report 006).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.5 — 2026-07-31 · AHP (spec 005, long run ADR 0006)
 

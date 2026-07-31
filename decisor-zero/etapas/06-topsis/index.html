@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 06</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 760px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin-top: 1rem; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #2563eb; background: #2563eb14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 06 — TOPSIS</h1>
+  <p>O mesmo caso âncora, os mesmos pesos — agora por geometria: perto do ideal,
+     longe do anti-ideal. Compare lado a lado com o SAW.</p>
+  <button id="btn">Ranquear (TOPSIS × SAW)</button>
+  <div id="saida"></div>
+  <script>
+    document.getElementById("btn").onclick = async () => {
+      const caso = await (await fetch("/api/caso-ancora")).json();
+      const r = await fetch("/api/matriz/topsis", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(caso),
+      });
+      const c = await r.json();
+      const tab = (titulo, ranking, campo) =>
+        `<h3>${titulo}</h3><table><tr><th>#</th><th>Alternativa</th><th>${campo}</th></tr>` +
+        ranking.map(l => `<tr><td>${l.posicao}</td><td>${l.alternativa}</td>
+          <td>${l.escore.toFixed(4)}</td></tr>`).join("") + `</table>`;
+      document.getElementById("saida").innerHTML =
+        tab("TOPSIS — proximidade C", c.ranking, "C") +
+        tab("SAW — escore aditivo", c.saw_para_comparar, "V") +
+        `<div class="nota">Aqui os dois concordam (A1 primeiro). Não é lei: métodos
+         legítimos podem discordar — o cap. 11 mede isso.</div>`;
+    };
+  </script>
+</body>
+</html>
