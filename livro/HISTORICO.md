@@ -25,8 +25,17 @@
 | 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-07-31 |
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-07-31 |
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-07-31 |
+| 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.10 — 2026-07-31 · VIKOR e BWM (spec 010, long run ADR 0006)
+
+- Capítulo 10 (S/R/Q, condições C1/C2 e o conjunto de compromisso {A1, A4} do caso
+  âncora; BWM com 2n−3 comparações e ξ); etapa `10-vikor-bwm` (VIKOR validado contra
+  pymcdm; BWM via linprog, forma exata no caso consistente); `vikor` no produto.
+- **Verificação**: etapa `6 passed`; app `20 passed` (qa-report 010).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.9 — 2026-07-31 · ELECTRE (spec 009, long run ADR 0006)
 

@@ -37,7 +37,7 @@ pytest                               # os números do capítulo, verificados
 | `07-funcoes-de-valor` | 07 | Funções de valor por critério (MAVT) + even swaps | ✅ |
 | `08-promethee` | 08 | Funções de preferência (usual, V-shape) e fluxos | ✅ |
 | `09-electre` | 09 | Concordância, discordância, veto, kernel | ✅ |
-| `10-vikor-bwm` | 10 | Solução de compromisso + pesos best-worst | ⬜ |
+| `10-vikor-bwm` | 10 | Solução de compromisso (condições C1/C2) + pesos best-worst (LP) | ✅ |
 | `11-sensibilidade` | 11 | Análise de sensibilidade e comparação entre métodos | ⬜ |
 | `12-grupo` | 12 | Agregação de julgamentos e rankings | ⬜ |
 | `13-persistencia` | 13 | Postgres (Neon) atrás de repositório — a ponte para o `app/` | ⬜ |

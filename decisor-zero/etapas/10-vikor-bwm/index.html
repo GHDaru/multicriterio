@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 10</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #16a34a; background: #16a34a14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 10 — VIKOR e BWM</h1>
+  <button id="vikor">VIKOR no caso âncora</button>
+  <button id="bwm">Pesos BWM (best=Preço, worst=Bairro)</button>
+  <div id="saida"></div>
+  <script>
+    const base = {
+      alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+      criterios: [
+        { nome: "Preço", direcao: "custo" }, { nome: "Área", direcao: "beneficio" },
+        { nome: "Deslocamento", direcao: "custo" }, { nome: "Bairro", direcao: "beneficio" },
+      ],
+      desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+      pesos: [0.35, 0.25, 0.25, 0.15],
+    };
+    document.getElementById("vikor").onclick = async () => {
+      const r = await fetch("/api/matriz/vikor", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(base),
+      });
+      const c = await r.json();
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>#</th><th>Alternativa</th><th>S</th><th>R</th><th>Q ↓</th></tr>` +
+        c.ranking.map(l => `<tr><td>${l.posicao}</td><td>${l.alternativa}</td>
+          <td>${l.S.toFixed(4)}</td><td>${l.R.toFixed(4)}</td>
+          <td><strong>${l.escore.toFixed(4)}</strong></td></tr>`).join("") + `</table>
+        <div class="nota">DQ = ${c.dq.toFixed(4)} · vantagem aceitável:
+        ${c.vantagem_aceitavel ? "sim" : "NÃO"} · estável: ${c.estavel ? "sim" : "não"}
+        → <strong>conjunto de compromisso: ${c.conjunto_compromisso.join(" + ")}</strong>.
+        O VIKOR sabe dizer "os dois" — nenhum método anterior sabia.</div>`;
+    };
+    document.getElementById("bwm").onclick = async () => {
+      const r = await fetch("/api/pesos/bwm", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ best: 0, worst: 3,
+          best_para_todos: [1, 2, 2, 4], todos_para_worst: [4, 2, 2, 1] }),
+      });
+      const c = await r.json();
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>Preço</th><th>Área</th><th>Deslocamento</th><th>Bairro</th></tr>
+         <tr>${c.pesos.map(w => `<td>${w.toFixed(4)}</td>`).join("")}</tr></table>
+         <div class="nota">ξ = ${c.xi.toFixed(4)} (0 = perfeitamente consistente).
+         Foram só 2n−3 = 5 comparações — contra 6 do AHP, e a diferença cresce
+         com n.</div>`;
+    };
+  </script>
+</body>
+</html>
