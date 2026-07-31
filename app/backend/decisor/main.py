@@ -21,6 +21,13 @@ from sqlmodel import Session, select
 from decisor.bd import criar_tabelas, get_sessao
 from decisor.modelos import Decisao
 from decisor.motor.dominancia import analise_dominancia
+from decisor.motor.pesos import (
+    ErroDePesos,
+    pesos_entropia,
+    pesos_rating_direto,
+    pesos_roc,
+    pesos_swing,
+)
 from decisor.motor.saw import ranquear_saw
 from decisor.motor.tipos import Problema
 
@@ -104,6 +111,35 @@ def ranquear(
     except ValueError as erro:
         raise HTTPException(422, str(erro)) from erro
     return {"decisao": registro.titulo, "metodo": metodo, "ranking": ranking}
+
+
+class PesosIn(BaseModel):
+    metodo: str  # rating | roc | swing | entropia
+    valores: list[float] | None = None  # rating: pontos · swing: saltos
+    ranking: list[int] | None = None    # roc: índices, do mais ao menos importante
+    problema: Problema | None = None    # entropia: o próprio problema
+
+
+@app.post("/api/pesos")
+def elicitar_pesos(entrada: PesosIn) -> dict:
+    """Elicitação de pesos (cap. 03) — stateless, não exige decisão salva."""
+    try:
+        if entrada.metodo == "rating":
+            pesos = pesos_rating_direto(entrada.valores or [])
+        elif entrada.metodo == "swing":
+            pesos = pesos_swing(entrada.valores or [])
+        elif entrada.metodo == "roc":
+            pesos = pesos_roc(entrada.ranking or [])
+        elif entrada.metodo == "entropia":
+            if entrada.problema is None:
+                raise HTTPException(422, "entropia exige o campo 'problema'")
+            pesos = pesos_entropia(entrada.problema)
+        else:
+            raise HTTPException(422, f"método {entrada.metodo!r} desconhecido "
+                                     "(use rating, roc, swing ou entropia)")
+    except ErroDePesos as erro:
+        raise HTTPException(422, str(erro)) from erro
+    return {"metodo": entrada.metodo, "pesos": [round(w, 6) for w in pesos]}
 
 
 @app.post("/api/decisoes/{decisao_id}/dominancia")

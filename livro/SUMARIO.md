@@ -14,7 +14,7 @@
 | 00 | [Introdução — por que sua intuição não escala](capitulos/00-introducao.md) | Reconhecer quando um problema é multicritério e por que "pesar de cabeça" falha | `00-esqueleto` — API FastAPI + página que servirão de chassi | ✅ |
 | 01 | [O problema multicritério](capitulos/01-problema-multicriterio.md) | Modelar alternativas, critérios e matriz de decisão; classificar o problema (escolha/ordenação/classificação) | `01-matriz` — a matriz de decisão vira código e API | ✅ |
 | 02 | [Estruturação — de valores a critérios](capitulos/02-estruturacao-dominancia.md) | Derivar critérios mensuráveis de objetivos (value-focused thinking); eliminar dominadas (Pareto) | `02-dominancia` | ✅ |
-| 03 | Normalização e pesos | Comparar grandezas incomensuráveis; extrair pesos (rating direto, ranking/ROC, swing, entropia) | `03-normalizacao-pesos` | ⬜ |
+| 03 | [Normalização e pesos](capitulos/03-normalizacao-pesos.md) | Comparar grandezas incomensuráveis; extrair pesos (rating direto, ranking/ROC, swing, entropia) | `03-normalizacao-pesos` | ✅ |
 
 ## Parte II — Métodos compensatórios (escola americana)
 

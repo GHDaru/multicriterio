@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 03</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button, select { margin: 1rem .5rem 0 0; padding: .45rem .9rem; cursor: pointer; }
+    .nota { border-left: 4px solid #2563eb; padding: .5rem .75rem; margin-top: 1rem;
+            background: #2563eb14; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 03 — normalização e pesos</h1>
+  <p>A fronteira de Pareto ficou com 4 alternativas em conflito. Antes de agregar
+     (cap. 04), é preciso tornar as colunas comensuráveis — e decidir de onde vêm
+     os pesos.</p>
+
+  <label>Normalização:
+    <select id="metodo">
+      <option value="minmax">min-max (resolve direção; 1 = melhor)</option>
+      <option value="vetorial">vetorial (norma 1; direção fica para o método)</option>
+    </select>
+  </label>
+  <button id="normalizar">Normalizar</button>
+  <button id="pesos">Pesos por entropia</button>
+  <div id="saida">carregando…</div>
+
+  <script>
+    let caso;
+    const saida = document.getElementById("saida");
+    const corpoMatriz = () => ({
+      alternativas: caso.alternativas,
+      criterios: caso.criterios,
+      desempenhos: caso.desempenhos,
+    });
+    const tabela = (linhas, cab, fmt) =>
+      `<table><tr><th>Alternativa</th>${cab.map(c => `<th>${c}</th>`).join("")}</tr>` +
+      caso.alternativas.map((a, i) =>
+        `<tr><td>${a}</td>${linhas[i].map(x => `<td>${fmt(x)}</td>`).join("")}</tr>`
+      ).join("") + `</table>`;
+
+    fetch("/api/caso-ancora").then(r => r.json()).then(c => {
+      caso = c;
+      const seta = d => d === "custo" ? "↓" : "↑";
+      saida.innerHTML = tabela(c.desempenhos,
+        c.criterios.map(cr => `${cr.nome} ${seta(cr.direcao)}`),
+        x => x.toLocaleString("pt-BR"));
+    });
+
+    document.getElementById("normalizar").onclick = async () => {
+      const metodo = document.getElementById("metodo").value;
+      const r = await fetch(`/api/normalizar?metodo=${metodo}`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(corpoMatriz()),
+      });
+      const corpo = await r.json();
+      saida.innerHTML =
+        tabela(corpo.normalizada, caso.criterios.map(c => c.nome), x => x.toFixed(4)) +
+        `<div class="nota">${corpo.resolve_direcao
+          ? "min-max: 1,0000 é sempre o melhor da coluna — repare no Preço, onde a mais barata (A4) vale 1."
+          : "vetorial: as proporções foram preservadas e a coluna tem norma 1 — mas a mais CARA continua com o maior número; a direção fica para o método (TOPSIS, cap. 06)."}</div>`;
+    };
+
+    document.getElementById("pesos").onclick = async () => {
+      const r = await fetch("/api/pesos", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ metodo: "entropia", matriz: corpoMatriz() }),
+      });
+      const corpo = await r.json();
+      saida.innerHTML =
+        `<table><tr>${caso.criterios.map(c => `<th>${c.nome}</th>`).join("")}</tr>
+         <tr>${corpo.pesos.map(w => `<td>${w.toFixed(4)}</td>`).join("")}</tr></table>
+         <div class="nota">Pesos por entropia: extraídos dos DADOS (quem discrimina
+         mais, pesa mais) — preferência de ninguém foi consultada. Compare com o
+         rating direto 0,35/0,25/0,25/0,15 que o livro usa: importância e
+         discriminação são coisas diferentes (cap. 03).</div>`;
+    };
+  </script>
+</body>
+</html>

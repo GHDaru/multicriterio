@@ -30,7 +30,7 @@ pytest                               # os números do capítulo, verificados
 | `00-esqueleto` | 00 | Chassi FastAPI + página com o caso âncora | ✅ |
 | `01-matriz` | 01 | `MatrizDecisao` (validação de dimensões, direções, pesos) + API genérica | ✅ |
 | `02-dominancia` | 02 | Filtro de dominadas / fronteira de Pareto (+ correção do peso negativo — gabarito do cap. 01) | ✅ |
-| `03-normalizacao-pesos` | 03 | Normalizações (min-max, vetorial) + pesos (direto, ROC, swing, entropia) | ⬜ |
+| `03-normalizacao-pesos` | 03 | Normalizações (min-max, vetorial) + pesos (direto, ROC, swing, entropia) | ✅ |
 | `04-saw` | 04 | Primeiro ranking completo (SAW/WSM) | ⬜ |
 | `05-ahp` | 05 | Comparações par a par, autovetor, razão de consistência | ⬜ |
 | `06-topsis` | 06 | Distância ao ideal/anti-ideal | ⬜ |
