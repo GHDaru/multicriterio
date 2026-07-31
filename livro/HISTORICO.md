@@ -37,6 +37,8 @@
 Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
 worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
 
+- **0.27 (spec 027, cap. 13)**: o acervo com os dois domínios; gabarito; etapa 13
+  `4 passed`. **Corrida de aprofundamento completa: caps. 00–13.**
 - **0.26 (spec 026, cap. 12)**: comitê polarizado no B2B; gabarito; etapa 12
   `7 passed`.
 - **0.25 (spec 025, cap. 11)**: a fotografia da robustez (56 × 4,2 p.p.); gabarito;
@@ -204,7 +206,7 @@ worked com números em teste + Apêndice B (gabarito comentado) + promoções de
 |---|---|---|---|---|
 | Seed no harness_engineering (ADR 0001) | não havia repositório próprio no nascimento | o Steward criar o repositório e o seed ser extraído | 🟢 cumprida | 2026-07-30 — GHDaru/multicriterio criado; ADR 0005 |
 | Fallback SQLite no `app/` | a trilha deve rodar a custo zero e offline (Princípio VI) | o cap. 13 tornar o provisionamento Neon parte da trilha | 🟡 em movimento | 2026-07-31 — cap. 13 documenta o provisionamento; fallback permanece pelo custo zero |
-| Capítulos 05–13 (long run, ADR 0006) | cobertura completa priorizada sobre profundidade | uma rodada de auditoria/aprofundamento revisar cada um | 🔵 aberta | — |
+| Capítulos 05–13 (long run, ADR 0006) | cobertura completa priorizada sobre profundidade | uma rodada de auditoria/aprofundamento revisar cada um | 🟢 cumprida | 2026-07-31 — specs 014–027 (ADR 0007): segundo domínio worked + gabarito em todos os capítulos |
 | Frontend estático v0 | zero build = carga cognitiva mínima nas etapas | a UI do produto exigir estado complexo (comparação multi-método, cap. 11+) → migração conforme ADR 0002 | 🔵 aberta | — |
 | Status "?" na bibliografia | editores bloqueiam verificação por robô | cada fonte "?" for promovida a ✓ antes de ser citada em capítulo novo | 🔵 aberta | — |
 

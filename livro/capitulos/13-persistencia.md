@@ -87,6 +87,16 @@ completar: adicione `apagar(decisao_id)` ao repositório com **soft-delete** (co
 `apagada_em`, filtro no listar) e o teste que prova que apagar é reversível — a regra
 de reversibilidade do Maestro aplicada a você mesmo.
 
+## Segundo domínio — o acervo de decisões
+
+O fecho dos dois fios do livro: as decisões do apartamento **e** do fornecedor
+convivem no mesmo repositório — o modelo v0 (problema em JSON validado) não precisou
+saber que uma é B2C com 4 alternativas e a outra B2B com 3. É a recompensa da anatomia
+única do cap. 01: um só esquema persiste qualquer problema multicritério bem modelado.
+E é também o embrião do **acervo**: com as decisões guardadas, os caps. 11–12 ganham
+matéria-prima histórica (comparar decisões, reusar pesos elicitados, auditar escolhas
+passadas). *Teste `test_segundo_dominio_acervo_com_os_dois_casos` da etapa 13.*
+
 ## Verificação
 
 1. Por que os testes da etapa criam o repositório com URL explícita de SQLite
@@ -108,3 +118,18 @@ de reversibilidade do Maestro aplicada a você mesmo.
   <https://alembic.sqlalchemy.org/>.
 - O workflow de CI deste repositório roda toda a trilha e o produto a cada push — a
   operação do livro vivo é, ela mesma, o exemplo final.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Porque teste que lê `DATABASE_URL` herda o ambiente de quem o roda — e um dia esse
+   ambiente será a produção. URL explícita de SQLite temporário torna impossível, por
+   construção, um teste tocar banco real (Princípio V aplicado à suíte).
+2. O motor deixaria de ser puro: importar o repositório arrasta engine, driver e
+   ambiente para dentro do cálculo — os testes de método passariam a exigir banco, a
+   validação cruzada com pymcdm ficaria lenta e frágil, e trocar de banco passaria a
+   "tocar o motor". A seta de dependência é rotas → motor e rotas → repositório; nunca
+   motor → repositório.
+3. Primeiro **revogar** a credencial no Neon (a chave vazada já é pública — cada
+   minuto conta); só depois limpar o histórico do git (rebase/filtro) e trocar o
+   `.env`. A ordem inversa deixa uma chave válida exposta enquanto você reescreve
+   commits.
