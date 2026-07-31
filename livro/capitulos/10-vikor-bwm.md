@@ -89,6 +89,17 @@ conjunto de compromisso) e `motor/bwm.py` (modelo linear via `scipy.optimize.lin
 melhor). Exercício de completar: varra $v \in \{0; 0{,}25; 0{,}5; 0{,}75; 1\}$ e
 escreva o teste que mostra em qual $v$ o conjunto de compromisso muda.
 
+## Segundo domínio — VIKOR na decisão B2B (o compromisso que surpreende)
+
+Fornecedores: **Q = F2 0,0000 < F3 0,3957 < F1 1,0000**, com F2 líder estável em S e
+R. E aqui vem a lição fina do protocolo: com $m = 3$, o limiar de vantagem sobe para
+$DQ = \frac{1}{m-1} = 0{,}5$ — e $Q(F3) - Q(F2) = 0{,}3957 < 0{,}5$. Mesmo uma vitória
+que todos os outros métodos chamam de robusta **não passa no C1 do VIKOR com poucas
+alternativas**: conjunto de compromisso {F2, F3}. Moral: o DQ embute o tamanho do
+conjunto — com poucas alternativas, o VIKOR exige vantagens enormes para proclamar
+vencedor único. Reporte o conjunto e o porquê. *Teste
+`test_segundo_dominio_dq_alto_com_poucas_alternativas` da etapa 10.*
+
 ## Verificação
 
 1. Por que A1 tem $Q = 0$ exato? (Dica: objetivo 1 — normalizações de S e R.)
@@ -107,3 +118,18 @@ escreva o teste que mostra em qual $v$ o conjunto de compromisso muda.
   notebooks (<https://github.com/Valdecy/pyDecision>).
 - O solver do site oficial do BWM (Excel) está em <https://bestworstmethod.com/> —
   vendor acadêmico; útil para conferência manual.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Porque A1 minimiza S **e** R simultaneamente: nas duas normalizações
+   $(S-S^*)/(S^--S^*)$ e $(R-R^*)/(R^--R^*)$ ela é o ponto de referência (numerador
+   zero) — e qualquer combinação convexa de zeros é zero. Q = 0 não significa
+   "perfeita"; significa "melhor do conjunto nos dois eixos".
+2. $v = 1$: só a soma dos arrependimentos conta — perfil utilitarista, aceita
+   sacrificar um critério se a média compensa. $v = 0$: só o pior arrependimento —
+   perfil maximin/cauteloso, protege o critério mais sacrificado. O 0,5 padrão declara
+   empate entre as duas éticas; mudá-lo é decisão de política, não de cálculo.
+3. Consistência plena significa $a_{Bj} = w_B/w_j$ e $a_{jW} = w_j/w_W$ exatos.
+   Então $a_{Bj} \cdot a_{jW} = (w_B/w_j)(w_j/w_W) = w_B/w_W = a_{BW}$ para todo $j$ —
+   e existe um vetor $w$ que zera todos os desvios: $\xi^* = 0$. Qualquer quebra
+   dessa cadeia força $\xi > 0$.
