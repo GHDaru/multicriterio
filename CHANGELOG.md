@@ -24,6 +24,8 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Decisão em grupo (spec 012)**: capítulo [12](livro/capitulos/12-grupo.md) e
+  etapa `12-grupo` (Borda, Copeland, Condorcet, AIJ).
 - **Sensibilidade e rank reversal (spec 011)**: capítulo
   [11](livro/capitulos/11-sensibilidade.md), etapa `11-sensibilidade` e
   `POST /api/decisoes/{id}/comparar` (4 métodos + Spearman) no produto.
@@ -63,6 +65,7 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 ### Follow-up
 
 - UI de funções de valor no produto para expor o método `mavt` (spec futura).
+- Decisão em grupo no produto junto com contas de usuário (spec futura).
 
 - Ativar o GitHub Pages no repositório (Settings → Pages → Source: GitHub Actions —
   única etapa manual; ADR 0005).

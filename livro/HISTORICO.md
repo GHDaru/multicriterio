@@ -27,8 +27,16 @@
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-07-31 |
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-07-31 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
+| 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.12 — 2026-07-31 · Decisão em grupo (spec 012, long run ADR 0006)
+
+- Capítulo 12 (Borda × Copeland — "A1 vence sem ser o 1º de ninguém"; paradoxo de
+  Condorcet; AIJ por média geométrica); etapa `12-grupo`.
+- **Verificação**: etapa `6 passed` (qa-report 012).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.11 — 2026-07-31 · Sensibilidade e rank reversal (spec 011, long run ADR 0006)
 

@@ -39,5 +39,5 @@ pytest                               # os números do capítulo, verificados
 | `09-electre` | 09 | Concordância, discordância, veto, kernel | ✅ |
 | `10-vikor-bwm` | 10 | Solução de compromisso (condições C1/C2) + pesos best-worst (LP) | ✅ |
 | `11-sensibilidade` | 11 | Varredura de pesos, Spearman multi-método, ensaio de rank reversal | ✅ |
-| `12-grupo` | 12 | Agregação de julgamentos e rankings | ⬜ |
+| `12-grupo` | 12 | Borda, Copeland, Condorcet e AIJ | ✅ |
 | `13-persistencia` | 13 | Postgres (Neon) atrás de repositório — a ponte para o `app/` | ⬜ |

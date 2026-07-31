@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 12</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #2563eb; background: #2563eb14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 12 — decisão em grupo</h1>
+  <p>Ana (financeira), Bia (qualidade) e Caio (equilíbrio) ranquearam os
+     apartamentos. Agregue por Borda e Copeland — e veja o paradoxo de Condorcet.</p>
+  <button id="grupo">Agregar os 3 rankings</button>
+  <button id="ciclo">Paradoxo de Condorcet</button>
+  <div id="saida"></div>
+  <script>
+    const post = (url, corpo) => fetch(url, { method: "POST",
+      headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) })
+      .then(r => r.json());
+    const tab = (titulo, linhas) =>
+      `<h3>${titulo}</h3><table><tr><th>#</th><th>Alternativa</th><th>Escore</th></tr>` +
+      linhas.map(l => `<tr><td>${l.posicao}</td><td>${l.alternativa}</td>
+        <td>${l.escore}</td></tr>`).join("") + `</table>`;
+    document.getElementById("grupo").onclick = async () => {
+      const c = await post("/api/grupo/rankings", { rankings: [
+        ["A4 — Estação", "A2 — Jardim", "A1 — Centro", "A3 — Parque"],
+        ["A3 — Parque", "A1 — Centro", "A2 — Jardim", "A4 — Estação"],
+        ["A1 — Centro", "A4 — Estação", "A2 — Jardim", "A3 — Parque"],
+      ]});
+      document.getElementById("saida").innerHTML =
+        tab("Borda", c.borda) + tab("Copeland", c.copeland) +
+        `<div class="nota">A1 vence nos dois — mas não foi o 1º de NINGUÉM.
+         Agregação de grupo pode eleger o consenso, não o favorito.</div>`;
+    };
+    document.getElementById("ciclo").onclick = async () => {
+      const c = await post("/api/grupo/rankings", { rankings: [
+        ["X", "Y", "Z"], ["Y", "Z", "X"], ["Z", "X", "Y"],
+      ]});
+      document.getElementById("saida").innerHTML =
+        tab("Borda", c.borda) + tab("Copeland", c.copeland) +
+        `<div class="nota">Maiorias cíclicas (X vence Y, Y vence Z, Z vence X):
+         empate total. Nenhuma agregação escapa de todos os paradoxos — Arrow.</div>`;
+    };
+  </script>
+</body>
+</html>
