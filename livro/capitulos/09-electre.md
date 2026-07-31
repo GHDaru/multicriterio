@@ -89,6 +89,16 @@ dominância, fica para a spec do cap. 11. Exercício de completar: implemente a
 **concordância parcial** (crédito proporcional quando a diferença é pequena) e mostre
 em teste como o cenário 1 muda.
 
+## Segundo domínio — sobreclassificação na decisão B2B
+
+Fornecedores com $c^* = 0{,}6$ e $d^* = 0{,}5$: a única relação que passa é
+**F2 S F1** — a coalizão de F2 (custo + latência + suporte = 0,75) é forte e o único
+protesto (SLA) fica abaixo do limiar. Kernel: **{F2, F3}**. Note quem sobrou: F3, o
+mais barato, não sobreclassifica ninguém — mas ninguém o sobreclassifica (seu SLA de
+99,0% e latência de 60 ms geram protestos altos em qualquer coalizão contra ele). A
+shortlist honesta é "Regional ou Nicho"; a Hiperescala sai da mesa por veredito, não
+por opinião. *Teste `test_segundo_dominio_kernel_f2_f3` da etapa 09.*
+
 ## Verificação
 
 1. Calcule à mão $C(A3, A2)$ e explique por que, mesmo com 0,65 de concordância, A3
@@ -109,3 +119,17 @@ em teste como o cenário 1 muda.
   (<https://github.com/kotbaton/pymcdm>).
 - O PDF do paper fundador está aberto na Numdam:
   <https://www.numdam.org/item/RO_1968__2_1_57_0.pdf>.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. $C(A3, A2) = 0{,}25 + 0{,}25 + 0{,}15 = 0{,}65$ (área, deslocamento, bairro). Mas o
+   protesto do Preço — A2 é 140 mil mais barata, sobre amplitude de 180 mil —
+   dá $D = 0{,}7778 > d^* = 0{,}4$: coalizão forte, veto informal do bolso. Não passa.
+2. No SAW, o peso multiplica desempenho normalizado — é **taxa de troca** (quanto de
+   um critério compensa quanto de outro). No ELECTRE, o peso só entra somado na
+   coalizão de quem está a favor — é **voto**: não existe "quanto", só "quem". Por
+   isso pesos iguais produzem comportamentos diferentes nos dois mundos.
+3. Porque encolher a shortlist não é o único serviço: kernel cheio diz que, nos seus
+   limiares, **nenhuma escolha é incontestável** — informação que protege o decisor de
+   falsas certezas e direciona a conversa para os limiares (ou para coletar mais
+   dados), em vez de forçar um vencedor.
