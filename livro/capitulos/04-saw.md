@@ -123,6 +123,15 @@ $V_i = \prod_j r_{ij}^{\,w_j}$, sobre desempenhos crus com direção tratada por
 inversão), exponha-o em `/api/matriz/wpm` e escreva o teste que mostra se o vencedor
 do caso âncora muda em relação ao SAW.
 
+## Segundo domínio — SAW na decisão B2B (o outro desfecho)
+
+Fornecedores, pesos 0,40/0,20/0,25/0,15: **F2 — Regional 0,6732 > F3 — Nicho 0,5500 >
+F1 — Hiperescala 0,3250**. Compare os desfechos: no apartamento, o 1º e o 2º se
+separam por 0,007; aqui, por **0,12** — dezessete vezes mais. F2 não vence por ajuste
+fino de pesos; vence porque é boa em quase tudo. É a diferença entre vitória frágil e
+vitória robusta, que o cap. 11 vai medir com instrumento (varredura de pesos).
+*Teste `test_segundo_dominio_f2_vence_com_folga` da etapa 04.*
+
 ## Verificação
 
 1. Refaça $V(A2)$ à mão com os pesos do rating direto e confira com a tabela do passo
@@ -147,3 +156,16 @@ do caso âncora muda em relação ao SAW.
   (<https://github.com/Valdecy/pyDecision>).
 - Em planilhas, o SAW é a fórmula `=SOMARPRODUTO(pesos; linha_normalizada)` — força e
   fraqueza: qualquer um monta, e qualquer um pula os caps. 01–03 sem perceber.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. $V(A2) = 0{,}35 \cdot 0{,}7778 + 0{,}25 \cdot 0{,}5 + 0{,}25 \cdot 0 + 0{,}15
+   \cdot 0{,}3333 = 0{,}2722 + 0{,}125 + 0 + 0{,}05 = 0{,}4472$ — último lugar: o
+   deslocamento de 35 min (r = 0) custou caro.
+2. Viola a **independência preferencial**: o valor de um ponto de Bairro passa a
+   depender do nível de Área. A forma aditiva perde a licença; o instrumento certo é
+   o cap. 07 (funções multilineares/MAUT) ou repensar os critérios.
+3. Mudou a **magnitude relativa** dos pesos, não a ordem: o ROC concentra 0,5208 no
+   1º do ranking (contra 0,35 do rating). Com metade do peso total num critério em
+   que A4 é imbatível (a mais barata), o pódio virou — ordem igual, números
+   diferentes, vencedor diferente.

@@ -84,3 +84,26 @@ def test_validacao_cruzada_com_pymcdm():
         nossos = {l["alternativa"]: l["escore"] for l in ranquear_saw(ancora(pesos))}
         for nome, escore_deles in zip(NOMES, deles):
             assert nossos[nome] == pytest.approx(float(escore_deles), abs=1e-6)
+
+
+def test_segundo_dominio_f2_vence_com_folga():
+    """Fornecedores (ADR 0007): vitória robusta — 0,12 de margem, não 0,007."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+        pesos=[0.40, 0.20, 0.25, 0.15],
+    )
+    ranking = ranquear_saw(fornecedores)
+    assert [l["alternativa"] for l in ranking] == [
+        "F2 — Regional", "F3 — Nicho", "F1 — Hiperescala",
+    ]
+    escores = {l["alternativa"]: l["escore"] for l in ranking}
+    assert escores["F2 — Regional"] == pytest.approx(0.673246, abs=1e-6)
+    assert escores["F3 — Nicho"] == pytest.approx(0.55, abs=1e-6)
+    assert escores["F2 — Regional"] - escores["F3 — Nicho"] > 0.12  # folga real
