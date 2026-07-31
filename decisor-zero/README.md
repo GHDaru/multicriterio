@@ -36,7 +36,7 @@ pytest                               # os números do capítulo, verificados
 | `06-topsis` | 06 | Distância ao ideal/anti-ideal (+ validação pymcdm) | ✅ |
 | `07-funcoes-de-valor` | 07 | Funções de valor por critério (MAVT) + even swaps | ✅ |
 | `08-promethee` | 08 | Funções de preferência (usual, V-shape) e fluxos | ✅ |
-| `09-electre` | 09 | Concordância, discordância, veto | ⬜ |
+| `09-electre` | 09 | Concordância, discordância, veto, kernel | ✅ |
 | `10-vikor-bwm` | 10 | Solução de compromisso + pesos best-worst | ⬜ |
 | `11-sensibilidade` | 11 | Análise de sensibilidade e comparação entre métodos | ⬜ |
 | `12-grupo` | 12 | Agregação de julgamentos e rankings | ⬜ |

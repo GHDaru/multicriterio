@@ -58,6 +58,7 @@ nav:
       - "06 — TOPSIS: distância ao ideal": capitulos/06-topsis.md
       - "07 — MAVT e Even Swaps": capitulos/07-funcoes-de-valor.md
       - "08 — PROMETHEE": capitulos/08-promethee.md
+      - "09 — ELECTRE": capitulos/09-electre.md
   - Aparato:
       - Bibliografia: bibliografia.md
       - Histórico (livro vivo): HISTORICO.md

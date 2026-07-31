@@ -24,6 +24,8 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **ELECTRE (spec 009)**: capítulo [09](livro/capitulos/09-electre.md) e etapa
+  `09-electre` (relação S, vetos, kernel com página interativa).
 - **PROMETHEE (spec 008)**: capítulo [08](livro/capitulos/08-promethee.md), etapa
   `08-promethee` (usual/V-shape, pymcdm) e `promethee2` no produto.
 - **MAVT e Even Swaps (spec 007)**: capítulo
