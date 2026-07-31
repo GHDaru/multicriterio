@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 09</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    label { display: inline-block; margin: .5rem 1rem 0 0; }
+    input { width: 5rem; }
+    button { margin-top: 1rem; padding: .5rem 1rem; cursor: pointer; }
+    .kernel { border-left: 4px solid #16a34a; background: #16a34a14;
+              padding: .5rem .75rem; margin-top: 1rem; }
+    ul { margin: .5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 09 — ELECTRE I</h1>
+  <p>Ajuste os limiares e veja a relação de sobreclassificação e o kernel (a
+     shortlist). Comece com c*=0,6 e d*=0,4: ninguém sobreclassifica ninguém — o
+     conflito do caso âncora é real.</p>
+  <label>c* (concordância mínima) <input id="c" type="number" step="0.05" value="0.6"></label>
+  <label>d* (discordância máxima) <input id="d" type="number" step="0.05" value="0.4"></label>
+  <label>veto no Bairro <input id="v" type="number" step="1" placeholder="—"></label>
+  <button id="btn">Analisar</button>
+  <div id="saida"></div>
+  <script>
+    const base = {
+      alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+      criterios: [
+        { nome: "Preço", direcao: "custo" }, { nome: "Área", direcao: "beneficio" },
+        { nome: "Deslocamento", direcao: "custo" }, { nome: "Bairro", direcao: "beneficio" },
+      ],
+      desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+      pesos: [0.35, 0.25, 0.25, 0.15],
+    };
+    document.getElementById("btn").onclick = async () => {
+      const v = document.getElementById("v").value;
+      const corpo = { ...base,
+        c_estrela: parseFloat(document.getElementById("c").value),
+        d_estrela: parseFloat(document.getElementById("d").value),
+        vetos: v === "" ? null : [null, null, null, parseFloat(v)],
+      };
+      const r = await fetch("/api/matriz/electre", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(corpo),
+      });
+      const c = await r.json();
+      if (!r.ok) { document.getElementById("saida").textContent = c.detail; return; }
+      document.getElementById("saida").innerHTML =
+        `<p><strong>Sobreclassificações:</strong></p><ul>` +
+        (c.sobreclassifica.length
+          ? c.sobreclassifica.map(([a, b]) => `<li>${a} S ${b}</li>`).join("")
+          : "<li><em>nenhuma — coalizões fracas ou protestos altos demais</em></li>") +
+        `</ul><div class="kernel"><strong>Kernel (shortlist):</strong>
+         ${c.kernel.join(" · ")}</div>`;
+    };
+  </script>
+</body>
+</html>

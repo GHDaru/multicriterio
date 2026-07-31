@@ -24,8 +24,17 @@
 | 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-07-31 |
 | 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-07-31 |
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-07-31 |
+| 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.9 — 2026-07-31 · ELECTRE (spec 009, long run ADR 0006)
+
+- Capítulo 09 (concordância/discordância/veto/kernel; "não ranquear" como resposta
+  honesta); etapa `09-electre` com três cenários em teste (relação vazia → shortlist
+  {A1, A3} → veto devolvendo A2). Fora do catálogo de ranking do produto por design.
+- **Verificação**: etapa `5 passed` (qa-report 009).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.8 — 2026-07-31 · PROMETHEE (spec 008, long run ADR 0006)
 
