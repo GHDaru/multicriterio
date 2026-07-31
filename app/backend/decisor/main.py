@@ -21,6 +21,7 @@ from sqlmodel import Session, select
 from decisor.bd import criar_tabelas, get_sessao
 from decisor.modelos import Decisao
 from decisor.motor.dominancia import analise_dominancia
+from decisor.motor.ahp import ErroDeJulgamentos, prioridades_ahp
 from decisor.motor.pesos import (
     ErroDePesos,
     pesos_entropia,
@@ -131,6 +132,7 @@ class PesosIn(BaseModel):
     valores: list[float] | None = None  # rating: pontos · swing: saltos
     ranking: list[int] | None = None    # roc: índices, do mais ao menos importante
     problema: Problema | None = None    # entropia: o próprio problema
+    julgamentos: list[list[float]] | None = None  # ahp: comparações par a par
 
 
 @app.post("/api/pesos")
@@ -143,14 +145,25 @@ def elicitar_pesos(entrada: PesosIn) -> dict:
             pesos = pesos_swing(entrada.valores or [])
         elif entrada.metodo == "roc":
             pesos = pesos_roc(entrada.ranking or [])
+        elif entrada.metodo == "ahp":
+            if entrada.julgamentos is None:
+                raise HTTPException(422, "ahp exige o campo 'julgamentos'")
+            resultado = prioridades_ahp(entrada.julgamentos)
+            if not resultado["consistente"]:
+                raise HTTPException(
+                    422,
+                    f"julgamentos inconsistentes (CR={resultado['cr']:.3f} > 0.10) — "
+                    "revise antes de usar (cap. 05)",
+                )
+            pesos = resultado["pesos"]
         elif entrada.metodo == "entropia":
             if entrada.problema is None:
                 raise HTTPException(422, "entropia exige o campo 'problema'")
             pesos = pesos_entropia(entrada.problema)
         else:
             raise HTTPException(422, f"método {entrada.metodo!r} desconhecido "
-                                     "(use rating, roc, swing ou entropia)")
-    except ErroDePesos as erro:
+                                     "(use rating, roc, swing, entropia ou ahp)")
+    except (ErroDePesos, ErroDeJulgamentos) as erro:
         raise HTTPException(422, str(erro)) from erro
     return {"metodo": entrada.metodo, "pesos": [round(w, 6) for w in pesos]}
 

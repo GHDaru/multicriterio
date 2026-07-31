@@ -32,7 +32,7 @@ pytest                               # os números do capítulo, verificados
 | `02-dominancia` | 02 | Filtro de dominadas / fronteira de Pareto (+ correção do peso negativo — gabarito do cap. 01) | ✅ |
 | `03-normalizacao-pesos` | 03 | Normalizações (min-max, vetorial) + pesos (direto, ROC, swing, entropia) | ✅ |
 | `04-saw` | 04 | Primeiro ranking completo (SAW/WSM) + validação cruzada com pymcdm | ✅ |
-| `05-ahp` | 05 | Comparações par a par, autovetor, razão de consistência | ⬜ |
+| `05-ahp` | 05 | Comparações par a par, autovetor, razão de consistência | ✅ |
 | `06-topsis` | 06 | Distância ao ideal/anti-ideal | ⬜ |
 | `07-funcoes-de-valor` | 07 | Funções de valor por critério (MAVT) + even swaps | ⬜ |
 | `08-promethee` | 08 | Funções de preferência e fluxos | ⬜ |

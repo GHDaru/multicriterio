@@ -20,8 +20,17 @@
 | 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-07-30 |
 | 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-07-30 |
 | 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-07-31 |
+| 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.5 — 2026-07-31 · AHP (spec 005, long run ADR 0006)
+
+- Capítulo 05 (autovetor, CI/CR, debate Belton & Gear/Dyer; AHP como técnica de pesos
+  por decisão do ADR 0006); etapa `05-ahp` com página interativa de julgamentos;
+  `/api/pesos` do produto ganha `ahp` (recusa CR > 0,10). Fontes: 6 promovidas a ✓.
+- **Verificação**: etapa `8 passed`; app `17 passed` (qa-report 005).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.4 — 2026-07-31 · SAW: o primeiro ranking (spec 004)
 
