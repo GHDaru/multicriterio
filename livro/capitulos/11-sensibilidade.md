@@ -101,6 +101,22 @@ métodos + matriz de Spearman + concordância média). Exercício de completar: 
 a varredura **bidimensional** (dois pesos simultâneos, mapa de regiões de vitória) e
 mostre em teste o ponto (w_Preço, w_Área) mais próximo do atual em que A3 vence.
 
+## Segundo domínio — a fotografia da robustez
+
+Aplicando o protocolo inteiro ao fornecedor, o contraste com o apartamento vira
+número:
+
+| Instrumento | Apartamento | Fornecedor |
+|---|---|---|
+| Faixa de estabilidade do vencedor (peso do 1º critério) | A1: [0,316; 0,358) — 4,2 p.p. | F2: [0; 0,561) — **56 p.p.** |
+| Concordância entre os 4 métodos | ρ = 1 | ρ = 1 |
+| Quem nunca vence na varredura | — | F1 (nenhum peso de Custo o elege) |
+
+F2 vence com qualquer peso de Custo até 0,561 — treze vezes a janela de A1 — e a
+Hiperescala não existe peso que salve. Mesmo protocolo, fotografias opostas: uma
+decisão pede cautela e conversa sobre pesos; a outra pode ser assinada hoje. *Teste
+`test_segundo_dominio_faixa_larga_e_f1_nunca_vence` da etapa 11.*
+
 ## Verificação
 
 1. Por que renormalizar os demais pesos na varredura, em vez de só aumentar um?
@@ -122,3 +138,17 @@ mostre em teste o ponto (w_Preço, w_Área) mais próximo do atual em que A3 ven
   (<https://arxiv.org/abs/1810.11078>).
 - **pyDecision** publica notebooks comparando métodos no mesmo dataset
   (<https://github.com/Valdecy/pyDecision>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Porque Σw = 1 é parte da definição (cap. 01): aumentar um peso sem renormalizar
+   criaria um vetor inválido, e a comparação entre pontos da varredura deixaria de ser
+   justa — cada ponto precisa ser um modelo legítimo completo.
+2. ρ = 1 diz que a *régua* não importa (as quatro filosofias concordam); a faixa
+   estreita diz que o *insumo* importa demais (0,008 de peso vira outro vencedor).
+   Preocupa mais a faixa: métodos são escolha nossa, pesos são elicitação imperfeita
+   de gente — e é aí que a decisão está por um fio.
+3. O bairro 1 de A5 esticou a coluna Bairro e moveu o **anti-ideal** — a referência de
+   "pior" de todo mundo. Distâncias mudam, C_i muda, e a ordem relativa de A3/A4, que
+   já era apertada, vira. Uma frase: *no TOPSIS, cada alternativa é medida contra
+   extremos que pertencem ao conjunto — mude o conjunto, mude a régua.*

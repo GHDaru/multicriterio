@@ -73,3 +73,34 @@ def test_o_mesmo_a5_vira_o_vencedor_do_saw():
 def test_spearman_casos_limite():
     assert spearman(["a", "b", "c"], ["a", "b", "c"]) == 1.0
     assert spearman(["a", "b", "c"], ["c", "b", "a"]) == -1.0
+
+
+FORNECEDORES = MatrizDecisao(
+    alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+    criterios=[
+        Criterio("Custo mensal", "custo", "R$/mês"),
+        Criterio("Latência", "custo", "ms"),
+        Criterio("SLA", "beneficio", "%"),
+        Criterio("Suporte", "beneficio", "1–5"),
+    ],
+    desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+    pesos=[0.40, 0.20, 0.25, 0.15],
+)
+
+
+def test_segundo_dominio_faixa_larga_e_f1_nunca_vence():
+    """Fornecedores (ADR 0007): robustez com número — 56 p.p. de faixa contra 4,2."""
+    faixas = varredura_peso(FORNECEDORES, indice=0, metodo="saw")
+    assert faixas == [
+        {"a_partir_de": 0.0, "vencedor": "F2 — Regional"},
+        {"a_partir_de": 0.562, "vencedor": "F3 — Nicho"},
+    ]
+    vencedores = {f["vencedor"] for f in faixas}
+    assert "F1 — Hiperescala" not in vencedores  # nenhum peso de Custo o elege
+
+
+def test_segundo_dominio_quatro_metodos_concordam():
+    resultado = comparar_metodos(FORNECEDORES)
+    ordem = resultado["rankings"]["saw"]
+    assert ordem == ["F2 — Regional", "F3 — Nicho", "F1 — Hiperescala"]
+    assert all(o == ordem for o in resultado["rankings"].values())
