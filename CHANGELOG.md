@@ -24,6 +24,10 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Do protótipo ao produto (spec 013)**: capítulo
+  [13](livro/capitulos/13-persistencia.md), etapa `13-persistencia` (porta de
+  persistência Neon/SQLite) e `GET /health` no produto — **trilha de 14 capítulos
+  completa**.
 - **Decisão em grupo (spec 012)**: capítulo [12](livro/capitulos/12-grupo.md) e
   etapa `12-grupo` (Borda, Copeland, Condorcet, AIJ).
 - **Sensibilidade e rank reversal (spec 011)**: capítulo

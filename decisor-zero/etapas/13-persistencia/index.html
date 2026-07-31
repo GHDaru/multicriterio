@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 13</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 720px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    li { margin: .25rem 0; }
+    .nota { border-left: 4px solid #16a34a; background: #16a34a14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 13 — persistência</h1>
+  <p>Salve o caso âncora, derrube o servidor, suba de novo: a decisão continua lá.
+     Com <code>DATABASE_URL</code> apontando para o Neon, ela sobrevive até à
+     máquina.</p>
+  <button id="salvar">Salvar o caso âncora</button>
+  <button id="listar">Listar decisões</button>
+  <div id="saida"></div>
+  <script>
+    document.getElementById("salvar").onclick = async () => {
+      const r = await fetch("/api/decisoes", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ titulo: "Escolha de apartamento", problema: {
+          alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+          desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+        }}),
+      });
+      const c = await r.json();
+      document.getElementById("saida").innerHTML =
+        `<div class="nota">Decisão #${c.id} salva. Reinicie o servidor e liste.</div>`;
+    };
+    document.getElementById("listar").onclick = async () => {
+      const [saude, decisoes] = await Promise.all([
+        (await fetch("/health")).json(), (await fetch("/api/decisoes")).json(),
+      ]);
+      document.getElementById("saida").innerHTML =
+        `<p>banco: <strong>${saude.banco}</strong></p><ul>` +
+        decisoes.map(d => `<li>#${d.id} — ${d.titulo} (${d.criada_em})</li>`).join("") +
+        `</ul>`;
+    };
+  </script>
+</body>
+</html>
