@@ -62,3 +62,19 @@ def test_aij_de_juizes_identicos_e_o_proprio_juiz():
 def test_ranking_incompativel_e_erro():
     with pytest.raises(ErroDeGrupo, match="permutação"):
         borda([["X", "Y"], ["X", "Z"]])
+
+
+def test_segundo_dominio_comite_polarizado():
+    """Fornecedores (ADR 0007): dois votos opostos, o terceiro desempata tudo."""
+    financeiro = ["F3 — Nicho", "F2 — Regional", "F1 — Hiperescala"]
+    confiabilidade = ["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"]
+    latencia = ["F2 — Regional", "F3 — Nicho", "F1 — Hiperescala"]
+    votos = [financeiro, confiabilidade, latencia]
+    assert [(l["alternativa"], l["escore"]) for l in borda(votos)] == [
+        ("F2 — Regional", 4), ("F3 — Nicho", 3), ("F1 — Hiperescala", 2),
+    ]
+    assert [(l["alternativa"], l["escore"]) for l in copeland(votos)] == [
+        ("F2 — Regional", 2), ("F3 — Nicho", 0), ("F1 — Hiperescala", -2),
+    ]
+    # Financeiro e Confiabilidade são rankings perfeitamente invertidos.
+    assert financeiro == list(reversed(confiabilidade))
