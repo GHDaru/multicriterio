@@ -62,3 +62,21 @@ def test_veto_bloqueia_sem_olhar_concordancia():
 def test_limiar_invalido_e_erro():
     with pytest.raises(ErroDeLimiares, match="c\\*"):
         analisar_electre(ANCORA, c_estrela=0.3)
+
+
+def test_segundo_dominio_kernel_f2_f3():
+    """Fornecedores (ADR 0007): F2 S F1; shortlist {F2, F3}."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+        pesos=[0.40, 0.20, 0.25, 0.15],
+    )
+    r = analisar_electre(fornecedores, c_estrela=0.6, d_estrela=0.5)
+    assert r["sobreclassifica"] == [("F2 — Regional", "F1 — Hiperescala")]
+    assert r["kernel"] == ["F2 — Regional", "F3 — Nicho"]
