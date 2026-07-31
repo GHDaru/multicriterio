@@ -68,3 +68,32 @@ def test_sem_pesos_e_erro():
     sem = MatrizDecisao(alternativas=NOMES, criterios=CRITERIOS, desempenhos=DESEMPENHOS)
     with pytest.raises(ValueError, match="pesos"):
         ranquear_topsis(sem)
+
+
+def test_segundo_dominio_f2_tres_quartos_do_ideal():
+    """Fornecedores (ADR 0007): C confirma o pódio do SAW com folga geométrica."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+        pesos=[0.40, 0.20, 0.25, 0.15],
+    )
+    escores = {l["alternativa"]: l["escore"] for l in ranquear_topsis(fornecedores)}
+    assert escores["F2 — Regional"] == pytest.approx(0.753637, abs=1e-6)
+    assert escores["F3 — Nicho"] == pytest.approx(0.528235, abs=1e-6)
+    assert escores["F1 — Hiperescala"] == pytest.approx(0.226368, abs=1e-6)
+    np = pytest.importorskip("numpy")
+    metodos = pytest.importorskip("pymcdm.methods")
+    from pymcdm import normalizations
+    topsis = metodos.TOPSIS(normalization_function=normalizations.vector_normalization)
+    deles = topsis(
+        np.array(fornecedores.desempenhos, dtype=float),
+        np.array(fornecedores.pesos), np.array([-1, -1, 1, 1]),
+    )
+    for nome, c in zip(fornecedores.alternativas, deles):
+        assert escores[nome] == pytest.approx(float(c), abs=1e-6)

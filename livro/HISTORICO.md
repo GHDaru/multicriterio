@@ -37,6 +37,8 @@
 Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
 worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
 
+- **0.20 (spec 020, cap. 06)**: TOPSIS B2B com validação pymcdm; gabarito; etapa 06
+  `6 passed`.
 - **0.19 (spec 019, cap. 05)**: AHP do CTO no B2B (CR=0,0038); gabarito; etapa 05
   `9 passed`.
 - **0.18 (spec 018, cap. 04)**: SAW B2B — vitória robusta (margem 17× maior);
