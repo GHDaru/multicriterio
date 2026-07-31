@@ -82,6 +82,15 @@ os compara. O produto ganhou `topsis` no catálogo `/api/metodos`. Exercício de
 completar: troque a distância euclidiana pela de Manhattan ($\sum |v - a|$) e escreva o
 teste que verifica se o pódio do caso âncora muda.
 
+## Segundo domínio — TOPSIS na decisão B2B
+
+Fornecedores, pesos 0,40/0,20/0,25/0,15: **C = F2 0,7536 > F3 0,5282 > F1 0,2264** —
+mesmo pódio do SAW, com a folga de F2 ainda mais visível na régua geométrica (F2 fica
+a três quartos do caminho até o ideal; F1, a menos de um quarto). O ideal aqui combina
+o custo de F3, a latência de F2, o SLA de F1 e o suporte de F3 — um fornecedor que não
+existe, e é exatamente essa a função dele: servir de farol, não de opção. *Teste
+`test_segundo_dominio_f2_tres_quartos_do_ideal` da etapa 06, validado contra a pymcdm.*
+
 ## Verificação
 
 1. Por que o TOPSIS usa a normalização vetorial e não a min-max? O que quebraria?
@@ -102,3 +111,17 @@ teste que verifica se o pódio do caso âncora muda.
   (<https://scikit-criteria.quatrope.org/>).
 - **pyDecision**: `topsis_method` com notebook
   (<https://github.com/Valdecy/pyDecision>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. A min-max já resolve a direção (1 = melhor), então o ideal seria sempre o vetor de
+   uns — degenerado. A vetorial preserva os valores crus em escala comparável e deixa
+   a direção para a **escolha do ideal** ($A^+$), que é onde o TOPSIS a trata; trocar
+   a normalização sem mover esse tratamento quebra o método.
+2. O anti-ideal concentra os piores desempenhos (o preço de A3, o deslocamento de A2,
+   a área e o bairro de A4). A4 está longe dele nos critérios de peso alto (é a mais
+   barata: $D^-$ grande via Preço) — e é essa distância ao pior, não só a proximidade
+   do ideal, que sustenta seu 2º lugar.
+3. Porque $A^+$ e $A^-$ são os extremos **do conjunto**: um 5º apartamento caríssimo
+   estica a coluna Preço, move o anti-ideal e muda todas as distâncias — mesmo sem
+   nenhuma alternativa original mudar. É o mecanismo do rank reversal do cap. 11.
