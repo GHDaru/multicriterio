@@ -29,11 +29,13 @@ from decisor.motor.pesos import (
     pesos_roc,
     pesos_swing,
 )
+from decisor.motor.promethee import ranquear_promethee2
 from decisor.motor.saw import ranquear_saw
 from decisor.motor.topsis import ranquear_topsis
 from decisor.motor.tipos import Problema
 
-METODOS = {"saw": ranquear_saw, "topsis": ranquear_topsis}
+METODOS = {"saw": ranquear_saw, "topsis": ranquear_topsis,
+           "promethee2": ranquear_promethee2}
 
 
 @asynccontextmanager
@@ -92,6 +94,8 @@ def listar_metodos() -> dict:
              "capitulo": "04", "exige_pesos": True},
             {"id": "topsis", "nome": "TOPSIS — proximidade ao ideal",
              "capitulo": "06", "exige_pesos": True},
+            {"id": "promethee2", "nome": "PROMETHEE II — fluxos de sobreclassificação",
+             "capitulo": "08", "exige_pesos": True},
         ]
     }
 

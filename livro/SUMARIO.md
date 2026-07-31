@@ -29,7 +29,7 @@
 
 | Cap. | Título | O que nasce | Etapa | Estado |
 |---|---|---|---|---|
-| 08 | PROMETHEE I/II | Funções de preferência, fluxos de sobreclassificação | `08-promethee` | ⬜ |
+| 08 | [PROMETHEE I/II](capitulos/08-promethee.md) | Funções de preferência, fluxos de sobreclassificação | `08-promethee` | ✅ |
 | 09 | ELECTRE — concordância, discordância e veto | Quando NÃO compensar: o outranking de Roy | `09-electre` | ⬜ |
 
 ## Parte IV — Robustez, grupo e produto
