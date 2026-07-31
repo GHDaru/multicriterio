@@ -116,6 +116,16 @@ reproduzem os números deste capítulo, incluindo o ranking absurdo da soma crua
 Exercício de completar: o validador ainda aceita peso negativo — escreva o teste que
 expõe o bug e a correção (part-task practice; gabarito no docstring do teste).
 
+## Segundo domínio — modelando a decisão B2B
+
+A mesma anatomia serve à escolha de fornecedor de nuvem (cap. 00): $m = 3$
+alternativas, $n = 4$ critérios — Custo mensal (R$/mês ↓), Latência (ms ↓), SLA (% ↑),
+Suporte (1–5 ↑). E a tentação ingênua falha do mesmo jeito, com um requinte: a soma
+crua dá 12.147,95 para F1, 9.123,50 para F2 e 7.664,00 para F3 — "elege" exatamente o
+fornecedor **mais caro**, porque a coluna de custo (milhares) engole latência, SLA e
+suporte (dezenas ou menos). Unidades diferentes, mesmo absurdo. *Reproduzido pelo
+teste `test_segundo_dominio_fornecedor` da etapa 01.*
+
 ## Verificação
 
 1. Na matriz do caso âncora, o que significaria acrescentar uma coluna "preço do
@@ -141,3 +151,16 @@ expõe o bug e a correção (part-task practice; gabarito no docstring do teste)
   `'max'/'min'` por critério (<https://github.com/Valdecy/pyDecision>).
 
 Três embalagens, um objeto: a matriz $X$ + direções + pesos deste capítulo.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. "Preço do condomínio" acrescenta **informação nova** (custo recorrente ausente da
+   matriz) — critério legítimo. "Preço por m²" é Preço ÷ Área: **informação já
+   contada**, e incluí-lo daria peso dobrado ao fator preço-tamanho — viola a
+   não-redundância de Keeney & Raiffa.
+2. Não. "Ordenar do melhor ao pior" é a problemática **γ** (ordenação); "dizer quais
+   são compráveis" é **β** (classificação em categorias com fronteira absoluta). A
+   mesma matriz serve às duas, mas os instrumentos diferem.
+3. A soma crua premia o critério de maior magnitude numérica — Preço, em centenas de
+   milhares — e ainda o trata como benefício. Em milhões, a dominância numérica seria
+   ainda mais absoluta: escala engole agregação sem normalização (cap. 03).
