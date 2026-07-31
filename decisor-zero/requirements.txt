@@ -4,3 +4,5 @@ pytest>=8.0
 httpx>=0.27
 
 pymcdm>=1.4     # validação cruzada dos motores (Princípio I)
+
+scipy>=1.10     # BWM (modelo linear) — etapa 10
