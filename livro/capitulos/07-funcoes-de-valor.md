@@ -101,6 +101,18 @@ o MAVT ainda **não** entra no catálogo do produto — exige UI de edição de 
 de "troca consistente" dos Even Swaps (dada uma troca declarada, aplicar à matriz e
 verificar que o critério igualado sai da comparação) com teste.
 
+## Segundo domínio — curvas de valor na decisão B2B
+
+No fornecedor, as curvas são quase autoexplicativas: SLA tem **limiar de contrato**
+($(99{,}0,\ 0) \to (99{,}5,\ 0{,}7) \to (99{,}95,\ 1{,}0)$ — atingir 99,5% captura
+70% do valor, o resto é refinamento) e Custo tem orçamento ($(7.500,\ 1) \to
+(9.500,\ 0{,}75) \to (12.000,\ 0)$ — acima de R$ 9.500 a dor acelera). Resultado com
+os mesmos pesos: **F2 0,775 > F3 0,550 > F1 0,325** — o pódio do SAW se mantém, mas a
+folga de F2 cresce (0,775 contra 0,673 no linear), porque seus 99,5% de SLA caem
+exatamente no joelho da curva. Curvas não mudaram o vencedor aqui; mudaram o
+**tamanho da vitória** — informação que importa para negociar contrato. *Teste
+`test_segundo_dominio_curva_de_sla` da etapa 07.*
+
 ## Verificação
 
 1. Por que MAVT linear ancorado em min/max dá exatamente o SAW? (Dica: objetivo 2 —
@@ -121,3 +133,17 @@ verificar que o critério igualado sai da comparação) com teste.
   (<https://www.1000minds.com/>) — vendor; leitura complementar.
 - **scikit-criteria** aceita transformações por critério no pipeline, onde as curvas
   deste capítulo se encaixariam (<https://scikit-criteria.quatrope.org/>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Com $v_j$ linear ancorada em (pior, 0) e (melhor, 1), a interpolação devolve
+   exatamente $(x - \min)/(\max - \min)$ nos benefícios e o espelho nos custos — a
+   fórmula min-max do cap. 03. Somar com os mesmos pesos ⇒ o mesmo escore do SAW,
+   termo a termo.
+2. "A partir de que preço a compra começa a doer de verdade?" (e depois: "onde ela se
+   torna proibitiva?"). As respostas ancoram o ponto de quebra e a inclinação de cada
+   trecho — elicitação de forma, não de peso.
+3. Depois da troca, as duas alternativas empatam naquele critério; qualquer forma
+   aditiva atribui a ele a mesma parcela nas duas — ele não discrimina mais o par. A
+   premissa silenciosa: a troca declarada não depende dos níveis dos demais critérios
+   (independência preferencial — se depender, a simplificação não vale).

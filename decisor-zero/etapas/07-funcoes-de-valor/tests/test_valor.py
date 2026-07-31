@@ -74,3 +74,32 @@ def test_falta_funcao_e_erro():
     incompleto = {k: v for k, v in LINEARES.items() if k != "Bairro"}
     with pytest.raises(ErroDeFuncaoValor, match="Bairro"):
         ranquear_mavt(ANCORA, incompleto)
+
+
+def test_segundo_dominio_curva_de_sla():
+    """Fornecedores (ADR 0007): curvas com limiar de contrato ampliam a folga de F2."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+        pesos=[0.40, 0.20, 0.25, 0.15],
+    )
+    curvas = {
+        "Custo mensal": [(7_500, 1.0), (9_500, 0.75), (12_000, 0.0)],
+        "Latência": [(20, 1.0), (60, 0.0)],
+        "SLA": [(99.0, 0.0), (99.5, 0.7), (99.95, 1.0)],
+        "Suporte": [(3, 0.0), (5, 1.0)],
+    }
+    ranking = ranquear_mavt(fornecedores, curvas)
+    escores = {l["alternativa"]: l["escore"] for l in ranking}
+    assert [l["alternativa"] for l in ranking] == [
+        "F2 — Regional", "F3 — Nicho", "F1 — Hiperescala",
+    ]
+    assert escores["F2 — Regional"] == pytest.approx(0.775, abs=1e-6)
+    assert escores["F3 — Nicho"] == pytest.approx(0.55, abs=1e-6)
+    assert escores["F1 — Hiperescala"] == pytest.approx(0.325, abs=1e-6)
