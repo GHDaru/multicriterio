@@ -23,8 +23,18 @@
 | 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-07-31 |
 | 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-07-31 |
 | 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-07-31 |
+| 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.8 — 2026-07-31 · PROMETHEE (spec 008, long run ADR 0006)
+
+- Capítulo 08 (fluxos φ, degrau × V-shape com o salto de A3); etapa `08-promethee`
+  validada contra a pymcdm; `promethee2` no catálogo do produto. Incidente didático
+  registrado no spec: a primeira versão do teste de propriedade do V-shape estava
+  errada — virou lição do capítulo.
+- **Verificação**: etapa `5 passed`; app `19 passed` (qa-report 008).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.7 — 2026-07-31 · MAVT e Even Swaps (spec 007, long run ADR 0006)
 

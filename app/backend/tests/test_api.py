@@ -95,4 +95,16 @@ def test_ranking_topsis_no_produto():
         assert corpo["ranking"][0]["alternativa"] == "A1 — Centro"
         assert corpo["ranking"][0]["escore"] == 0.635886
         catalogo = client.get("/api/metodos").json()["metodos"]
-        assert {m["id"] for m in catalogo} == {"saw", "topsis"}
+        assert {"saw", "topsis"} <= {m["id"] for m in catalogo}
+
+
+def test_ranking_promethee2_no_produto():
+    # Cap. 08: φ líquido do caso âncora — A1 0,1 na frente, soma dos φ = 0.
+    with TestClient(app) as client:
+        decisao_id = client.post("/api/decisoes", json=DECISAO).json()["id"]
+        corpo = client.post(
+            f"/api/decisoes/{decisao_id}/ranking?metodo=promethee2"
+        ).json()
+        assert corpo["ranking"][0]["alternativa"] == "A1 — Centro"
+        assert corpo["ranking"][0]["escore"] == 0.1
+        assert abs(sum(l["escore"] for l in corpo["ranking"])) < 1e-9

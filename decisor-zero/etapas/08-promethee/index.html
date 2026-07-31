@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 08</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #2563eb; background: #2563eb14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 08 — PROMETHEE II</h1>
+  <p>Fluxos de sobreclassificação no caso âncora. Compare o degrau ("usual") com o
+     V-shape (limiar de indiferença gradual) — repare no φ de A3.</p>
+  <button data-f="usual">Função usual (degrau)</button>
+  <button data-f="vshape">V-shape (limiares 200k / 30 / 20 / 3)</button>
+  <div id="saida"></div>
+  <script>
+    const base = {
+      alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+      criterios: [
+        { nome: "Preço", direcao: "custo" }, { nome: "Área", direcao: "beneficio" },
+        { nome: "Deslocamento", direcao: "custo" }, { nome: "Bairro", direcao: "beneficio" },
+      ],
+      desempenhos: [[450000,62,15,4],[380000,70,35,3],[520000,85,25,5],[340000,55,20,2]],
+      pesos: [0.35, 0.25, 0.25, 0.15],
+    };
+    document.querySelectorAll("button").forEach(b => b.onclick = async () => {
+      const corpo = { ...base, funcao: b.dataset.f };
+      if (b.dataset.f === "vshape") corpo.limiares = [200000, 30, 20, 3];
+      const r = await fetch("/api/matriz/promethee", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(corpo),
+      });
+      const c = await r.json();
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>#</th><th>Alternativa</th><th>φ+</th><th>φ−</th><th>φ</th></tr>` +
+        c.ranking.map(l => `<tr><td>${l.posicao}</td><td>${l.alternativa}</td>
+          <td>${l.fluxo_positivo.toFixed(4)}</td><td>${l.fluxo_negativo.toFixed(4)}</td>
+          <td><strong>${l.escore.toFixed(4)}</strong></td></tr>`).join("") + `</table>
+        <div class="nota">${b.dataset.f === "usual"
+          ? "Degrau: qualquer diferença, por mínima que seja, vira preferência total no critério."
+          : "V-shape: diferenças pequenas valem pouco. A3 (vantagens GRANDES em área e bairro) sobe — as vantagens miúdas dos rivais evaporam no limiar."}</div>`;
+    });
+  </script>
+</body>
+</html>
