@@ -78,3 +78,19 @@ def test_ranking_saw_com_pesos_ahp():
         "A4 — Estação", "A1 — Centro", "A2 — Jardim", "A3 — Parque",
     ]
     assert ranking[0]["escore"] == pytest.approx(0.593870, abs=1e-5)
+
+
+def test_segundo_dominio_prioridades_do_cto():
+    """Fornecedores (ADR 0007): outro domínio, outro vetor — mesma mecânica."""
+    julgamentos_cto = [
+        [1, 3, 2, 3],
+        [1 / 3, 1, 1 / 2, 1],
+        [1 / 2, 2, 1, 2],
+        [1 / 3, 1, 1 / 2, 1],
+    ]
+    r = prioridades_ahp(julgamentos_cto)
+    assert r["pesos"] == pytest.approx([0.4554, 0.1409, 0.2628, 0.1409], abs=1e-4)
+    assert r["cr"] == pytest.approx(0.0038, abs=1e-3)
+    assert r["consistente"] is True
+    # Latência e Suporte: julgamentos idênticos ⇒ pesos idênticos.
+    assert r["pesos"][1] == pytest.approx(r["pesos"][3], abs=1e-9)
