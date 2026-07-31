@@ -88,6 +88,14 @@ def obter_decisao(decisao_id: int, sessao: Session = Depends(get_sessao)):
     )
 
 
+@app.get("/health")
+def health() -> dict:
+    """Sonda de operação (cap. 13): status + qual banco está por trás da porta."""
+    from decisor.bd import engine
+    banco = "postgres" if "postgres" in str(engine.url) else "sqlite"
+    return {"status": "ok", "banco": banco, "versao": app.version}
+
+
 @app.get("/api/metodos")
 def listar_metodos() -> dict:
     return {

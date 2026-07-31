@@ -6,3 +6,5 @@ httpx>=0.27
 pymcdm>=1.4     # validação cruzada dos motores (Princípio I)
 
 scipy>=1.10     # BWM (modelo linear) — etapa 10
+
+sqlmodel>=0.0.19   # persistência — etapa 13

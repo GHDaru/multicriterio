@@ -28,8 +28,19 @@
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-07-31 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-07-31 |
+| 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.13 — 2026-07-31 · Do protótipo ao produto (spec 013) — TRILHA COMPLETA
+
+- Capítulo 13 (porta de persistência, Neon + fallback SQLite, credenciais, /health,
+  degraus de infra futuros); etapa `13-persistencia` com a prova de sobrevivência ao
+  reinício; `GET /health` no produto. **Os 14 capítulos do SUMARIO estão publicados,
+  cada um com etapa executável testada.**
+- Varredura final da long run: todas as etapas + produto + build estrito verdes
+  (qa-report 013).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.12 — 2026-07-31 · Decisão em grupo (spec 012, long run ADR 0006)
 
@@ -160,7 +171,8 @@
 | Componente | Existe porque… | Previmos que expira quando… | Estado | Evidência datada |
 |---|---|---|---|---|
 | Seed no harness_engineering (ADR 0001) | não havia repositório próprio no nascimento | o Steward criar o repositório e o seed ser extraído | 🟢 cumprida | 2026-07-30 — GHDaru/multicriterio criado; ADR 0005 |
-| Fallback SQLite no `app/` | a trilha deve rodar a custo zero e offline (Princípio VI) | o cap. 13 tornar o provisionamento Neon parte da trilha | 🔵 aberta | — |
+| Fallback SQLite no `app/` | a trilha deve rodar a custo zero e offline (Princípio VI) | o cap. 13 tornar o provisionamento Neon parte da trilha | 🟡 em movimento | 2026-07-31 — cap. 13 documenta o provisionamento; fallback permanece pelo custo zero |
+| Capítulos 05–13 (long run, ADR 0006) | cobertura completa priorizada sobre profundidade | uma rodada de auditoria/aprofundamento revisar cada um | 🔵 aberta | — |
 | Frontend estático v0 | zero build = carga cognitiva mínima nas etapas | a UI do produto exigir estado complexo (comparação multi-método, cap. 11+) → migração conforme ADR 0002 | 🔵 aberta | — |
 | Status "?" na bibliografia | editores bloqueiam verificação por robô | cada fonte "?" for promovida a ✓ antes de ser citada em capítulo novo | 🔵 aberta | — |
 

@@ -128,3 +128,11 @@ def test_comparar_metodos_no_produto():
         assert set(corpo["rankings"]) == {"saw", "topsis", "promethee2", "vikor"}
         assert corpo["concordancia_media"] == 1.0
         assert all(o[0] == "A1 — Centro" for o in corpo["rankings"].values())
+
+
+def test_health_reporta_banco_e_versao():
+    with TestClient(app) as client:
+        corpo = client.get("/health").json()
+        assert corpo["status"] == "ok"
+        assert corpo["banco"] == "sqlite"  # testes nunca tocam banco real
+        assert corpo["versao"] == "0.1.0"
