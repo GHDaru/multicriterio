@@ -100,6 +100,17 @@ decisores"). Exercício de completar: implemente a checagem de **vencedor de
 Condorcet** (existe alternativa que vence todos os duelos?) e devolva-a quando
 existir, com teste para os dois cenários da página.
 
+## Segundo domínio — o comitê de tecnologia
+
+Três personas ranqueiam os fornecedores: Financeiro (F3 ≻ F2 ≻ F1), Confiabilidade
+(F1 ≻ F2 ≻ F3) e Latência (F2 ≻ F3 ≻ F1). **Borda: F2 = 4 > F3 = 3 > F1 = 2 ·
+Copeland: F2 = +2 > F3 = 0 > F1 = −2.** De novo o padrão do consenso — F2 vence com um
+único 1º lugar — mas com um detalhe novo: Financeiro e Confiabilidade são
+**perfeitamente opostos** (rankings invertidos, ρ de Spearman = −1), e é o terceiro
+voto que desempata tudo. Comitês polarizados dão poder desproporcional ao voto do
+meio; vale reportar a polarização junto com o agregado. *Teste
+`test_segundo_dominio_comite_polarizado` da etapa 12.*
+
 ## Verificação
 
 1. Refaça a contagem de Borda de A4 e explique por que ela fica atrás de A1 mesmo com
@@ -119,3 +130,18 @@ existir, com teste para os dois cenários da página.
   como referência de UX para a futura spec de multiusuário do Decisor.
 - O capítulo de decisão em grupo de Greco, Ehrgott & Figueira (2016) é o survey de
   referência (<https://link.springer.com/book/10.1007/978-1-4939-3094-4>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. A4 soma 3 (1º de Ana) + 0 (último de Bia) + 2 (2º de Caio) = 5. O 1º lugar de Ana
+   não compensa o último de Bia — Borda pune rejeição forte tanto quanto premia
+   favoritismo. A1, sem nenhum 1º lugar, nunca é rejeitada (2º, 2º, 1º… no mínimo 3º)
+   e soma mais.
+2. O que não existe é um **vencedor de Condorcet** — uma alternativa que vença todas
+   as outras nos duelos por maioria — e, mais forte, qualquer ordenação coerente com
+   as maiorias par a par (elas formam um ciclo). Rankings individuais existem;
+   coletivo coerente, não.
+3. Julgamentos 2 e 1/2: média aritmética = 1,25; média dos recíprocos (1/2 e 2)
+   também = 1,25 — mas o recíproco de 1,25 é 0,8 ≠ 1,25. A matriz média deixaria de
+   ser recíproca. Média geométrica: √(2 · 1/2) = 1 e √(1/2 · 2) = 1 — reciprocidade
+   intacta.
