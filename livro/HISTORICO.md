@@ -37,6 +37,8 @@
 Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
 worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
 
+- **0.17 (spec 017, cap. 03)**: entropia quase uniforme no B2B como diagnóstico;
+  gabarito; etapa 03 `21 passed`.
 - **0.16 (spec 016, cap. 02)**: F4 — Revenda dominada por dois candidatos
   (diagnóstico de redundância); gabarito; etapa 02 `9 passed`.
 - **0.15 (spec 015, cap. 01)**: modelagem e soma crua do segundo domínio ("elege o

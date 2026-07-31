@@ -73,3 +73,20 @@ def test_entropia_ignora_criterio_que_nao_discrimina():
 def test_rating_com_soma_zero_e_erro():
     with pytest.raises(ErroDePesos, match="positiva"):
         pesos_rating_direto([0, 0, 0])
+
+
+def test_segundo_dominio_entropia_quase_uniforme():
+    """Fornecedores (ADR 0007): colunas discriminam parecido → entropia ~uniforme."""
+    fornecedores = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+    )
+    pesos = pesos_entropia(fornecedores)
+    assert pesos == pytest.approx([0.2295, 0.2764, 0.2450, 0.2491], abs=1e-4)
+    assert max(pesos) - min(pesos) < 0.05  # quase uniforme: ninguém domina a informação

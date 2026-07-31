@@ -125,6 +125,17 @@ normalização **linear pela soma** ($r_{ij} = x_{ij} / \sum_i x_{ij}$, com inve
 prévia nos custos), adicione-a ao dicionário `NORMALIZACOES` e escreva o teste que
 verifica que cada coluna soma 1 — sem quebrar os existentes.
 
+## Segundo domínio — normalização e entropia na decisão B2B
+
+O caso do fornecedor expõe a incomensurabilidade em grau extremo: R$ 12.000 convivem
+com 99,95% e notas 1–5 na mesma matriz. O min-max resolve — e a entropia conta uma
+história diferente da do apartamento: os pesos "dos dados" saem quase equalizados
+(Custo 0,2295 · Latência 0,2764 · SLA 0,2450 · Suporte 0,2491), porque as três
+alternativas se espalham de forma parecida em todas as colunas. Lição: entropia quase
+uniforme significa "nenhuma coluna é redundante nem decisiva sozinha" — a
+responsabilidade volta inteira para os pesos subjetivos. *Teste
+`test_segundo_dominio_entropia_quase_uniforme` da etapa 03.*
+
 ## Verificação
 
 1. Na tabela vetorial do passo 2, por que seria um erro somar as colunas ponderadas
@@ -151,3 +162,18 @@ verifica que cada coluna soma 1 — sem quebrar os existentes.
 - O survey aberto de Krishnan (2022) na *Frontiers in Big Data* cataloga os critérios
   publicados para escolher normalização
   (<https://pmc.ncbi.nlm.nih.gov/articles/PMC9433668/>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Porque a normalização vetorial **não resolve a direção**: nas colunas de custo, o
+   maior valor cru continua com o maior $r$. Somar colunas ponderadas sem tratar a
+   direção premiaria o mais caro e o mais distante — o método que consome vetorial
+   (TOPSIS) trata a direção depois, na escolha do ideal.
+2. Podem. "Preço é o dobro da área" no rating direto vira $w_1 = 2w_2$ sem contexto;
+   no swing a pergunta é sobre o salto pior→melhor **daquele problema** — se a faixa
+   de preços for estreita, o salto de preço vale pouco e o swing devolve razão menor
+   que 2. O swing amarra o peso às amplitudes; o rating não.
+3. Nenhum dos dois está "errado" — medem coisas diferentes. A entropia responde "quais
+   colunas separam as alternativas deste conjunto"; o decisor responde "o que importa
+   para mim". Use a entropia como diagnóstico (ex.: peso alto em coluna que não
+   discrimina é peso desperdiçado) e o decisor como fonte da preferência.
