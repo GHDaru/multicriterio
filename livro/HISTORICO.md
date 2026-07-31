@@ -32,6 +32,14 @@
 
 ## Edições
 
+### Edições 0.14+ — 2026-07-31 · rodada de aprofundamento (specs 014–027, ADR 0007)
+
+Uma edição por capítulo; fórmula uniforme: segundo domínio (fornecedor de nuvem)
+worked com números em teste + Apêndice B (gabarito comentado) + promoções de fonte.
+
+- **0.14 (spec 014, cap. 00)**: segundo domínio apresentado; etapa 00 ganha
+  `/api/caso-fornecedor` e testes (`2 passed`).
+
 ### Edição 0.13 — 2026-07-31 · Do protótipo ao produto (spec 013) — TRILHA COMPLETA
 
 - Capítulo 13 (porta de persistência, Neon + fallback SQLite, credenciais, /health,

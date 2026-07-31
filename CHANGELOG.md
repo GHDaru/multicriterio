@@ -24,6 +24,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Aprofundamento por capítulo (specs 014–027, ADR 0007)**: segundo domínio
+  (fornecedor de nuvem) worked em cada capítulo com testes, Apêndice B (gabarito
+  comentado) e promoções de fonte (Ishizaka & Nemery ✓, Roy 1996 ✓).
 - **Do protótipo ao produto (spec 013)**: capítulo
   [13](livro/capitulos/13-persistencia.md), etapa `13-persistencia` (porta de
   persistência Neon/SQLite) e `GET /health` no produto — **trilha de 14 capítulos

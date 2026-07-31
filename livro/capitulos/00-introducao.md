@@ -81,6 +81,23 @@ nenhum método — só o chassi sobre o qual as próximas 13 etapas vão crescer
 `uvicorn app:app --reload`, abra `http://localhost:8000` e confira que a tabela que você
 viu neste capítulo é a mesma que a API serve em `/api/caso-ancora`.
 
+## Segundo domínio — a decisão B2B que vai nos acompanhar
+
+O caso âncora é doméstico de propósito. Para provar que o instrumental é o mesmo em
+decisão corporativa, um segundo problema acompanha o livro a partir daqui (worked em
+cada capítulo, com números garantidos por teste): **escolher o fornecedor de nuvem** de
+uma empresa.
+
+| Alternativa | Custo mensal (R$) ↓ | Latência (ms) ↓ | SLA (%) ↑ | Suporte (1–5) ↑ |
+|---|---|---|---|---|
+| F1 — Hiperescala | 12.000 | 45 | 99,95 | 3 |
+| F2 — Regional | 9.000 | 20 | 99,50 | 4 |
+| F3 — Nicho | 7.500 | 60 | 99,00 | 5 |
+
+Adianto o spoiler pedagógico: este problema é o **contraponto** do apartamento — aqui
+haverá um vencedor robusto, e a diferença entre os dois desfechos é uma das lições
+centrais do livro (cap. 11).
+
 ## Verificação
 
 1. Na tabela de apartamentos, existe alguma alternativa que seja melhor que outra em
@@ -106,3 +123,17 @@ Panorama do que existe pronto (e que este livro usa como referência de validaç
   scikit-learn (`DecisionMatrix`, pipelines); referência de arquitetura para o `app/`.
 - **International Society on MCDM** (<https://www.mcdmsociety.org/>) — sociedade
   científica do campo, com banco de software e material histórico.
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. **Não** — na tabela do caso âncora nenhuma alternativa é melhor (ou igual) em todos
+   os critérios: todo par tem vitórias e derrotas. Se existisse uma "melhor em tudo", a
+   outra poderia ser descartada sem método algum — é a dominância, formalizada no
+   cap. 02.
+2. Um método que *decide por você* devolve uma resposta e esconde os juízos que a
+   produziram; um método de *apoio* (a tradição de Roy) torna explícitos critérios,
+   pesos e trade-offs, e devolve clareza auditável — a escolha continua sua.
+3. Porque métodos legítimos **elicitam** e **agregam** preferências de formas
+   diferentes (pesos como taxas de troca × votos; soma × distância ao ideal × torneio
+   par a par). Mesma matriz + filosofias diferentes ⇒ recomendações possivelmente
+   diferentes — o cap. 11 mede quando isso acontece.
