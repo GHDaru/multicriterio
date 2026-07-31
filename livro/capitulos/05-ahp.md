@@ -104,6 +104,17 @@ método `ahp`, que **recusa** julgamentos com CR > 0,10. Exercício de completar
 implemente o cálculo de prioridades pela **média geométrica das linhas** (atalho
 clássico) e escreva o teste que mede o quanto ela se afasta do autovetor nesta matriz.
 
+## Segundo domínio — AHP na decisão B2B
+
+O CTO julga os critérios do fornecedor: "Custo importa 3× mais que Latência, 2× mais
+que SLA, 3× mais que Suporte; SLA vale 2× Latência e 2× Suporte; Latência e Suporte
+empatam". A matriz recíproca resultante dá prioridades **(0,4554; 0,1409; 0,2628;
+0,1409)** com $\lambda_{max}$ próximo de 4 e $CR = 0{,}0038$ — consistente. Repare no
+padrão já visto no âncora: julgamentos idênticos (Latência e Suporte) ⇒ pesos
+idênticos, agora com valores diferentes dos do apartamento — a mesma técnica, elicitada
+em outro domínio, entrega outro vetor. *Teste `test_segundo_dominio_prioridades_do_cto`
+da etapa 05.*
+
 ## Verificação
 
 1. Por que Área e Deslocamento terminaram com o mesmo peso? O que isso diz sobre o
@@ -124,3 +135,18 @@ clássico) e escreva o teste que mede o quanto ela se afasta do autovetor nesta 
   (<https://github.com/kotbaton/pymcdm>).
 - O exemplar de Saaty (1980) está acessível no Internet Archive
   (<https://archive.org/details/analytichierarch0000saat>).
+
+## Apêndice B — gabarito comentado da Verificação
+
+1. Porque receberam **linhas idênticas** na matriz de julgamentos: para o autovetor,
+   dois critérios com o mesmo perfil de comparações são indistinguíveis — e o método
+   devolve exatamente o mesmo peso, como deve ser (é um bom teste de sanidade de
+   qualquer implementação).
+2. Reentrevistar o decisor. $CR = 0{,}25$ diz que os julgamentos **se contradizem**
+   (há ciclos de preferência); normalizar não remove a contradição e cortar critério
+   trata o sintoma. O protocolo de Saaty: localizar o julgamento mais inconsistente e
+   pedir revisão.
+3. Porque no AHP completo as alternativas são comparadas **entre si**, e a entrada de
+   uma nova muda todas as comparações relativas — o cenário de rank reversal de
+   Belton & Gear (1983). Com desempenhos mensuráveis e alternativas voláteis, matriz
+   de decisão + AHP só nos pesos evita o problema estrutural.
