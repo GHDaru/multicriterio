@@ -40,6 +40,28 @@ CASO_ANCORA = {
 }
 
 
+CASO_FORNECEDOR = {
+    "titulo": "Escolha de fornecedor de nuvem",
+    "criterios": [
+        {"nome": "Custo mensal", "unidade": "R$/mês", "direcao": "custo"},
+        {"nome": "Latência", "unidade": "ms", "direcao": "custo"},
+        {"nome": "SLA", "unidade": "%", "direcao": "beneficio"},
+        {"nome": "Suporte", "unidade": "1–5", "direcao": "beneficio"},
+    ],
+    "alternativas": [
+        {"nome": "F1 — Hiperescala", "desempenhos": [12_000, 45, 99.95, 3]},
+        {"nome": "F2 — Regional", "desempenhos": [9_000, 20, 99.50, 4]},
+        {"nome": "F3 — Nicho", "desempenhos": [7_500, 60, 99.00, 5]},
+    ],
+}
+
+
+@app.get("/api/caso-fornecedor")
+def caso_fornecedor() -> dict:
+    """O segundo domínio do livro (ADR 0007) — a decisão B2B."""
+    return CASO_FORNECEDOR
+
+
 @app.get("/api/caso-ancora")
 def caso_ancora() -> dict:
     """A mesma tabela do capítulo 00 — a API e o livro nunca divergem."""
