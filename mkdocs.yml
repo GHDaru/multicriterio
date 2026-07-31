@@ -54,6 +54,7 @@ nav:
       - "02 — Estruturação e dominância": capitulos/02-estruturacao-dominancia.md
       - "03 — Normalização e pesos": capitulos/03-normalizacao-pesos.md
       - "04 — SAW: o método aditivo": capitulos/04-saw.md
+      - "05 — AHP: comparações par a par": capitulos/05-ahp.md
   - Aparato:
       - Bibliografia: bibliografia.md
       - Histórico (livro vivo): HISTORICO.md

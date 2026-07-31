@@ -60,3 +60,18 @@ def test_erro_de_elicitacao_vira_422():
         resposta = client.post("/api/pesos", json={"metodo": "swing", "valores": [90, 10]})
         assert resposta.status_code == 422
         assert "100" in resposta.json()["detail"]
+
+
+def test_pesos_ahp_via_api_consistentes_e_inconsistentes():
+    julgamentos = [[1, 2, 2, 3], [0.5, 1, 1, 2], [0.5, 1, 1, 2],
+                   [1 / 3, 0.5, 0.5, 1]]
+    with TestClient(app) as client:
+        ok = client.post("/api/pesos", json={"metodo": "ahp", "julgamentos": julgamentos})
+        assert ok.status_code == 200
+        assert ok.json()["pesos"] == pytest.approx(
+            [0.4236, 0.2270, 0.2270, 0.1223], abs=1e-4
+        )
+        ciclica = [[1, 3, 5], [1 / 3, 1, 1 / 5], [1 / 5, 5, 1]]
+        ruim = client.post("/api/pesos", json={"metodo": "ahp", "julgamentos": ciclica})
+        assert ruim.status_code == 422
+        assert "inconsistentes" in ruim.json()["detail"]

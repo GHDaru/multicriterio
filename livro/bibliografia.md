@@ -17,7 +17,7 @@
 | ✓ | Keeney, R. L. (1992). *Value-Focused Thinking: A Path to Creative Decisionmaking.* Harvard University Press. Exemplar verificado: <https://archive.org/details/valuefocusedthin0000keen> | Objetivos-fim vs objetivos-meio; estruturação de critérios (cap. 02) |
 | ? | Ishizaka, A.; Nemery, P. (2013). *Multi-Criteria Decision Analysis: Methods and Software.* Wiley. DOI 10.1002/9781118644898 | Modelo "método → exemplo numérico → software" que este livro adota |
 | ? | Roy, B. (1996). *Multicriteria Methodology for Decision Aiding.* Springer. <https://link.springer.com/book/10.1007/978-1-4757-2500-1> | Base conceitual da escola europeia; "decision aiding" vs "decision making" |
-| ? | Saaty, T. L. (1980). *The Analytic Hierarchy Process.* McGraw-Hill. <https://archive.org/details/analytichierarch0000saat> | O livro que consolidou o AHP (cap. 05) |
+| ✓ | Saaty, T. L. (1980). *The Analytic Hierarchy Process.* McGraw-Hill. Exemplar verificado: <https://archive.org/details/analytichierarch0000saat> | O livro que consolidou o AHP (cap. 05) |
 | ? | Triantaphyllou, E. (2000). *Multi-Criteria Decision Making Methods: A Comparative Study.* Springer. <https://link.springer.com/book/10.1007/978-1-4757-3157-6> | Comparação sistemática e rank reversal (cap. 11) |
 | ? | Hammond, J. S.; Keeney, R. L.; Raiffa, H. (1999). *Smart Choices.* Harvard Business School Press. | PrOACT e trade-offs para leigos (caps. 00–02) |
 
@@ -27,11 +27,11 @@
 |---|---|---|
 | ✓ | Fishburn, P. C. (1967). "Additive Utilities with Incomplete Product Sets: Application to Priorities and Assignments." *Operations Research*, 15(3), 537–542. DOI 10.1287/opre.15.3.537 | SAW/WSM (cap. 04) |
 | ✓ | Edwards, W.; Barron, F. H. (1994). "SMARTS and SMARTER: Improved Simple Methods for Multiattribute Utility Measurement." *OBHDP*, 60(3), 306–325. DOI 10.1006/obhd.1994.1087 | SMART/SMARTER, swing weights, ROC (caps. 03–04) |
-| ? | Saaty, T. L. (1977). "A Scaling Method for Priorities in Hierarchical Structures." *J. Math. Psychology*, 15(3), 234–281. DOI 10.1016/0022-2496(77)90033-5 | AHP (cap. 05) |
+| ✓ | Saaty, T. L. (1977). "A Scaling Method for Priorities in Hierarchical Structures." *J. Math. Psychology*, 15(3), 234–281. DOI 10.1016/0022-2496(77)90033-5 | AHP (cap. 05) |
 | ✓ | Roy, B. (1968). "Classement et choix en présence de points de vue multiples (la méthode ELECTRE)." *RAIRO — RO*, 2(8), 57–75. PDF aberto: <https://www.numdam.org/item/RO_1968__2_1_57_0.pdf> | ELECTRE / nascimento do outranking (cap. 09) |
 | ✓ | Brans, J. P.; Vincke, Ph. (1985). "A Preference Ranking Organisation Method (PROMETHEE)." *Management Science*, 31(6), 647–656. <https://pubsonline.informs.org/doi/10.1287/mnsc.31.6.647> | PROMETHEE I/II (cap. 08) |
-| ? | Opricovic, S.; Tzeng, G.-H. (2004). "Compromise Solution by MCDM Methods: A Comparative Analysis of VIKOR and TOPSIS." *EJOR*, 156(2), 445–455. DOI 10.1016/S0377-2217(03)00020-1 | VIKOR (cap. 10) |
-| ? | Rezaei, J. (2015). "Best-Worst Multi-Criteria Decision-Making Method." *Omega*, 53, 49–57. DOI 10.1016/j.omega.2014.11.009 | BWM (cap. 10) |
+| ✓ | Opricovic, S.; Tzeng, G.-H. (2004). "Compromise Solution by MCDM Methods: A Comparative Analysis of VIKOR and TOPSIS." *EJOR*, 156(2), 445–455. DOI 10.1016/S0377-2217(03)00020-1 | VIKOR (cap. 10) |
+| ✓ | Rezaei, J. (2015). "Best-Worst Multi-Criteria Decision-Making Method." *Omega*, 53, 49–57. DOI 10.1016/j.omega.2014.11.009 | BWM (cap. 10) |
 | ✓ | Hammond, J. S.; Keeney, R. L.; Raiffa, H. (1998). "Even Swaps: A Rational Method for Making Trade-offs." *HBR*, mar–abr. <https://hbr.org/1998/03/even-swaps-a-rational-method-for-making-trade-offs> | Even Swaps (cap. 07) |
 | ? | Bana e Costa, C. A.; Vansnick, J.-C. (1994). "MACBETH." *ITOR*, 1(4), 489–500. DOI 10.1111/j.1475-3995.1994.00325.x | MACBETH (apêndice do cap. 07) |
 | ? | Gabus, A.; Fontela, E. (1972). *World Problems… (DEMATEL).* Battelle Geneva. | DEMATEL (fora do núcleo; citar com survey moderno) |
@@ -45,8 +45,8 @@
 | ✓ | Nguyen, T. T. H. et al. (2025). "A Comparative Analysis of MCDM Methods." arXiv:2509.08187. <https://arxiv.org/abs/2509.08187> | Divergência de rankings entre métodos (cap. 11) |
 | ? | Sahoo, S. K.; Goswami, S. S. (2023). "A Comprehensive Review of MCDM Methods." *Decision Making Advances*, 1(1). | Panorama geral aberto |
 | ? | Aires, R. F. F.; Ferreira, L. (2018). "The Rank Reversal Problem in MCDM: A Literature Review." *Pesquisa Operacional* (SciELO). | Rank reversal em AHP/TOPSIS/ELECTRE/PROMETHEE (cap. 11) |
-| ? | Belton, V.; Gear, T. (1983). "On a Short-coming of Saaty's Method of Analytic Hierarchies." *Omega*, 11(3), 228–230. | Primeira demonstração do rank reversal no AHP (caps. 05, 11) |
-| ? | Dyer, J. S. (1990). "Remarks on the Analytic Hierarchy Process." *Management Science*, 36(3), 249–258. | A crítica dura ao AHP + réplicas (cap. 05) |
+| ✓ | Belton, V.; Gear, T. (1983). "On a Short-coming of Saaty's Method of Analytic Hierarchies." *Omega*, 11(3), 228–230. DOI 10.1016/0305-0483(83)90047-6 | Primeira demonstração do rank reversal no AHP (caps. 05, 11) |
+| ✓ | Dyer, J. S. (1990). "Remarks on the Analytic Hierarchy Process." *Management Science*, 36(3), 249–258. DOI 10.1287/mnsc.36.3.249 | A crítica dura ao AHP + réplicas (cap. 05) |
 | ? | García-Cascales, M. S.; Lamata, M. T. (2012). "On Rank Reversal and TOPSIS Method." *Math. Comput. Modelling*, 56. | Rank reversal específico do TOPSIS (caps. 06, 11) |
 
 ## Software (alvo de leitura de código e comparação)
@@ -72,6 +72,9 @@
 - Keeney & Raiffa é originalmente Wiley 1976; a reimpressão Cambridge 1993 é a citável hoje.
 - DEMATEL é relatório técnico sem DOI — nunca citar sozinho.
 - VIKOR tem origem em trabalhos sérvios de Opricovic (1998); o paper EJOR 2004 é a referência internacional.
+- 2026-07-31 (long run, ADR 0006): promovidas a ✓ por verificação de registro
+  (API do Semantic Scholar / exemplar no Internet Archive): Saaty 1977, Saaty 1980,
+  Belton & Gear 1983, Dyer 1990, Opricovic & Tzeng 2004, Rezaei 2015.
 - 2026-07-31 (rodada 004): Fishburn (1967) promovida a ✓ por registro DOI
   (Semantic Scholar). Curadoria: o texto é formalmente uma *Letter to the Editor* da
   Operations Research — citá-lo como tal quando a natureza da fonte importar.

@@ -24,6 +24,8 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **AHP (spec 005)**: capítulo [05](livro/capitulos/05-ahp.md), etapa `05-ahp`
+  (autovetor + CR interativos) e método `ahp` em `/api/pesos`; 6 fontes ✓.
 - **SAW — o primeiro ranking (spec 004)**: capítulo
   [04](livro/capitulos/04-saw.md) (premissas da forma aditiva + virada de ranking
   rating×ROC), etapa `04-saw` com validação cruzada pymcdm, e sobrescrita de pesos no
