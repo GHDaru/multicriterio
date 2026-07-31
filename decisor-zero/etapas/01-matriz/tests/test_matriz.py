@@ -90,3 +90,23 @@ def test_peso_negativo_e_erro_de_modelagem():
     skip e afirme pytest.raises(ErroDeModelagem) para pesos=[0.7, 0.5, -0.1, -0.1]
     (que somam 1 — o caso que escapa da checagem de soma).
     """
+
+
+def test_segundo_dominio_fornecedor():
+    """O caso B2B do cap. 00 (ADR 0007): mesma anatomia, mesmo absurdo da soma."""
+    fornecedor = MatrizDecisao(
+        alternativas=["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        criterios=[
+            Criterio("Custo mensal", "custo", "R$/mês"),
+            Criterio("Latência", "custo", "ms"),
+            Criterio("SLA", "beneficio", "%"),
+            Criterio("Suporte", "beneficio", "1–5"),
+        ],
+        desempenhos=[[12_000, 45, 99.95, 3], [9_000, 20, 99.50, 4], [7_500, 60, 99.00, 5]],
+    )
+    escores = fornecedor.soma_crua()
+    assert escores["F1 — Hiperescala"] == pytest.approx(12_147.95)
+    assert escores["F2 — Regional"] == pytest.approx(9_123.50)
+    assert escores["F3 — Nicho"] == pytest.approx(7_664.00)
+    # A soma crua "elege" o mais caro — de novo.
+    assert fornecedor.ranking_por(escores)[0] == "F1 — Hiperescala"
