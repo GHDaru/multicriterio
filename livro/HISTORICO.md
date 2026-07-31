@@ -26,8 +26,18 @@
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-07-31 |
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-07-31 |
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-07-31 |
+| 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.11 — 2026-07-31 · Sensibilidade e rank reversal (spec 011, long run ADR 0006)
+
+- Capítulo 11 (varredura de peso — A1 reina só em [0,316; 0,358); ρ=1 entre os 4
+  métodos; rank reversal real: A5 de último lugar troca A3/A4 no TOPSIS e o VENCEDOR
+  no SAW; protocolo de robustez do livro); etapa `11-sensibilidade`;
+  `POST /api/decisoes/{id}/comparar` no produto.
+- **Verificação**: etapa `5 passed`; app `21 passed` (qa-report 011).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana a posteriori (ADR 0006).
 
 ### Edição 0.10 — 2026-07-31 · VIKOR e BWM (spec 010, long run ADR 0006)
 

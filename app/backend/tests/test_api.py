@@ -118,3 +118,13 @@ def test_ranking_vikor_no_produto():
         assert corpo["ranking"][0]["alternativa"] == "A1 — Centro"
         assert corpo["ranking"][0]["escore"] == 0.0
         assert corpo["ranking"][1]["escore"] == 0.168367
+
+
+def test_comparar_metodos_no_produto():
+    # Cap. 11: com estes pesos, os 4 métodos concordam (ρ médio = 1).
+    with TestClient(app) as client:
+        decisao_id = client.post("/api/decisoes", json=DECISAO).json()["id"]
+        corpo = client.post(f"/api/decisoes/{decisao_id}/comparar").json()
+        assert set(corpo["rankings"]) == {"saw", "topsis", "promethee2", "vikor"}
+        assert corpo["concordancia_media"] == 1.0
+        assert all(o[0] == "A1 — Centro" for o in corpo["rankings"].values())

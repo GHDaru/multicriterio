@@ -20,6 +20,7 @@ from sqlmodel import Session, select
 
 from decisor.bd import criar_tabelas, get_sessao
 from decisor.modelos import Decisao
+from decisor.motor.comparar import comparar_metodos
 from decisor.motor.dominancia import analise_dominancia
 from decisor.motor.ahp import ErroDeJulgamentos, prioridades_ahp
 from decisor.motor.pesos import (
@@ -172,6 +173,18 @@ def elicitar_pesos(entrada: PesosIn) -> dict:
     except (ErroDePesos, ErroDeJulgamentos) as erro:
         raise HTTPException(422, str(erro)) from erro
     return {"metodo": entrada.metodo, "pesos": [round(w, 6) for w in pesos]}
+
+
+@app.post("/api/decisoes/{decisao_id}/comparar")
+def comparar(decisao_id: int, sessao: Session = Depends(get_sessao)) -> dict:
+    """Rankings pelos 4 métodos + correlação de Spearman (cap. 11)."""
+    registro = sessao.get(Decisao, decisao_id)
+    if registro is None:
+        raise HTTPException(404, "decisão não encontrada")
+    problema = Problema(**registro.problema)
+    if problema.pesos is None:
+        raise HTTPException(422, "a comparação exige pesos (ver cap. 03)")
+    return {"decisao": registro.titulo, **comparar_metodos(problema)}
 
 
 @app.post("/api/decisoes/{decisao_id}/dominancia")
