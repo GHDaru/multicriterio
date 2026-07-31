@@ -85,3 +85,14 @@ def test_pesos_sobrescritos_invalidos_viram_422():
             json={"pesos": [0.7, 0.5, -0.1, -0.1]},
         )
         assert resposta.status_code == 422
+
+
+def test_ranking_topsis_no_produto():
+    # Cap. 06: C do caso âncora — A1 0,635886 na frente.
+    with TestClient(app) as client:
+        decisao_id = client.post("/api/decisoes", json=DECISAO).json()["id"]
+        corpo = client.post(f"/api/decisoes/{decisao_id}/ranking?metodo=topsis").json()
+        assert corpo["ranking"][0]["alternativa"] == "A1 — Centro"
+        assert corpo["ranking"][0]["escore"] == 0.635886
+        catalogo = client.get("/api/metodos").json()["metodos"]
+        assert {m["id"] for m in catalogo} == {"saw", "topsis"}

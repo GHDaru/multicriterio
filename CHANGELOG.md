@@ -24,6 +24,8 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **TOPSIS (spec 006)**: capítulo [06](livro/capitulos/06-topsis.md), etapa
+  `06-topsis` (validação pymcdm) e `topsis` no catálogo do produto.
 - **AHP (spec 005)**: capítulo [05](livro/capitulos/05-ahp.md), etapa `05-ahp`
   (autovetor + CR interativos) e método `ahp` em `/api/pesos`; 6 fontes ✓.
 - **SAW — o primeiro ranking (spec 004)**: capítulo

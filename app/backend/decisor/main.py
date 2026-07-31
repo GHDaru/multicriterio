@@ -30,9 +30,10 @@ from decisor.motor.pesos import (
     pesos_swing,
 )
 from decisor.motor.saw import ranquear_saw
+from decisor.motor.topsis import ranquear_topsis
 from decisor.motor.tipos import Problema
 
-METODOS = {"saw": ranquear_saw}
+METODOS = {"saw": ranquear_saw, "topsis": ranquear_topsis}
 
 
 @asynccontextmanager
@@ -87,12 +88,10 @@ def obter_decisao(decisao_id: int, sessao: Session = Depends(get_sessao)):
 def listar_metodos() -> dict:
     return {
         "metodos": [
-            {
-                "id": "saw",
-                "nome": "SAW — Simple Additive Weighting",
-                "capitulo": "04",
-                "exige_pesos": True,
-            }
+            {"id": "saw", "nome": "SAW — Simple Additive Weighting",
+             "capitulo": "04", "exige_pesos": True},
+            {"id": "topsis", "nome": "TOPSIS — proximidade ao ideal",
+             "capitulo": "06", "exige_pesos": True},
         ]
     }
 
