@@ -24,6 +24,11 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **Normalização e pesos (spec 003)**: capítulo
+  [03](livro/capitulos/03-normalizacao-pesos.md) (min-max × vetorial; rating, ROC,
+  swing, entropia — com vieses declarados), etapa `03-normalizacao-pesos` (motores
+  puros + API + página) e rota stateless `POST /api/pesos` no produto; Edwards &
+  Barron (1994) ✓ na bibliografia.
 - **Estruturação e dominância (spec 002)**: capítulo
   [02](livro/capitulos/02-estruturacao-dominancia.md) (value-focused thinking,
   checklist de critérios, fronteira de Pareto), etapa `02-dominancia` (motor puro +
@@ -40,4 +45,4 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - Ativar o GitHub Pages no repositório (Settings → Pages → Source: GitHub Actions —
   única etapa manual; ADR 0005).
 - Promover fontes "?" da bibliografia a ✓ antes de citá-las em capítulos novos.
-- Cap. 03 (normalização e pesos) — próxima rodada natural.
+- Cap. 04 (SAW/SMART — o primeiro ranking completo) — próxima rodada natural.

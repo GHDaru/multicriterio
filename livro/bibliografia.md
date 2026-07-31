@@ -26,7 +26,7 @@
 | Status | Referência | Método |
 |---|---|---|
 | ? | Fishburn, P. C. (1967). "Additive Utilities with Incomplete Product Sets." *Operations Research*, 15(3), 537–542. | SAW/WSM (cap. 04) |
-| ? | Edwards, W.; Barron, F. H. (1994). "SMARTS and SMARTER: Improved Simple Methods for Multiattribute Utility Measurement." *OBHDP*, 60(3), 306–325. | SMART/SMARTER, swing weights, ROC (caps. 03–04) |
+| ✓ | Edwards, W.; Barron, F. H. (1994). "SMARTS and SMARTER: Improved Simple Methods for Multiattribute Utility Measurement." *OBHDP*, 60(3), 306–325. DOI 10.1006/obhd.1994.1087 | SMART/SMARTER, swing weights, ROC (caps. 03–04) |
 | ? | Saaty, T. L. (1977). "A Scaling Method for Priorities in Hierarchical Structures." *J. Math. Psychology*, 15(3), 234–281. DOI 10.1016/0022-2496(77)90033-5 | AHP (cap. 05) |
 | ✓ | Roy, B. (1968). "Classement et choix en présence de points de vue multiples (la méthode ELECTRE)." *RAIRO — RO*, 2(8), 57–75. PDF aberto: <https://www.numdam.org/item/RO_1968__2_1_57_0.pdf> | ELECTRE / nascimento do outranking (cap. 09) |
 | ✓ | Brans, J. P.; Vincke, Ph. (1985). "A Preference Ranking Organisation Method (PROMETHEE)." *Management Science*, 31(6), 647–656. <https://pubsonline.informs.org/doi/10.1287/mnsc.31.6.647> | PROMETHEE I/II (cap. 08) |
@@ -72,6 +72,9 @@
 - Keeney & Raiffa é originalmente Wiley 1976; a reimpressão Cambridge 1993 é a citável hoje.
 - DEMATEL é relatório técnico sem DOI — nunca citar sozinho.
 - VIKOR tem origem em trabalhos sérvios de Opricovic (1998); o paper EJOR 2004 é a referência internacional.
+- 2026-07-30 (rodada 003): Edwards & Barron (1994) promovida a ✓ por verificação do
+  registro (API do Semantic Scholar confirma título, autores, ano e DOI
+  10.1006/obhd.1994.1087; ScienceDirect bloqueia robô).
 - 2026-07-30 (rodada 002): Keeney (1992) promovido a ✓ via exemplar do Internet Archive
   (HUP retornou página vazia ao robô); Roy (1996) segue ? (Springer redireciona robô
   para IdP) — o cap. 02 cita a família coerente via Belton & Stewart (2002) ✓.

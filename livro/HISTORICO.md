@@ -18,8 +18,22 @@
 | 00 Introdução | 2026-07 | ✓ (etapa 00) | 2026-07-30 |
 | 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-07-30 |
 | 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-07-30 |
+| 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-07-30 |
 
 ## Edições
+
+### Edição 0.3 — 2026-07-30 · normalização e pesos (spec 003)
+
+- Capítulo 03 (min-max × vetorial; rating direto, ROC, swing e entropia) no esqueleto
+  v3, com todas as tabelas geradas pelo motor da etapa; a origem dos pesos
+  0,35/0,25/0,25/0,15 usados desde o cap. 01 fica declarada (rating direto).
+- Etapa `03-normalizacao-pesos`: `normalizacao.py` + `pesos.py` puros, rotas
+  `/api/normalizar` e `/api/pesos`, página comparando as duas normalizações.
+- Produto: rota stateless `POST /api/pesos` (rating, ROC, swing, entropia).
+- Bibliografia: Edwards & Barron (1994) promovida a ✓ (registro DOI verificado).
+- **Verificação**: etapa 03 `20 passed`; app `14 passed`; `mkdocs build --strict` verde
+  (ver `specs/003-normalizacao-pesos/qa-report.md`).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana pendente de gate de merge.
 
 ### Edição 0.2 — 2026-07-30 · repositório próprio + estruturação e dominância (spec 002)
 
