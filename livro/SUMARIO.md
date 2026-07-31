@@ -41,6 +41,13 @@
 | 12 | [Decisão em grupo](capitulos/12-grupo.md) | Agregação de julgamentos e de rankings; votação | `12-grupo` | ✅ |
 | 13 | [Do protótipo ao produto](capitulos/13-persistencia.md) | Persistência (Neon/Postgres), contas e deploy — o `decisor-zero` vira o **Decisor** (`app/`) | `13-persistencia` | ✅ |
 
+## Parte V — Contribuição original
+
+| Cap. | Título | O que nasce | Etapa | Estado |
+|---|---|---|---|---|
+| 14 | [Agregação Estocástica Ordinal — decidir só com ordens](capitulos/14-simulacao-ordinal.md) | Matriz de aceitabilidade, protocolo de decisão, pesos centrais ("crenças") | `14-simulacao-ordinal` | ✅ iteração 1 |
+| — | [Apêndice C — o artigo completo (vivo)](apendice-c-artigo-aeo.md) | Formalização, provas, experimentos e agenda de iterações | — | ✅ iteração 1 |
+
 ## Aparato
 
 - [Bibliografia](bibliografia.md) — fontes com status de verificação (Princípio I)

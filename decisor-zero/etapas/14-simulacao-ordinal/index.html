@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 14</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 800px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    .nota { border-left: 4px solid #7c3aed; background: #7c3aed14;
+            padding: .5rem .75rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 14 — Agregação Estocástica Ordinal</h1>
+  <p>Só ordens, nenhum número: 20.000 funções de importância sorteadas.</p>
+  <button data-caso="ancora-com">Apartamento (com ordem de pesos)</button>
+  <button data-caso="ancora-sem">Apartamento (sem ordem — força intrínseca)</button>
+  <button data-caso="fornecedor">Fornecedor de nuvem</button>
+  <div id="saida"></div>
+  <script>
+    const casos = {
+      "ancora-com": {
+        alternativas: ["A1 — Centro", "A2 — Jardim", "A3 — Parque", "A4 — Estação"],
+        rankings_criterios: [
+          ["A4 — Estação", "A2 — Jardim", "A1 — Centro", "A3 — Parque"],
+          ["A3 — Parque", "A2 — Jardim", "A1 — Centro", "A4 — Estação"],
+          ["A1 — Centro", "A4 — Estação", "A3 — Parque", "A2 — Jardim"],
+          ["A3 — Parque", "A1 — Centro", "A2 — Jardim", "A4 — Estação"],
+        ],
+        ordem_pesos: [0, 1, 2, 3], n_simulacoes: 20000, semente: 42,
+      },
+      "fornecedor": {
+        alternativas: ["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+        rankings_criterios: [
+          ["F3 — Nicho", "F2 — Regional", "F1 — Hiperescala"],
+          ["F2 — Regional", "F1 — Hiperescala", "F3 — Nicho"],
+          ["F1 — Hiperescala", "F2 — Regional", "F3 — Nicho"],
+          ["F3 — Nicho", "F2 — Regional", "F1 — Hiperescala"],
+        ],
+        ordem_pesos: [0, 2, 1, 3], n_simulacoes: 20000, semente: 42,
+      },
+    };
+    casos["ancora-sem"] = { ...casos["ancora-com"], ordem_pesos: null };
+    document.querySelectorAll("button").forEach(b => b.onclick = async () => {
+      const r = await fetch("/api/aeo", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(casos[b.dataset.caso]),
+      });
+      const c = await r.json();
+      const alts = Object.keys(c.aceitabilidade);
+      const npos = c.aceitabilidade[alts[0]].length;
+      document.getElementById("saida").innerHTML =
+        `<table><tr><th>Alternativa</th>${Array.from({length: npos},
+          (_, i) => `<th>${i + 1}º</th>`).join("")}<th>posto esp.</th></tr>` +
+        alts.map(a => `<tr><td>${a}</td>${c.aceitabilidade[a].map(x =>
+          `<td>${(x * 100).toFixed(1)}%</td>`).join("")}
+          <td>${c.posto_esperado[a].toFixed(3)}</td></tr>`).join("") + `</table>
+        <div class="nota">Ordem final (posto esperado): <strong>${c.ordem_final.join(" > ")}</strong><br>
+        Vencedor de Condorcet estocástico: <strong>${c.vencedor_condorcet ?? "não existe"}</strong>
+        ${c.vencedor_condorcet && c.vencedor_condorcet !== c.ordem_final[0]
+          ? "<br>⚠ As regras divergem — leia o protocolo do cap. 14 antes de decidir." : ""}</div>`;
+    });
+  </script>
+</body>
+</html>
