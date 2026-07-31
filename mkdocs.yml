@@ -53,6 +53,7 @@ nav:
       - "01 — O problema multicritério": capitulos/01-problema-multicriterio.md
       - "02 — Estruturação e dominância": capitulos/02-estruturacao-dominancia.md
       - "03 — Normalização e pesos": capitulos/03-normalizacao-pesos.md
+      - "04 — SAW: o método aditivo": capitulos/04-saw.md
   - Aparato:
       - Bibliografia: bibliografia.md
       - Histórico (livro vivo): HISTORICO.md

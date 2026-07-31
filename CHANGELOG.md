@@ -24,6 +24,10 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **SAW — o primeiro ranking (spec 004)**: capítulo
+  [04](livro/capitulos/04-saw.md) (premissas da forma aditiva + virada de ranking
+  rating×ROC), etapa `04-saw` com validação cruzada pymcdm, e sobrescrita de pesos no
+  ranking do produto; Fishburn (1967) ✓ na bibliografia.
 - **Normalização e pesos (spec 003)**: capítulo
   [03](livro/capitulos/03-normalizacao-pesos.md) (min-max × vetorial; rating, ROC,
   swing, entropia — com vieses declarados), etapa `03-normalizacao-pesos` (motores
@@ -45,4 +49,4 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - Ativar o GitHub Pages no repositório (Settings → Pages → Source: GitHub Actions —
   única etapa manual; ADR 0005).
 - Promover fontes "?" da bibliografia a ✓ antes de citá-las em capítulos novos.
-- Cap. 04 (SAW/SMART — o primeiro ranking completo) — próxima rodada natural.
+- Cap. 05 (AHP — comparações par a par e consistência) — próxima rodada natural.

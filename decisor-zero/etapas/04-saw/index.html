@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>decisor-zero · etapa 04</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #8884; padding: .45rem .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    button { margin: 1rem .5rem 0 0; padding: .5rem 1rem; cursor: pointer; }
+    tr.vencedor td { font-weight: 700; }
+    .nota { border-left: 4px solid #d97706; padding: .5rem .75rem; margin-top: 1rem;
+            background: #d9770614; }
+  </style>
+</head>
+<body>
+  <h1>Etapa 04 — SAW: o primeiro ranking</h1>
+  <p>Matriz + normalização min-max + pesos = escore. Rode com os dois vetores de
+     pesos do capítulo 03 e repare em quem vence cada corrida.</p>
+  <button id="rating">Ranquear com rating direto (0,35 / 0,25 / 0,25 / 0,15)</button>
+  <button id="roc">Ranquear com ROC (0,5208 / 0,2708 / 0,1458 / 0,0625)</button>
+  <div id="saida">carregando…</div>
+  <script>
+    let caso;
+    const saida = document.getElementById("saida");
+    fetch("/api/caso-ancora").then(r => r.json()).then(c => {
+      caso = c; saida.textContent = "Escolha um vetor de pesos acima.";
+    });
+    async function ranquear(pesos, rotulo) {
+      const r = await fetch("/api/matriz/saw", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          alternativas: caso.alternativas, criterios: caso.criterios,
+          desempenhos: caso.desempenhos, pesos,
+        }),
+      });
+      const corpo = await r.json();
+      saida.innerHTML =
+        `<table><tr><th>#</th><th>Alternativa</th><th>Escore SAW</th></tr>` +
+        corpo.ranking.map(l =>
+          `<tr class="${l.posicao === 1 ? "vencedor" : ""}"><td>${l.posicao}</td>
+           <td>${l.alternativa}</td><td>${l.escore.toFixed(4)}</td></tr>`).join("") +
+        `</table><div class="nota">Pesos: ${rotulo}. O método não mudou — o vetor w
+         mudou. Se dois vetores defensáveis elegem vencedores diferentes, a decisão
+         está nos pesos, não no algoritmo (caps. 03 e 11).</div>`;
+    }
+    document.getElementById("rating").onclick = () =>
+      ranquear(caso.pesos_rating, "rating direto (cap. 03)");
+    document.getElementById("roc").onclick = () =>
+      ranquear(caso.pesos_roc, "ROC — só a ordem Preço ≻ Área ≻ Desl. ≻ Bairro");
+  </script>
+</body>
+</html>

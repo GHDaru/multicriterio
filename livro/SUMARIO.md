@@ -20,7 +20,7 @@
 
 | Cap. | Título | O que nasce | Etapa | Estado |
 |---|---|---|---|---|
-| 04 | SAW/WSM e SMART(ER) — o método aditivo | O primeiro ranking completo do caso âncora; premissas da agregação aditiva | `04-saw` | ⬜ |
+| 04 | [SAW/WSM e SMART(ER) — o método aditivo](capitulos/04-saw.md) | O primeiro ranking completo do caso âncora; premissas da agregação aditiva | `04-saw` | ✅ |
 | 05 | AHP — comparações par a par | Matriz de julgamentos, autovetor, razão de consistência; o debate do rank reversal | `05-ahp` | ⬜ |
 | 06 | TOPSIS — distância ao ideal | Solução ideal/anti-ideal, normalização vetorial | `06-topsis` | ⬜ |
 | 07 | MAUT/MAVT e Even Swaps | Funções de valor por critério; trade-offs racionais sem pesos mágicos | `07-funcoes-de-valor` | ⬜ |

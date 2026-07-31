@@ -19,8 +19,24 @@
 | 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-07-30 |
 | 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-07-30 |
 | 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-07-30 |
+| 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-07-31 |
 
 ## Edições
+
+### Edição 0.4 — 2026-07-31 · SAW: o primeiro ranking (spec 004)
+
+- Capítulo 04 (agregação aditiva: fórmula, premissas — independência preferencial,
+  escala de intervalo, compensação total — e o processo SMART) no esqueleto v3; o
+  worked example central é a virada de ranking: rating direto elege A1, ROC elege A4,
+  mesma matriz e mesma ordem de importância.
+- Etapa `04-saw`: motor aditivo puro + rota + página com os dois vetores de pesos;
+  **validação cruzada com pymcdm** (WSM + min-max) em teste — os escores batem a 1e-6.
+- Produto: `POST /api/decisoes/{id}/ranking` aceita sobrescrita de pesos (revalidada);
+  teste prova a troca de vencedor sobre a decisão salva.
+- Bibliografia: Fishburn (1967) promovida a ✓ (registro DOI; nota: é carta ao editor).
+- **Verificação**: etapa 04 `7 passed`; app `16 passed`; `mkdocs build --strict` verde
+  (ver `specs/004-saw/qa-report.md`).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana pendente de gate de merge.
 
 ### Edição 0.3 — 2026-07-30 · normalização e pesos (spec 003)
 

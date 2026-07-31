@@ -25,7 +25,7 @@
 
 | Status | Referência | Método |
 |---|---|---|
-| ? | Fishburn, P. C. (1967). "Additive Utilities with Incomplete Product Sets." *Operations Research*, 15(3), 537–542. | SAW/WSM (cap. 04) |
+| ✓ | Fishburn, P. C. (1967). "Additive Utilities with Incomplete Product Sets: Application to Priorities and Assignments." *Operations Research*, 15(3), 537–542. DOI 10.1287/opre.15.3.537 | SAW/WSM (cap. 04) |
 | ✓ | Edwards, W.; Barron, F. H. (1994). "SMARTS and SMARTER: Improved Simple Methods for Multiattribute Utility Measurement." *OBHDP*, 60(3), 306–325. DOI 10.1006/obhd.1994.1087 | SMART/SMARTER, swing weights, ROC (caps. 03–04) |
 | ? | Saaty, T. L. (1977). "A Scaling Method for Priorities in Hierarchical Structures." *J. Math. Psychology*, 15(3), 234–281. DOI 10.1016/0022-2496(77)90033-5 | AHP (cap. 05) |
 | ✓ | Roy, B. (1968). "Classement et choix en présence de points de vue multiples (la méthode ELECTRE)." *RAIRO — RO*, 2(8), 57–75. PDF aberto: <https://www.numdam.org/item/RO_1968__2_1_57_0.pdf> | ELECTRE / nascimento do outranking (cap. 09) |
@@ -72,6 +72,9 @@
 - Keeney & Raiffa é originalmente Wiley 1976; a reimpressão Cambridge 1993 é a citável hoje.
 - DEMATEL é relatório técnico sem DOI — nunca citar sozinho.
 - VIKOR tem origem em trabalhos sérvios de Opricovic (1998); o paper EJOR 2004 é a referência internacional.
+- 2026-07-31 (rodada 004): Fishburn (1967) promovida a ✓ por registro DOI
+  (Semantic Scholar). Curadoria: o texto é formalmente uma *Letter to the Editor* da
+  Operations Research — citá-lo como tal quando a natureza da fonte importar.
 - 2026-07-30 (rodada 003): Edwards & Barron (1994) promovida a ✓ por verificação do
   registro (API do Semantic Scholar confirma título, autores, ano e DOI
   10.1006/obhd.1994.1087; ScienceDirect bloqueia robô).
