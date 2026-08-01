@@ -1,9 +1,14 @@
 # Apêndice C — Artigo (vivo): Agregação Estocástica Ordinal
 
-> **Artigo em desenvolvimento — iteração 1** · 2026-07-31 · contribuição original do
+> **Artigo em desenvolvimento — iteração 2** · 2026-07-31 · contribuição original do
 > autor do livro; redação e formalização assistidas por IA (Claude Code, Anthropic),
 > com curadoria humana. Nome do método é provisório. Todos os números desta versão são
 > reproduzidos pelos testes da etapa 14 do `decisor-zero` (semente 42, N = 20.000).
+>
+> **Novidades da iteração 2**: Proposição 5 (caracterização exata do prior induzido,
+> com o corolário fechado $E = (\ln 2,\ 1-\ln 2)$ para $m=2$), resolução da
+> conjectura do autor sobre os valores médios, prior alternativo (`simplexo`)
+> implementado no motor e experimento comparativo §7.4.
 
 ## Agregação Estocástica Ordinal: ranqueamento multicritério com informação puramente ordinal via simulação de funções de importância
 
@@ -108,7 +113,7 @@ que $a_i$ venceu.
 **Algoritmo 1 (AEO).**
 
 ```
-entrada: A, Σ, τ (opcional), N, semente
+entrada: A, Σ, τ (opcional), N, semente, prior ∈ {uniforme, simplexo}
 para t = 1..N:
     para cada critério j: sorteie m uniformes, ordene desc,
         atribua via σ_j, normalize a coluna (soma 1)
@@ -138,15 +143,49 @@ preservam a relação afim, logo $\bar{B}_i = m - \bar{r}_i$ e as ordens induzid
 inversas uma da outra. ∎ (Consequência: a regra "posto esperado" traz para o contexto
 probabilístico as propriedades — e as limitações — da contagem de Borda do cap. 12.)
 
-**Proposição 3 (o prior induzido é uma escolha declarável).** Para $m$ uniformes
+**Proposição 3 (valores esperados antes da normalização).** Para $m$ uniformes
 i.i.d., $\mathbb{E}[u_{(k)}] = (m+1-k)/(m+1)$ — para $m = 4$: $(0{,}8;\ 0{,}6;\
-0{,}4;\ 0{,}2)$. A normalização pela soma introduz dependência entre as componentes e
-o vetor esperado resultante **não** coincide com o centróide do simplexo ordenado
-(os pesos ROC do cap. 03, que são o valor esperado sob o prior *uniforme no
-simplexo*, usado pela SMAA clássica). Ambos os priors respeitam a ordem declarada;
-nenhum é "o correto" — a escolha é parte do modelo e deve ser reportada, em eco
-direto à lição de normalização do cap. 03. (A quantificação da diferença prática
-entre os dois priors é experimento previsto para a iteração 2.)
+0{,}4;\ 0{,}2)$. A normalização pela soma introduz dependência entre as componentes,
+e $\mathbb{E}[u_{(k)}/S] \ne \mathbb{E}[u_{(k)}]/\mathbb{E}[S]$ — a razão das
+esperanças ($2/3$ para o maior com $m=2$) **não** é a esperança da razão. O valor
+correto é dado pela Prop. 5.
+
+**Proposição 5 (caracterização exata do prior AEO — nova na iteração 2).** *Seja
+$V = (u_1, \dots, u_m)/S$ com $u_i \sim U(0,1)$ i.i.d. A densidade de $V$ no
+simplexo é*
+$$p(v) \;\propto\; \big(\max_i v_i\big)^{-m}.$$
+*Prova.* Mude variáveis $u = s\,v$ com $s = S$ e $v$ no simplexo. O jacobiano é
+$s^{m-1}$ e a restrição $u_i \le 1$ equivale a $s \le 1/\max_i v_i$. Integrando a
+densidade (constante) do cubo em $s$: $\int_0^{1/\max v} s^{m-1}\,ds =
+\frac{1}{m}(\max_i v_i)^{-m}$. ∎
+
+Consequências: (i) o prior AEO **penaliza vetores concentrados** (densidade cai com
+$\max v$) — é mais igualitário que o prior uniforme no simplexo (Dirichlet(1)) usado
+pela SMAA clássica, cujas médias ordenadas são os pesos ROC do cap. 03; (ii)
+**corolário fechado para $m = 2$**: com densidade $\propto t^{-2}$ para o maior
+componente $t \in [1/2, 1]$, $\mathbb{E}[V_{(1)}] = \int_{1/2}^{1} t\cdot
+t^{-2}dt \big/ \int_{1/2}^{1} t^{-2}dt = \ln 2 \approx 0{,}6931$, logo
+$\mathbb{E} = (\ln 2,\ 1-\ln 2) \approx (0{,}693;\ 0{,}307)$.
+
+**Resolução da conjectura do autor.** O esboço original do método conjecturou média
+"$0{,}75 \times 0{,}25$, ou algo assim" para $m=2$. A conjectura acerta um prior
+legítimo — $(0{,}75;\ 0{,}25)$ é **exatamente** a média sob o prior uniforme no
+simplexo (ROC) — mas o esquema de sorteio proposto (uniformes normalizadas) induz
+outro: $(\ln 2;\ 1-\ln 2)$. Os três candidatos a "média do 1º" com $m=2$ ficam
+assim separados: $0{,}75$ (simplexo/ROC), $0{,}693$ (AEO), $0{,}667$ (falácia da
+razão das esperanças). Médias estimadas por Monte Carlo (N = 200.000, ±0,2 p.p.):
+
+| $m$ | prior AEO (uniformes/soma) | prior simplexo (= ROC, exato) |
+|---|---|---|
+| 2 | 0,693 · 0,307 | 0,750 · 0,250 |
+| 3 | 0,523 · 0,324 · 0,153 | 0,611 · 0,278 · 0,111 |
+| 4 | 0,418 · 0,299 · 0,191 · 0,092 | 0,521 · 0,271 · 0,146 · 0,063 |
+| 5 | 0,347 · 0,269 · 0,196 · 0,127 · 0,062 | 0,457 · 0,257 · 0,157 · 0,090 · 0,040 |
+
+Ambos os priors respeitam a ordem declarada; nenhum é "o correto" — desde a iteração
+2 o motor aceita `prior="uniforme"` (default) e `prior="simplexo"`, e a escolha deve
+ser reportada (eco direto da lição de normalização do cap. 03). O impacto prático é
+medido na §7.4.
 
 **Proposição 4 (convergência e erro de Monte Carlo).** Cada índice é média de
 variáveis de Bernoulli i.i.d.; pela lei dos grandes números converge ao valor
@@ -249,13 +288,31 @@ robustez de F2 não depende de números finos. Crenças: eleger F3 exige concent
 ~0,45 do peso em Custo ($w^c_{F3} = (0{,}447; 0{,}174; 0{,}287; 0{,}092)$); as de F2
 são mais equilibradas — mais um ângulo do mesmo diagnóstico.
 
+**§7.4 — Experimento da iteração 2: o efeito do prior.** Caso âncora com ordem de
+pesos, mesmos rankings, mesma semente, dois priors:
+
+| Índice | prior AEO | prior simplexo |
+|---|---|---|
+| $b^1$ de A4 (fração de 1ºs) | 36,4% | **65,1%** |
+| posto esperado de A4 | 2,226 | 1,557 |
+| vencedor de Condorcet | A4 | A4 |
+| ordem final | A4 ≻ A2 ≻ A1 ≻ A3 | A4 ≻ A2 ≻ A3 ≻ A1 |
+
+Leitura: o prior do simplexo concentra os pesos no critério mais importante (Preço,
+média 0,521 contra 0,418) e quase **dobra** a aceitabilidade de primeiro lugar de A4
+— sem mudar o campeão nem o selo de Condorcet, mas invertendo a cauda (A1 cai de 3º
+para 4º). Conclusão registrada: conclusões *qualitativas* (campeão, selo) foram
+estáveis ao prior neste caso; conclusões *quantitativas* (magnitudes, cauda) não são
+— reporte sempre o prior junto com o resultado. *Números em
+`test_troca_de_prior_muda_magnitude_mas_nao_o_campeao_no_ancora`.*
+
 ### 8. Limitações e agenda de iterações
 
 Esta é a **iteração 1** de um artigo vivo. Limitações conhecidas e agenda:
 
-1. **Prior**: comparar sistematicamente o prior uniformes-ordenadas-normalizadas com
-   o uniforme-no-simplexo (SMAA) e com Dirichlet genérico; quantificar o impacto nos
-   índices (Prop. 3).
+1. ~~**Prior**: comparar com o uniforme-no-simplexo e quantificar o impacto~~ —
+   **concluído na iteração 2** (Prop. 5, tabela de médias e §7.4; Dirichlet genérico
+   como prior paramétrico segue em aberto).
 2. **Empates e ordens parciais**: a Def. 1 exige permutações completas; decisores
    reais têm empates e pares incomparáveis — estender σ e τ a pré-ordens.
 3. **Correlação entre critérios**: os sorteios por critério são independentes;

@@ -98,3 +98,56 @@ def test_validacoes():
         simular_aeo(["A", "B"], [["A", "A"]])
     with pytest.raises(ErroDeOrdinal, match="ordem_pesos"):
         simular_aeo(["A", "B"], [["A", "B"]], ordem_pesos=[0, 1])
+
+
+# ---------- Iteração 2: caracterização do prior (Prop. 5) ----------
+
+from motor.ordinal import media_simplexo_ordenado, media_valores_ordenados  # noqa: E402
+
+
+def test_prop5_para_m2_a_media_e_ln2():
+    # Corolário da Prop. 5: sob o esquema AEO, E = (ln 2, 1 − ln 2).
+    import math
+    media = media_valores_ordenados(2, "uniforme", 400_000, semente=7)
+    assert media[0] == pytest.approx(math.log(2), abs=2e-3)
+    assert media[1] == pytest.approx(1 - math.log(2), abs=2e-3)
+
+
+def test_conjectura_do_autor_e_o_prior_do_simplexo():
+    # A intuição "0,75 × 0,25" é exatamente o valor esperado sob o prior
+    # uniforme no simplexo — a fórmula fechada dos pesos ROC.
+    assert media_simplexo_ordenado(2) == pytest.approx([0.75, 0.25])
+    empirico = media_valores_ordenados(2, "simplexo", 200_000, semente=7)
+    assert empirico == pytest.approx([0.75, 0.25], abs=3e-3)
+
+
+def test_prior_simplexo_reproduz_roc_para_m4():
+    empirico = media_valores_ordenados(4, "simplexo", 200_000, semente=7)
+    assert empirico == pytest.approx(media_simplexo_ordenado(4), abs=2e-3)
+
+
+def test_os_dois_priores_divergem_e_o_aeo_e_mais_igualitario():
+    aeo = media_valores_ordenados(4, "uniforme", 200_000, semente=7)
+    roc = media_simplexo_ordenado(4)
+    assert aeo[0] < roc[0]          # topo menos concentrado (0,418 < 0,521)
+    assert aeo[-1] > roc[-1]        # base menos esmagada (0,092 > 0,0625)
+
+
+def test_troca_de_prior_muda_magnitude_mas_nao_o_campeao_no_ancora():
+    # Experimento §7.4 do artigo: mesmo problema, dois priors.
+    uni = simular_aeo(ALT, RK, ordem_pesos=[0, 1, 2, 3],
+                      n_simulacoes=20_000, semente=42, prior="uniforme")
+    simp = simular_aeo(ALT, RK, ordem_pesos=[0, 1, 2, 3],
+                       n_simulacoes=20_000, semente=42, prior="simplexo")
+    assert uni["aceitabilidade"]["A4 — Estação"][0] == pytest.approx(0.3643, abs=1e-4)
+    assert simp["aceitabilidade"]["A4 — Estação"][0] == pytest.approx(0.6510, abs=1e-4)
+    assert simp["posto_esperado"]["A4 — Estação"] == pytest.approx(1.557, abs=1e-3)
+    # Campeão e Condorcet estáveis; a cauda muda (A1: 3º → 4º).
+    assert uni["vencedor_condorcet"] == simp["vencedor_condorcet"] == "A4 — Estação"
+    assert uni["ordem_final"][2] == "A1 — Centro"
+    assert simp["ordem_final"][3] == "A1 — Centro"
+
+
+def test_prior_invalido_e_erro():
+    with pytest.raises(ErroDeOrdinal, match="prior"):
+        simular_aeo(["A", "B"], [["A", "B"]], prior="cauchy")
