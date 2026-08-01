@@ -18,7 +18,10 @@ normalizadas pela soma) e no protocolo de decisão recomendado (posto esperado
 Motor puro; aleatoriedade só via random.Random(semente) — reprodutível.
 """
 
+import math
 import random
+
+PRIORS = ("uniforme", "simplexo")
 
 
 class ErroDeOrdinal(ValueError):
@@ -43,12 +46,51 @@ def _validar(alternativas, rankings_criterios, ordem_pesos):
         raise ErroDeOrdinal("ordem_pesos deve ser permutação de 0..n-1")
 
 
+def media_simplexo_ordenado(m: int) -> list[float]:
+    """Valor esperado das componentes ordenadas sob o prior uniforme no
+    simplexo — a fórmula fechada dos pesos ROC (cap. 03)."""
+    return [sum(1 / i for i in range(k, m + 1)) / m for k in range(1, m + 1)]
+
+
+def _sorteio_ordenado(rng: random.Random, m: int, prior: str) -> list[float]:
+    """Vetor ordenado (desc) que soma 1, sob o prior escolhido (Prop. 5).
+
+    "uniforme": U(0,1) i.i.d. ordenadas / soma — o esquema original da AEO;
+        densidade no simplexo proporcional a max(v)^(−m); para m=2,
+        E = (ln 2, 1 − ln 2).
+    "simplexo": exponenciais ordenadas / soma — uniforme no simplexo
+        (Dirichlet(1)); E = pesos ROC; o prior da SMAA clássica.
+    """
+    if prior == "uniforme":
+        brutos = [rng.random() for _ in range(m)]
+    else:
+        brutos = [-math.log(rng.random()) for _ in range(m)]
+    ordenados = sorted(brutos, reverse=True)
+    total = sum(ordenados)
+    return [x / total for x in ordenados]
+
+
+def media_valores_ordenados(
+    m: int, prior: str = "uniforme", n_simulacoes: int = 100_000,
+    semente: int | None = None,
+) -> list[float]:
+    """Estimativa Monte Carlo de E[V_(k)] sob o prior escolhido."""
+    rng = random.Random(semente)
+    soma = [0.0] * m
+    for _ in range(n_simulacoes):
+        v = _sorteio_ordenado(rng, m, prior)
+        for k in range(m):
+            soma[k] += v[k]
+    return [round(x / n_simulacoes, 4) for x in soma]
+
+
 def simular_aeo(
     alternativas: list[str],
     rankings_criterios: list[list[str]],
     ordem_pesos: list[int] | None = None,
     n_simulacoes: int = 10_000,
     semente: int | None = None,
+    prior: str = "uniforme",
 ) -> dict:
     """Roda o torneio estocástico e devolve o dossiê completo.
 
@@ -58,6 +100,8 @@ def simular_aeo(
     pesos_centrais (média dos vetores de peso nas rodadas em que a alternativa
     venceu — as "crenças" que a elegem).
     """
+    if prior not in PRIORS:
+        raise ErroDeOrdinal(f"prior {prior!r} desconhecido (use {PRIORS})")
     _validar(alternativas, rankings_criterios, ordem_pesos)
     rng = random.Random(semente)
     m, n = len(alternativas), len(rankings_criterios)
@@ -72,21 +116,22 @@ def simular_aeo(
         # valores ordinais → cardinais: uniformes ordenadas, coluna soma 1
         valores = [[0.0] * n for _ in range(m)]
         for j, ranking in enumerate(rankings_criterios):
-            sorteio = sorted((rng.random() for _ in range(m)), reverse=True)
-            total = sum(sorteio)
+            sorteio = _sorteio_ordenado(rng, m, prior)
             for posicao, nome in enumerate(ranking):
-                valores[indice[nome]][j] = sorteio[posicao] / total
+                valores[indice[nome]][j] = sorteio[posicao]
         # pesos: uniformes; com ordem declarada, o maior vai ao mais importante
-        brutos = [rng.random() for _ in range(n)]
         if ordem_pesos is not None:
-            ordenados = sorted(brutos, reverse=True)
+            ordenados = _sorteio_ordenado(rng, n, prior)
             pesos = [0.0] * n
             for posicao, criterio in enumerate(ordem_pesos):
                 pesos[criterio] = ordenados[posicao]
         else:
-            pesos = brutos
-        total_w = sum(pesos)
-        pesos = [w / total_w for w in pesos]
+            if prior == "uniforme":
+                brutos = [rng.random() for _ in range(n)]
+            else:
+                brutos = [-math.log(rng.random()) for _ in range(n)]
+            total_w = sum(brutos)
+            pesos = [w / total_w for w in brutos]
         # agrega e ranqueia (empate tem probabilidade zero)
         escores = [
             sum(w * v for w, v in zip(pesos, valores[i])) for i in range(m)
@@ -140,6 +185,7 @@ def simular_aeo(
             total = sum(media)
             pesos_centrais[nome] = [round(x / total, 4) for x in media]
     return {
+        "prior": prior,
         "n_simulacoes": n_simulacoes,
         "aceitabilidade": aceitabilidade,
         "posto_esperado": posto_esperado,

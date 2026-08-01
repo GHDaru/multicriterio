@@ -44,6 +44,14 @@ ranking. Após $N$ rodadas:
 - o **vetor de pesos central** de cada alternativa é a média dos pesos nas rodadas em
   que ela venceu — *o que é preciso acreditar para elegê-la*.
 
+Um detalhe que parece técnico e é decisão: **o jeito de sortear é um prior**. O
+esquema original (uniformes ordenadas divididas pela soma) induz, para dois itens,
+média exata $(\ln 2;\ 1-\ln 2) \approx (0{,}69;\ 0{,}31)$; o prior alternativo do
+simplexo (o da SMAA clássica) dá $(0{,}75;\ 0{,}25)$ — os pesos ROC do cap. 03. O
+motor aceita os dois (`prior=`), e o Apêndice C (Prop. 5 e §7.4) prova a diferença e
+mede o impacto: no caso âncora, o campeão não muda, mas a aceitabilidade dele quase
+dobra. Declare o prior como declara a normalização.
+
 Duas garantias valem a pena conhecer (provas no Apêndice C): dominância ordinal é
 respeitada com probabilidade 1 (dominada nunca sobe), e o erro de Monte Carlo com
 $N = 20.000$ é de no máximo ±0,35 ponto percentual — diferenças menores são empate.

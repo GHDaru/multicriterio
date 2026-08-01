@@ -24,6 +24,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 - **app (produto v0)**: backend FastAPI + motor SAW puro (com fonte no docstring) +
   persistência Neon/Postgres com fallback SQLite + frontend estático; 8 testes.
 
+- **AEO iteração 2 (spec 029)**: Prop. 5 (prior ∝ max^(−m); m=2 → ln 2), resolução
+  da conjectura do autor (0,75/0,25 = prior do simplexo/ROC), `prior=` no motor e
+  experimento comparativo §7.4.
 - **Contribuição original — AEO (spec 028, ADR 0008)**: cap.
   [14](livro/capitulos/14-simulacao-ordinal.md) + artigo vivo
   ([Apêndice C](livro/apendice-c-artigo-aeo.md), iteração 1), etapa

@@ -33,6 +33,15 @@
 
 ## Edições
 
+### Edição 0.29 — 2026-07-31 · AEO iteração 2: a matemática do prior (spec 029)
+
+- A conjectura do autor sobre os valores médios do sorteio vira a **Proposição 5** do
+  artigo: densidade do prior AEO ∝ max(v)^(−m); para m=2, E = (ln 2, 1−ln 2) ≈
+  (0,693; 0,307) — e o palpite 0,75 × 0,25 é exatamente a média do prior do simplexo
+  (ROC). Motor ganha os dois priors; experimento §7.4 mede o impacto (aceitabilidade
+  de A4 quase dobra; campeão estável). Etapa 14: `14 passed`.
+- **IA**: agente **Claude Code (Anthropic)**; método e conjectura do autor (Steward).
+
 ### Edição 0.28 — 2026-07-31 · contribuição original: AEO (spec 028, ADR 0008)
 
 - Nasce o cap. 14 — **Agregação Estocástica Ordinal** (método do autor: só ordens,
