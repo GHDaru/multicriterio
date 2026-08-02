@@ -44,6 +44,11 @@ ranking. Após $N$ rodadas:
 - o **vetor de pesos central** de cada alternativa é a média dos pesos nas rodadas em
   que ela venceu — *o que é preciso acreditar para elegê-la*.
 
+A frase fundadora do método — "o sorteio simula infinitas funções de importância" —
+é literal, não metáfora: as frações que o torneio devolve convergem (lei dos grandes
+números) para as probabilidades calculadas sobre o **contínuo** de todas as funções
+de valor e peso compatíveis com as ordens declaradas (Apêndice C, Observação 1).
+
 Um detalhe que parece técnico e é decisão: **o jeito de sortear é um prior**. O
 esquema original (uniformes ordenadas divididas pela soma) induz, para dois itens,
 média exata $(\ln 2;\ 1-\ln 2) \approx (0{,}69;\ 0{,}31)$; o prior alternativo do

@@ -110,6 +110,20 @@ estocástico**, se existir: $a_i$ com $p_{ik} > 1/2$ para todo $k \ne i$; e o **
 de pesos central** $w^c_i$ = média (renormalizada) dos vetores de peso das rodadas em
 que $a_i$ venceu.
 
+**Observação 1 (interpretação populacional — "infinitas funções de importância").**
+A intuição fundadora do método — *o sorteio simula infinitas funções de importância* —
+tem enunciado preciso: cada par (matriz de valores imputada, vetor de pesos) gerado
+pela Def. 2 é uma função de importância compatível com $\langle \Sigma, \tau
+\rangle$, e os índices da Def. 3 são **estimativas Monte Carlo de integrais sobre o
+contínuo de todas essas funções**:
+$$b_i^r \;=\; \Pr_{(V,W)\sim \text{prior}}\big[\text{posto de } a_i = r\big],
+\qquad p_{ik} \;=\; \Pr_{(V,W)\sim \text{prior}}\big[s_i > s_k\big],$$
+com as frequências empíricas convergindo a essas probabilidades quando $N \to
+\infty$ (LGN; taxa na Prop. 4). A ressalva que dá conteúdo à frase: "infinitas
+funções compatíveis" só define probabilidades depois que se escolhe uma **medida**
+sobre elas — o prior da Prop. 5. Sortear-e-ordenar é, portanto, integrar sobre todas
+as funções de importância compatíveis, *ponderadas pelo prior declarado*.
+
 **Algoritmo 1 (AEO).**
 
 ```
