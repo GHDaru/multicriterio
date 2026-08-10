@@ -1,6 +1,6 @@
 # 14 — Agregação Estocástica Ordinal: decidir só com ordens
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 >
 > **Capítulo de contribuição original do autor** — método em desenvolvimento
 > (iteração 1); o artigo completo, com formalização, provas e experimentos, está no
@@ -26,6 +26,45 @@ números (rating direto ancora; ROC exagera); o cap. 11 mostrou que o vencedor p
 depender de 0,008 de peso. E se, em vez de escolher *um* número para cada lacuna, nós
 sorteássemos **todos os números compatíveis com as ordens** — e contássemos os
 resultados?
+
+## De onde isto veio
+
+**O aperto.** Aqui a história é testemunho, não arqueologia: o método é do autor deste
+livro (2026), e a fonte primária é **este repositório** — specs 028–029 e ADR 0008
+guardam, com data e diff, o esboço original, a pergunta aberta ("com as contagens de
+1ºs, 2ºs…, como decido?") e até uma conjectura numérica que estava *errada por um
+motivo interessante* (a média 0,75/0,25, que a Prop. 5 revelou pertencer a outro prior
+— o do simplexo). É o único capítulo em que se pode auditar o aperto no controle de
+versão.
+
+**O que se fazia antes.** Inventar os números que faltam: transformar ordens em pesos
+por ROC (cap. 03) e seguir com um método cardinal — um ponto escolhido no meio de um
+contínuo de possibilidades. E, sem sabermos na concepção, a família **SMAA** (Finlândia,
+anos 1990) já explorava o espaço de pesos por simulação — a literatura situa sua
+origem em decisões públicas reais (localização de infraestrutura) em que os decisores
+**se recusavam a declarar pesos**.
+
+**A virada.** Não escolher ponto nenhum: sortear **todos os números compatíveis com as
+ordens declaradas** e contar os resultados — "o sorteio simula infinitas funções de
+importância" (Observação 1 do Apêndice C torna a frase literal). A independência da
+concepção e o parentesco com a SMAA estão declarados no artigo (§2) — convergência é
+evidência de que o aperto é real.
+
+**A ideia reaproveitável.** Sob informação parcial, **não colapse a incerteza num
+ponto: integre sobre o conjunto compatível e reporte a distribuição** — e declare o
+prior, porque "não escolher" também é uma escolha (a Prop. 5 mede exatamente o preço
+dela). O padrão serve a qualquer modelagem com insumo incompleto, de riscos a
+elicitação de especialistas.
+
+**O nome.** Descritivo e do autor: **Agregação Estocástica Ordinal** — agrega ordens,
+por sorteio.
+
+| Afirmação | Selo |
+|---|---|
+| Gênese da AEO (esboço, pergunta aberta, conjectura, iterações) | ✓ fonte primária = este repositório, versionado (specs 028–029, ADR 0008) |
+| SMAA: Lahdelma, Hokkanen & Salminen (1998) e família (SMAA-2, SMAA-O, survey) | ✓ᵐ (DOIs na bibliografia; conteúdo não lido) |
+| Origem da SMAA em decisões públicas finlandesas com recusa de pesos | ⏳ atribuição corrente |
+| Posto esperado ≡ Borda média; ROC ≡ média do prior do simplexo | ✓ provas próprias testadas em código (Apêndice C, Props. 2 e 5) |
 
 ## Fundamentos
 

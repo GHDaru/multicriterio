@@ -1,6 +1,6 @@
 # 04 — SAW: o método aditivo (e o primeiro ranking do livro)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -21,6 +21,40 @@ original: **qual apartamento?** Falta o passo que junta tudo. O mais simples, ma
 usado e mais antigo dos agregadores é uma soma ponderada; a pergunta honesta do
 capítulo não é "como calcular" (é uma linha), e sim **o que essa linha assume** e
 **quanto do resultado já estava decidido antes dela**.
+
+## De onde isto veio
+
+**O aperto.** O SAW é o único método deste livro **sem cena de invenção** — e isso é a
+história. Somar notas ponderadas é o que comitês, professores e concursos fazem
+espontaneamente há séculos; ninguém precisou inventar o gesto. O aperto era outro:
+saber **quando o gesto natural é legítimo** — e quem estava preso nisso era a nascente
+pesquisa operacional gerencial dos anos 1950, tentando transformar "avaliação por
+pontos" de folclore administrativo em instrumento defensável.
+
+**O que se fazia antes.** A mesma soma — sem saber o que ela assumia. A literatura
+atribui a Churchman & Ackoff (1954) a primeira formalização gerencial do procedimento
+("uma medida aproximada de valor"); a fundação matemática só chegou em 1967, com
+Fishburn enunciando as condições da utilidade aditiva — publicadas, detalhe saboroso,
+como **carta ao editor** da *Operations Research*.
+
+**A virada.** Perceber que a pergunta científica não era "como somar?" (trivial), e
+sim "**o que precisa ser verdade para que somar seja válido?**" — independência
+preferencial, escala de intervalo, compensação aceitável. A teoria veio *depois* da
+prática, para delimitá-la.
+
+**A ideia reaproveitável.** Quando um procedimento folk funciona, o trabalho rigoroso
+não é substituí-lo — é **explicitar as condições em que ele vale** e detectar quando
+elas caem. Vale para heurísticas de engenharia, regras de bolso clínicas, prompts que
+"simplesmente funcionam": formalizar é desenhar a cerca, não demolir a casa.
+
+**O nome.** SAW (*Simple Additive Weighting*) e WSM (*Weighted Sum Model*) são
+descrições, não batismos — método sem inventor tampouco tem cerimônia de nome.
+
+| Afirmação | Selo |
+|---|---|
+| Churchman & Ackoff (1954) como primeira formalização gerencial | ⏳ atribuição corrente; primária na fila de verificação |
+| Fishburn (1967) axiomatiza a utilidade aditiva, publicado como carta ao editor | ✓ᵐ (DOI e formato verificados na bibliografia; conteúdo não lido) |
+| "Método folk, teoria a posteriori" | 📖 leitura editorial do arco |
 
 ## Fundamentos
 

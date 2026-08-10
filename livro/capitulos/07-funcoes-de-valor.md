@@ -1,6 +1,6 @@
 # 07 — MAVT e Even Swaps: o valor não é linear
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -21,6 +21,45 @@ Decisores reais não funcionam assim — abaixo do orçamento, cada real economi
 pouco; acima, dói progressivamente. E a área: de 55 m² para 70 m² muda a vida; de 70
 para 85, menos. Ignorar a **forma** da preferência distorce o ranking tanto quanto
 errar os pesos.
+
+## De onde isto veio
+
+**O aperto.** A pré-história favorita do campo é uma carta: a literatura conta que
+**Benjamin Franklin**, em 1772, respondendo ao amigo Joseph Priestley (que agonizava
+sobre aceitar ou não um emprego), descreveu sua "álgebra moral ou prudencial" — prós e
+contras em colunas, riscando pares que se equivalem até a decisão ficar visível.
+(Buscamos a carta na fonte primária aberta nesta rodada; o acesso falhou do nosso
+ambiente, então **não citamos o texto** — só a atribuição, que segue na fila de
+verificação.) Dois séculos depois, o aperto moderno: a análise de decisão do pós-guerra
+tinha teoria da utilidade rigorosa para **uma** dimensão — e as decisões públicas dos
+anos 1960–70 (usinas, aeroportos, orçamentos) chegavam com dez.
+
+**O que se fazia antes.** Ou uma dimensão de cada vez (e a soma implícita do SAW, com
+linearidade assumida em silêncio), ou nada de formal — comitê e retórica.
+
+**A virada.** Keeney & Raiffa estenderam a arquitetura axiomática de von
+Neumann–Morgenstern para $n$ atributos: enunciar **as condições** (independência
+preferencial) sob as quais a forma aditiva com funções de valor $v_j$ existe — e
+transformar a elicitação dessas curvas num procedimento. Vinte anos depois, os mesmos
+autores (com Hammond) destilaram tudo de volta ao espírito da carta de Franklin: os
+**Even Swaps** são a álgebra prudencial com disciplina de engenheiro — trocas
+explícitas, um critério eliminado por vez.
+
+**A ideia reaproveitável.** Duas pontas do mesmo fio. Da teoria: antes de usar uma
+forma matemática cômoda, **pergunte que premissa comportamental ela exige** — e teste a
+premissa, não a fórmula. Da prática: para reduzir um problema grande, **elimine
+dimensões por trocas explícitas** — cada troca é pequena, auditável e reversível, e a
+sequência inteira substitui o cálculo de pesos.
+
+**O nome.** MAVT/MAUT são siglas descritivas (valor sem incerteza, utilidade com);
+*Even Swaps* — "trocas equilibradas" — nomeia o gesto central do método.
+
+| Afirmação | Selo |
+|---|---|
+| Franklin → Priestley (1772), "moral or prudential algebra" | ⏳ atribuição corrente; primária aberta existe, inacessível deste ambiente — item nº 1 da fila; sem citação verbatim até lá |
+| Keeney & Raiffa (1976) como fundação axiomática multiatributo | ✓ᵐ (registro na bibliografia; conteúdo não lido) |
+| Hammond, Keeney & Raiffa (1998), Even Swaps na HBR | ✓ᵐ (URL na bibliografia) |
+| Contexto "decisões públicas dos anos 1960–70" | ⏳ narrativa corrente da história da análise de decisão |
 
 ## Fundamentos
 

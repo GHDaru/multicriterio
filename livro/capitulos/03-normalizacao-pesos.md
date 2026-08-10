@@ -1,6 +1,6 @@
 # 03 — Normalização e pesos: os dois insumos de toda agregação
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-30 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -21,6 +21,47 @@ produz "o preço com ruído". Antes de qualquer método compensatório, duas per
 precisam de resposta explícita: **como tornar as colunas comensuráveis?** (normalização)
 e **de onde vem o vetor $w$?** (elicitação de pesos). As duas parecem detalhe técnico;
 as duas mudam resultado.
+
+## De onde isto veio
+
+**O aperto.** A literatura conta a história das técnicas de peso deste capítulo em
+torno de **Ward Edwards**, psicólogo que passou décadas estudando como gente decide de
+verdade — e que, ao levar a teoria da decisão do laboratório para agências e empresas,
+esbarrou num muro prático: decisores ocupados não entregam funções de utilidade;
+entregam, no máximo, alguns números chutados numa reunião.
+
+**O que se fazia antes.** Ou o rigor axiomático completo (semanas de elicitação, cap.
+07), ou o chute direto — "distribua 100 pontos" — sem nenhuma âncora no problema
+concreto: o mesmo "preço importa muito" servindo para preços que variam 5% ou 50%.
+
+**A virada.** Duas, com vinte anos de intervalo. A primeira: **amarrar a pergunta às
+amplitudes** — "dos saltos pior→melhor *deste problema*, qual você mais quer?" (o
+swing); peso deixa de ser opinião solta e vira taxa de troca contextualizada. A
+segunda, para quando nem isso se consegue: se o decisor só sabe **ordenar** os
+critérios, tome como peso o **centroide de todos os vetores compatíveis com a ordem**
+(ROC) — a média de tudo o que ele pode estar querendo dizer.
+
+**A ideia reaproveitável.** São duas. (1) Uma pergunta de elicitação deve carregar o
+contexto dentro dela — pergunta descontextualizada colhe resposta descontextualizada.
+(2) Sob informação parcial, em vez de forçar um número, **integre sobre tudo o que é
+compatível com o que foi declarado** — o mesmo movimento que, levado ao limite, gera a
+AEO do cap. 14 (a Prop. 5 do Apêndice C prova que os pesos ROC *são* a média do prior
+do simplexo: mesma matemática, trinta anos antes).
+
+**O nome.** SMART → SMARTS → SMARTER: a própria sequência de siglas registra
+autocrítica — Edwards & Barron (1994) publicam as versões corrigidas do método de
+Edwards ao constatar que o rating sem amplitudes era um erro. ROC é *Rank Order
+Centroid*: o centroide da região de ordem. Já a **entropia** vem de outra linhagem —
+Shannon (1948) media informação em canais de comunicação; o MCDM a importou como
+detector de colunas que discriminam.
+
+| Afirmação | Selo |
+|---|---|
+| Trajetória de Edwards (psicologia → prática; SMART anos 1970) | ⏳ atribuição corrente |
+| Edwards & Barron (1994) publicam SMARTS/SMARTER corrigindo o SMART | ✓ᵐ (DOI verificado na bibliografia; conteúdo não lido) |
+| ROC como centroide: Barron & Barrett (1996) | ✓ᵐ (DOI na bibliografia) |
+| ROC ≡ média do prior do simplexo | ✓ prova própria (Apêndice C, Prop. 5, testada em código) |
+| Shannon (1948) como origem da entropia; importação para pesos via Hwang & Yoon (1981) | ⏳ metadados na fila de verificação |
 
 ## Fundamentos
 

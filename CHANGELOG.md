@@ -11,6 +11,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Seções "De onde isto veio" (spec 031)**: os 11 capítulos de método (02–10, 12, 14)
+  ganham a seção histórica do Princípio VIII, com os 5 elementos e tabela de selos —
+  toda afirmação limitada ao selo registrado na nota de pesquisa.
 - **Princípio VIII — "Nenhum método cai do céu" (spec 030, ADR 0009)**: emenda
   constitucional v1.1.0 (texto do autor); seção obrigatória "De onde isto veio" no
   esqueleto v3; selos de afirmação histórica (✓/✓ᵐ/⏳/❌/📖); nota de pesquisa

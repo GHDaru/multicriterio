@@ -17,21 +17,33 @@
 |---|---|---|---|
 | 00 Introdução | 2026-07 | ✓ (etapa 00) | 2026-07-30 |
 | 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-07-30 |
-| 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-07-30 |
-| 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-07-30 |
-| 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-07-31 |
-| 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-07-31 |
-| 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-07-31 |
-| 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-07-31 |
-| 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-07-31 |
-| 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-07-31 |
-| 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-07-31 |
+| 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-08-10 |
+| 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-08-10 |
+| 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-08-10 |
+| 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-08-10 |
+| 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-08-10 |
+| 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-08-10 |
+| 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-10 |
+| 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-10 |
+| 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-10 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
-| 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-07-31 |
+| 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-10 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
-| 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 1 | 2026-07-31 |
+| 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 1 | 2026-08-10 |
 
 ## Edições
+
+### Edição 0.31 — 2026-08-10 · "De onde isto veio" nos 11 capítulos de método (spec 031)
+
+- Primeira aplicação integral do Princípio VIII: os caps. 02–10, 12 e 14 ganham a
+  seção **"De onde isto veio"** (aperto → antes → virada → ideia reaproveitável →
+  nome + tabela de selos), consumindo a nota de pesquisa histórica. Destaques: a
+  história do ELECTRE com selo ✓ (lida na fonte — SEMA 1966, três autores, manual de
+  programa, CDC); a do AHP ancorada no obituário INFORMS (ACDA 1961–69); a lacuna do
+  TOPSIS admitida (❌ sem cena fundadora); o fio ordinal Borda 1781 → ROC → AEO
+  costurando os caps. 03, 12 e 14. Caps. 00, 01, 11 e 13 (conceituais/operacionais)
+  omitem a seção, conforme o guia.
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
 
 ### Edição 0.30 — 2026-08-10 · Princípio VIII: "Nenhum método cai do céu" (spec 030, ADR 0009)
 

@@ -1,6 +1,6 @@
 # 06 — TOPSIS: perto do ideal, longe do pior
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -19,6 +19,42 @@ ideal — e mais se afasta do pior cenário**. São réguas diferentes: uma alte
 equilibrada pode somar bem e ainda assim estar longe do ideal em algum eixo. O TOPSIS
 (*Technique for Order Preference by Similarity to Ideal Solution*) formaliza a régua
 geométrica.
+
+## De onde isto veio
+
+**O aperto.** O TOPSIS não nasceu num artigo triunfal — nasceu **dentro de um
+catálogo**. Hwang & Yoon (a literatura os situa na Kansas State University) passaram o
+fim dos anos 1970 fazendo o trabalho ingrato de organizar um campo disperso: seu livro
+de 1981 (*Multiple Attribute Decision Making*, LNEMS 186) é uma taxonomia de dezenas
+de métodos que não conversavam entre si. O aperto era o do cartógrafo: mapear tudo — e
+descobrir, no meio do mapa, um território vazio.
+
+**O que se fazia antes.** Os dois polos que o catálogo deixava claros: o SAW **somava**
+virtudes numa régua absoluta; o ELECTRE **relacionava** pares sem régua nenhuma.
+Faltava a intuição do meio — "melhor" como posição no espaço.
+
+**A virada.** Geometria com **dois polos**: a melhor alternativa é a que fica perto do
+ideal **e** longe do anti-ideal — as duas exigências ao mesmo tempo, porque estar
+perto do ideal não garante estar longe do pesadelo (e o $C_i$ pune a incoerência entre
+as duas medidas).
+
+**A ideia reaproveitável.** Duas. (1) Quando critérios brigam, meça contra **os dois
+extremos** — referências duplas detectam o que uma referência única esconde (o
+anti-ideal é o que o cap. 11 vai sacudir no rank reversal). (2) A meta-lição do
+catálogo: **organizar exaustivamente um campo é um gerador de métodos** — o buraco na
+taxonomia é uma agenda de pesquisa. Não temos, porém, cena fundadora datada do TOPSIS
+(quem pediu, que decisão concreta o motivou): procuramos e não achamos — a lacuna fica
+admitida em voz alta.
+
+**O nome.** Acrônimo descritivo, batizado no livro de 1981: *Technique for Order
+Preference by Similarity to Ideal Solution*.
+
+| Afirmação | Selo |
+|---|---|
+| Hwang & Yoon (1981), LNEMS 186, livro-taxonomia onde o TOPSIS é proposto | ✓ᵐ (registro Springer na bibliografia; conteúdo não lido — prefácio na fila) |
+| Afiliação Kansas State University | ⏳ atribuição corrente |
+| Cena fundadora datada do TOPSIS | ❌ procurei e não achei — lacuna admitida |
+| "Catálogo como gerador de métodos" | 📖 leitura editorial |
 
 ## Fundamentos
 
