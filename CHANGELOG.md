@@ -11,6 +11,12 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Princípio VIII — "Nenhum método cai do céu" (spec 030, ADR 0009)**: emenda
+  constitucional v1.1.0 (texto do autor); seção obrigatória "De onde isto veio" no
+  esqueleto v3; selos de afirmação histórica (✓/✓ᵐ/⏳/❌/📖); nota de pesquisa
+  histórica em `estudos/` com fila de verificação (Roy 1968 lido na íntegra — notas
+  SEMA de 1966 confirmadas; acrônimo ELECTRE ausente do artigo).
+
 - **Fundação do projeto (spec 001)**: constituição v1.0.0 (linhagem Engenharia de
   Harness + Maestro), [CLAUDE.md](CLAUDE.md)/[AGENTS.md](AGENTS.md) para agentes,
   spec-kit (`.specify/`), ADRs 0001–0004.

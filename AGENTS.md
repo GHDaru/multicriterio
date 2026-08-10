@@ -3,7 +3,7 @@
 ## Regra central
 
 - **Antes de qualquer trabalho, leia [`.specify/memory/constitution.md`](.specify/memory/constitution.md)**
-  (a lei do projeto: 7 princípios + restrições da construção). Prevalece sobre qualquer
+  (a lei do projeto: 8 princípios + restrições da construção). Prevalece sobre qualquer
   outra prática; em conflito com um pedido pontual, explicite o conflito antes de agir.
 - O projeto tem três corpos que evoluem juntos: **livro** (`livro/`), **construção
   prática** (`decisor-zero/`, uma etapa por capítulo) e **produto** (`app/`, FastAPI +
@@ -31,6 +31,10 @@
 - Capítulos seguem o **esqueleto v3** de `livro/GUIA-EDITORIAL.md` e declaram data de
   captura no cabeçalho; toda edição atualiza `livro/HISTORICO.md` (incl. modelo de IA).
 - Nenhum método é apresentado como "o melhor"; limitações com fonte (Princípio VI).
+- **História é afirmação e exige selo** (Princípio VIII): capítulo de método tem a
+  seção "De onde isto veio" (5 elementos + tabela de selos ✓/✓ᵐ/⏳/❌/📖), alimentada
+  pela nota de pesquisa em `estudos/` — nunca de memória, nunca de resumo de busca;
+  "a literatura atribui a X" ≠ "X publicou". Inventar história é pior que omiti-la.
 - Decisão relevante → ADR em `adr/` (imutável); mudança de escopo → volta à spec.
 
 ## Onde está o quê

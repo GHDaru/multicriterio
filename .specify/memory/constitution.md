@@ -3,7 +3,8 @@
 > A lei do projeto. Em conflito entre um pedido pontual e esta constituição, a constituição
 > prevalece — ou o conflito é explicitado ao usuário antes de agir.
 >
-> **Versão 1.0.0** · Ratificada em 2026-07-30 · Linhagem: constituição do
+> **Versão 1.1.0** · Ratificada em 2026-07-30 · Emendada em 2026-08-10 (Princípio VIII,
+> ADR 0009) · Linhagem: constituição do
 > [Engenharia de Harness](https://github.com/ghdaru/harness_engineering) (v1.2.0) +
 > princípios do [Maestro](https://github.com/ghdaru/maestro) (v1.0.0).
 
@@ -79,6 +80,100 @@ executa não verifica (revisão independente em contexto fresco); **"prove, não
 (todo "pronto" vem com o output do teste/build que o comprova); toda decisão relevante
 vira ADR em `adr/` (imutável — superada, nunca editada no mérito). Exceções que vão
 direto ao main: emendas a esta constituição e correções triviais.
+
+### VIII. Nenhum método cai do céu (NÃO-NEGOCIÁVEL)
+
+Todo método deste livro foi inventado por **alguém**, que estava **preso** num problema
+concreto, numa data, com meios limitados. Um capítulo que apresenta o método sem essa
+história entrega um procedimento — e procedimento, o leitor decora. **Este livro não passa
+decoreba.**
+
+A razão não é ornamental. Quem sabe *que problema forçou o método a existir* consegue
+reconhecer, anos depois e noutro contexto, quando está diante do mesmo tipo de aperto — e é
+isso que transfere. Quem só sabe executar o procedimento tem uma habilidade que expira com a
+prova.
+
+#### A seção obrigatória: "De onde isto veio"
+
+Todo capítulo de método tem essa seção, posicionada **depois** de "o problema" e **antes** da
+intuição. Ela não é caixa de curiosidade: é o que dá ao leitor um motivo para não pular
+direto para a fórmula.
+
+Cinco elementos, nesta ordem:
+
+| Elemento | A pergunta que responde |
+|---|---|
+| **O aperto** | Quem estava preso, em quê, quando. Um problema do mundo, com data e gente |
+| **O que se fazia antes** | Contra o quê o método compete. Sem isto, não dá para medir o salto |
+| **A virada** | Qual foi a ideia que destravou — em linguagem natural, sem notação |
+| **A ideia reaproveitável** | O padrão de raciocínio que serve **fora** deste método |
+| **O nome** | Se o nome tem origem, ela é contada |
+
+O elemento que mais importa é o quarto. **Todo artifício técnico declara a ideia
+reaproveitável que há por trás dele.** Um artifício sem ideia é truque, e truque não se
+transfere.
+
+#### História é afirmação, e exige fonte
+
+Este é o terreno mais fácil do livro para inventar, porque **história inventada soa bem**: uma
+data errada e uma atribuição plausível passam por qualquer revisão apressada.
+
+**Inventar história é pior do que omiti-la, porque é convincente.**
+
+Toda afirmação histórica carrega um selo, e cada capítulo fecha a seção com uma tabela que
+declara o estado de cada uma:
+
+| Selo | Significa |
+|---|---|
+| ✓ | **Fonte aberta e lida.** O que está afirmado foi conferido no texto |
+| ✓ᵐ | **Só os metadados** foram conferidos (autor, obra, ano, identificador). O conteúdo não foi lido |
+| ⏳ | **Atribuição corrente**, repetida na literatura didática, **não confirmada em fonte primária** |
+| ❌ | Procurei e **não achei fonte** |
+| 📖 | **Leitura editorial** — interpretação deste livro, não afirmação histórica |
+
+A distinção entre ✓ e ✓ᵐ não é preciosismo: ela é o que impede confundir *"existe e é este
+artigo"* com *"eu li e diz isso"*. Metadado confere que a obra existe; não confere o que ela
+afirma.
+
+O selo ❌ é permitido e às vezes é o mais honesto. Uma lacuna admitida em voz alta vale mais
+do que uma suposição com cara de fato.
+
+#### Três proibições
+
+1. **Nada de gênio solitário.** É uma história ruim e geralmente falsa. Métodos nascem de
+   instituições, encomendas, prazos e restrições materiais — e é isso que ensina.
+2. **Nada de curiosidade decorativa.** Se o parágrafo sai sem o leitor perder compreensão ou
+   julgamento, ele é enfeite. A história entra porque ensina, não porque enfeita.
+3. **Nada de misturar registro.** "A literatura atribui a X" não é a mesma frase que "X
+   publicou em 19NN", e as duas não podem parecer iguais no texto.
+
+#### Processo: pesquise de uma vez, não capítulo a capítulo
+
+Concentre a pesquisa histórica numa **sessão própria**, que produz uma nota de pesquisa
+alimentando as rodadas seguintes — em vez de pesquisar dentro de cada capítulo.
+
+A razão é concreta: **as histórias se conectam, e quem descobre a conexão depois já publicou
+os dois lados sem ela.** Pesquisando junto, as ligações aparecem; pesquisando separado, não.
+
+A nota de pesquisa deve terminar com uma **fila de verificação**, ordenada por quanta dúvida
+cada fonte fecharia por unidade de esforço. Nem toda fonte é alcançável, e saber qual abrir
+primeiro poupa horas.
+
+#### Duas armadilhas, aprendidas na prática
+
+**Resumo de busca não é fonte — nem para confirmar, nem para desmentir.** Um resumo pode
+abreviar o original de tal forma que um fato **correto** pareça errado. Corrigir a partir do
+resumo introduz o erro que você achava estar consertando. Se a afirmação importa, abra o
+texto.
+
+**Ler a fonte não serve só para conferir: serve para achar o que você não sabia que estava
+lá.** As melhores histórias quase nunca aparecem em resumo — elas estão no parágrafo que
+ninguém resumiu.
+
+#### O teste da seção
+
+O leitor deve terminá-la **querendo continuar**. Um livro técnico compete com a tentação de
+pular para a fórmula; a história é o que dá ao leitor um motivo para não pular.
 
 ## Restrições da construção (decisor-zero e app)
 

@@ -36,20 +36,32 @@ Seções, na ordem:
 1. `## Objetivos de aprendizagem` — 3–5, cada um abrindo com verbo de Bloom em negrito
    (**Explicar**, **Calcular**, **Implementar**, **Comparar**, **Avaliar**).
 2. `## O problema` — a dor de decisão que motiva o capítulo, sempre encostada no caso âncora.
-3. `## Fundamentos` — a fonte seminal do método *traduzida para decisões* ("Saaty propõe X,
+3. `## De onde isto veio` — **obrigatória em capítulo de método** (Princípio VIII):
+   entre "O problema" e "Fundamentos", os cinco elementos na ordem — **o aperto** (quem
+   estava preso, em quê, quando) → **o que se fazia antes** → **a virada** (sem notação) →
+   **a ideia reaproveitável** (o padrão que serve fora do método) → **o nome** (se tem
+   origem). Fecha com a tabela de selos (✓ · ✓ᵐ · ⏳ · ❌ · 📖) declarando o estado de cada
+   afirmação histórica. As três proibições valem aqui: nada de gênio solitário, nada de
+   curiosidade decorativa, nada de misturar "a literatura atribui a X" com "X publicou".
+   A matéria-prima vem da nota de pesquisa histórica (`estudos/`), nunca de memória.
+   Teste da seção: o leitor termina **querendo continuar**.
+4. `## Fundamentos` — a fonte seminal do método *traduzida para decisões* ("Saaty propõe X,
    o que significa que você deve Y"); fórmulas em LaTeX; ponteiro para `bibliografia.md`.
-4. `## O método passo a passo` — worked example completo no caso âncora, tabela por tabela,
+5. `## O método passo a passo` — worked example completo no caso âncora, tabela por tabela,
    até o resultado final (que o teste da etapa reproduz).
-5. `## Quando usar (e quando não)` — premissas, limitações e críticas com fonte
+6. `## Quando usar (e quando não)` — premissas, limitações e críticas com fonte
    (Princípio VI); fecha com `### Leitura executiva` terminando em "**O que levar** hoje: …".
-6. `## Mão na massa — decisor-zero, etapa NN` — aponta a pasta, diz o que nasce no código
+7. `## Mão na massa — decisor-zero, etapa NN` — aponta a pasta, diz o que nasce no código
    e propõe o exercício de completar (part-task practice).
-7. `## Verificação` — 2–3 perguntas mapeadas nos objetivos do item 1, com dica entre parênteses.
-8. `---` + `## Apêndice A — [tema] nas ferramentas e na literatura aplicada` — como
+8. `## Verificação` — 2–3 perguntas mapeadas nos objetivos do item 1, com dica entre parênteses.
+9. `---` + `## Apêndice A — [tema] nas ferramentas e na literatura aplicada` — como
    softwares/bibliotecas reais (pymcdm, scikit-criteria, planilhas…) e estudos de caso
    tratam o tema, com URLs; expandido a cada rodada, sem inchar o corpo.
+10. `## Apêndice B — gabarito comentado da Verificação` — resposta comentada de cada
+    pergunta do item 8 (feedback é parte da prática — 4C/ID).
 
-Capítulos conceituais (00, panoramas) podem omitir 4 e 6, mantendo o resto.
+Capítulos conceituais ou operacionais (00, panoramas, infra) podem omitir 3, 5 e 7,
+mantendo o resto.
 
 ## 4. Regras de escrita permanentes
 
