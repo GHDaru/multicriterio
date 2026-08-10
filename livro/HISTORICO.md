@@ -33,6 +33,21 @@
 
 ## Edições
 
+### Edição 0.30 — 2026-08-10 · Princípio VIII: "Nenhum método cai do céu" (spec 030, ADR 0009)
+
+- **Emenda constitucional v1.1.0** (texto integral do autor): todo capítulo de método
+  ganha a seção obrigatória **"De onde isto veio"** (aperto → o que se fazia antes →
+  virada → ideia reaproveitável → nome), com selo por afirmação histórica
+  (✓ · ✓ᵐ · ⏳ · ❌ · 📖) e três proibições (gênio solitário, curiosidade decorativa,
+  mistura de registro). Esqueleto v3 atualizado no guia editorial.
+- Nasce a **nota de pesquisa histórica** (`estudos/nota-pesquisa-historia-mcda.md`),
+  produzida em sessão única com leitura real de fonte: Roy (1968) lido na íntegra —
+  ELECTRE nasce como nota interna da SEMA (1966, Benayoun/Roy/Sussmann, manual de
+  programa, CDC ≤100 objetos) e o acrônimo famoso **não está** no artigo (achado
+  negativo); obituário INFORMS de Saaty lido (ACDA 1961–69 → Penn 1969). Fila de
+  verificação com 9 itens abertos. A inserção das seções nos capítulos é a spec 031.
+- **IA**: agente **Claude Code (Anthropic)**; princípio e texto do autor (Steward).
+
 ### Edição 0.29 — 2026-07-31 · AEO iteração 2: a matemática do prior (spec 029)
 
 - A conjectura do autor sobre os valores médios do sorteio vira a **Proposição 5** do
