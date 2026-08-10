@@ -1,6 +1,6 @@
 # 05 — AHP: pesos por comparações par a par (e o detector de incoerência)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -19,6 +19,47 @@ ancoram, chutam, mudam. O que um decisor *consegue* responder com confiança é 
 pergunta de cada vez: "entre Preço e Área, qual importa mais — e quanto?". O AHP
 (*Analytic Hierarchy Process*) transforma um conjunto dessas perguntas simples num
 vetor de pesos — e, melhor, **denuncia quando as respostas se contradizem**.
+
+## De onde isto veio
+
+**O aperto.** Segundo o obituário da INFORMS (fonte aberta, lida), **Thomas Saaty** —
+matemático formado em teoria de filas — passou **1961–1969 na Arms Control and
+Disarmament Agency** do Departamento de Estado americano, nas administrações Kennedy e
+Johnson, cercado de cientistas de primeira linha, trabalhando nas negociações de
+desarmamento com a União Soviética. E saiu frustrado: os modelos eram cada vez mais
+sofisticados, e os negociadores simplesmente **não os usavam**. Oito anos vendo a
+melhor matemática disponível ser ignorada por quem decidia de verdade.
+
+**O que se fazia antes.** Dois caminhos, ambos falhando na mesa de negociação: pedir
+números absolutos a especialistas (que eles não têm — o cap. 03 mostrou o chute que
+sai disso) ou construir funções de utilidade axiomáticas (que o decisor não entende
+nem reconhece como suas).
+
+**A virada.** Ninguém sabe dizer "o preço pesa 0,35" — mas qualquer um diz, com
+convicção, "o preço importa umas 3× mais que a área". Saaty trocou a pergunta
+impossível por muitas perguntas fáceis (**pares**, não absolutos) e, em vez de proibir
+a contradição humana, resolveu **medi-la**: a redundância dos julgamentos (fazemos 6
+comparações para extrair 4 pesos) é o que permite calcular o quanto o decisor se
+contradisse — o CR. Deixou o governo em 1969, para a University of Pennsylvania, e
+construiu o método na década seguinte; a literatura data a cena fundadora em 1971, em
+planejamento de contingência para a Defesa — e a primeira aplicação de grande porte
+foi o plano de transporte do **Sudão** (1977), antes do livro de 1980.
+
+**A ideia reaproveitável.** Quando o insumo direto é inacessível, **colete julgamentos
+relativos redundantes e extraia deles duas coisas: o consenso interno (autovetor) e o
+grau de contradição (CR)**. O padrão serve fora daqui: avaliação por comparação pareada
+com checagem de consistência aparece hoje de ranqueamento de LLMs a priorização de
+backlog.
+
+**O nome.** Descritivo: uma **hierarquia** (objetivo → critérios → alternativas)
+percorrida por um **processo analítico**. Sem lenda de batismo conhecida.
+
+| Afirmação | Selo |
+|---|---|
+| ACDA 1961–1969 (Kennedy/Johnson); saída em 1969 para a Univ. da Pennsylvania; frustração com modelos ignorados; Sudão 1977; livro 1980 | ✓ obituário INFORMS (fonte secundária aberta, lida na íntegra) |
+| Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ corrente; não confirmada em primária (candidata: introdução de Saaty 1977 — na fila) |
+| Nome da escola na Penn ("Wharton") | ⏳ não confirmado na fonte lida — por isso não afirmado no texto |
+| Redundância → CR como resposta à contradição humana | 📖 leitura editorial da arquitetura do método |
 
 ## Fundamentos
 

@@ -1,6 +1,6 @@
 # 02 — Estruturação: de valores a critérios (e o veredito da dominância)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-30 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -26,6 +26,39 @@ E há um terceiro desperdício, mais silencioso: gastar energia comparando alter
 que nenhuma preferência racional escolheria. Um quinto candidato entrou na nossa busca —
 **A5 (Colina): R$ 470.000, 60 m², 18 min, bairro 3**. Precisamos de algum método
 sofisticado para descartá-lo?
+
+## De onde isto veio
+
+**O aperto.** A literatura atribui o conceito central deste capítulo a **Vilfredo
+Pareto**, engenheiro que virou economista, na cátedra de Lausanne, no *Cours d'économie
+politique* (1896–97). O problema que o prendia não era escolher apartamento: era dizer
+quando uma sociedade inteira está "melhor" — sem ter como somar a satisfação de pessoas
+diferentes numa conta só.
+
+**O que se fazia antes.** Somava-se assim mesmo: a tradição utilitarista comparava e
+agregava utilidades de indivíduos distintos como se fossem a mesma moeda — exatamente o
+"somar R$ com m²" do nosso cap. 01, em escala nacional.
+
+**A virada.** Recusar a soma e ainda assim afirmar algo: se uma mudança melhora alguém
+**sem piorar ninguém**, ela é uma melhoria — não importa como se pese pessoa contra
+pessoa. Onde nenhuma mudança dessas resta, chegou-se a um ponto "ótimo": todo ganho
+passa a custar uma perda.
+
+**A ideia reaproveitável.** Antes de comprar a briga da comensuração (pesos, escalas,
+trocas), extraia tudo o que pode ser afirmado **sem ela**. É o veredito parcial que não
+exige acordo — e por isso é incontestável. O padrão serve muito além de MCDA: em
+qualquer comparação multidimensional (portfólios, fornecedores, modelos de ML), o
+filtro "quem é pior em tudo?" vem antes e de graça.
+
+**O nome.** "Ótimo de Pareto" e "fronteira de Pareto" homenageiam o economista; os
+historiadores da economia discutem a anterioridade de **Edgeworth** (1881) na ideia —
+registramos a discussão sem arbitrá-la.
+
+| Afirmação | Selo |
+|---|---|
+| Pareto formulou o critério no *Cours d'économie politique* (Lausanne, 1896–97) | ⏳ atribuição corrente; primária (Gallica) não alcançada |
+| A tradição utilitarista agregava utilidades interpessoais | 📖 leitura editorial do contraste |
+| Edgeworth (1881) teria anterioridade parcial | ⏳ discussão corrente entre historiadores |
 
 ## Fundamentos
 

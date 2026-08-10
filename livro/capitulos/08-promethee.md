@@ -1,6 +1,6 @@
 # 08 — PROMETHEE: preferência par a par e fluxos
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -19,6 +19,43 @@ R$ 2 mil mais barato é *preferível*, ou é *a mesma coisa*? A escola europeia
 (outranking) leva a sério a ideia de que preferência **nasce da comparação entre duas
 alternativas concretas** e pode ser fraca, forte ou nula conforme o tamanho da
 diferença.
+
+## De onde isto veio
+
+**O aperto.** O outranking já existia (o ELECTRE, cap. 09, é quinze anos mais velho) —
+e era esse o problema. A literatura conta que **Jean-Pierre Brans**, da escola belga,
+apresentou o PROMETHEE em **1982**, numa conferência na Université Laval (Québec)
+chamada, apropriadamente, *L'ingénierie de la décision*: a segunda geração de um campo
+respondendo à crítica que a primeira acumulara — limiares de concordância e
+discordância que o decisor aceitava sem entender.
+
+**O que se fazia antes.** ELECTRE: sobreclassificação com parâmetros globais ($c^*$,
+$d^*$, vetos) potentes, mas opacos — mexa em $d^*$ de 0,4 para 0,65 (nosso cap. 09 faz
+isso) e explique a um comitê o que exatamente mudou na *preferência* de alguém.
+
+**A virada.** Colocar os parâmetros **onde o decisor tem intuição**: por critério, uma
+função que traduz a *diferença de desempenho* em preferência — com limiares que
+significam algo dizível ("abaixo de R$ 2 mil é a mesma coisa"; "acima de R$ 200 mil a
+preferência satura"). Seis formas de função, escolhidas pelo dono do problema, não
+pelo analista.
+
+**A ideia reaproveitável.** **Interpretabilidade de parâmetro é requisito, não
+cosmética**: um modelo cujos parâmetros o dono da decisão consegue discutir é um
+modelo que sobrevive à reunião. E a meta-lição da segunda geração: aceitar a crítica
+ao antecessor e responder **dentro** do paradigma (o PROMETHEE não abandona o
+outranking — o conserta onde doía).
+
+**O nome.** A expansão consta do título do paper de 1985: *Preference Ranking
+Organisation METHod (for Enrichment Evaluations)* — e o acrônimo pisca para o titã
+que roubou o fogo; a intenção mitológica é corrente, mas não a encontramos afirmada
+pelos autores em fonte primária.
+
+| Afirmação | Selo |
+|---|---|
+| Apresentação em 1982, conferência "L'ingénierie de la décision", Université Laval (Québec) | ⏳ atribuição corrente; atas na fila (esforço alto) |
+| Brans & Vincke (1985), *Management Science* — paper de referência | ✓ᵐ (registro na bibliografia; conteúdo não lido) |
+| Motivação "responder à opacidade do ELECTRE" | 📖 leitura editorial (coerente com a arquitetura do método) |
+| Alusão mitológica intencional no nome | ⏳ corrente, não confirmada |
 
 ## Fundamentos
 

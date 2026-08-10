@@ -1,6 +1,6 @@
 # 10 — VIKOR e BWM: compromisso honesto, pesos com menos perguntas
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -17,6 +17,51 @@ Duas frustrações acumuladas. Primeira: todo ranking até aqui **elege alguém*
 quando a vantagem do 1º sobre o 2º é ridícula (no cap. 04, 0,007!). Um método honesto
 deveria saber dizer "é empate técnico". Segunda: o AHP pede $n(n-1)/2$ comparações — 6
 para 4 critérios, 36 para 9; decisores cansam, e julgamento cansado é julgamento ruim.
+
+## De onde isto veio
+
+Dois métodos, dois apertos — com quarenta anos e um contraste instrutivo entre eles.
+
+**O aperto (VIKOR).** A literatura atribui o método a **Serafim Opricovic**,
+engenheiro civil em Belgrado, e situa sua origem no planejamento de **reconstrução
+pós-terremoto** na Iugoslávia (a partir do fim dos anos 1970): recursos escassos,
+alternativas irreconciliáveis e nenhum luxo de eleger um "vencedor" frágil — quando
+tudo é urgente, proclamar um campeão por 0,17 de índice é irresponsabilidade. As
+fontes primárias (tese e relatórios em servo-croata) não foram alcançadas — procuramos
+e não achamos acesso; tudo nesta origem fica no registro "a literatura atribui".
+
+**O aperto (BWM).** Quarenta anos depois, o problema é de fadiga: **Jafar Rezaei**
+(TU Delft, logística — afiliação corrente) via decisores desistirem no meio das
+$n(n-1)/2$ comparações do AHP; julgamento cansado é julgamento incoerente, e o CR
+só detecta o estrago depois.
+
+**O que se fazia antes.** Para o compromisso: TOPSIS — perto do ideal, mas sem
+protocolo para dizer "empate técnico" (C1/C2 não existem lá). Para pesos: AHP
+completo, com todas as comparações e a inconsistência corrigida a posteriori.
+
+**A virada.** No VIKOR: medir **dois arrependimentos** (a maioria, S, e o crítico mais
+sacrificado, R) e — a parte realmente nova — um **protocolo de aceitação** que
+transforma vantagem insuficiente em conjunto de compromisso declarado. No BWM: só
+comparar todos contra **os dois extremos** (melhor e pior) — $2n-3$ julgamentos, e a
+consistência sai alta *por construção*, não por sorte.
+
+**A ideia reaproveitável.** Do VIKOR: **um ranking precisa de condições de
+proclamação** — sem margem mínima e estabilidade, o resultado honesto é um conjunto,
+não um campeão. Do BWM: **pontos de referência extremos baratearam a elicitação** —
+âncoras nos dois polos extraem mais informação por pergunta do que pares arbitrários
+(o mesmo princípio dos dois polos do TOPSIS, aplicado a perguntas em vez de
+distâncias).
+
+**O nome.** VIKOR é acrônimo servo-croata — *VIšekriterijumsko KOmpromisno
+Rangiranje*, "ordenação de compromisso multicritério" (atribuição corrente). BWM é
+literal: *Best-Worst Method*.
+
+| Afirmação | Selo |
+|---|---|
+| Opricovic, Belgrado, origem pós-terremoto (fim dos anos 1970) | ⏳ atribuição corrente; primárias em servo-croata — ❌ não alcançadas |
+| Opricovic & Tzeng (2004), o comparativo que internacionalizou o VIKOR | ✓ᵐ (DOI na bibliografia; conteúdo não lido) |
+| Rezaei (2015), *Omega*; afiliação TU Delft | ✓ᵐ o paper (bibliografia); ⏳ a afiliação e a motivação narrada |
+| Expansão servo-croata do acrônimo | ⏳ corrente |
 
 ## Fundamentos
 

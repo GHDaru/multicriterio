@@ -1,6 +1,6 @@
 # 09 — ELECTRE: concordância, discordância e o direito de veto
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -17,6 +17,53 @@ um apartamento em bairro inaceitável pode vencer se for barato o bastante. Para
 decisões reais isso é inadmissível ("segurança não se negocia", "abaixo do mínimo
 legal não entra"). O ELECTRE nasce exatamente desta recusa: **preferência global não
 precisa ser uma soma** — pode ser um sistema de votação com direito de veto.
+
+## De onde isto veio
+
+Este é o único capítulo cuja história lemos na fonte: o paper de 1968 está aberto na
+Numdam, e nós o abrimos — o que segue com selo ✓ foi conferido no texto.
+
+**O aperto.** **Bernard Roy** não assina o paper por uma universidade: a nota de
+rodapé o identifica como *Directeur de la Direction Scientifique* da **SEMA (Metra
+International)** — uma consultoria, com clientes pagando. O problema trabalhado no
+artigo é de empresa: selecionar **novas atividades/produtos** avaliados sob dezenas de
+*points de vue* (o exemplo estruturado no paper classifica **49** deles em seis
+grupos). E a bibliografia do próprio artigo empurra o nascimento para dois anos antes
+da publicação: em **1966**, ELECTRE já existia como **nota de trabalho interna nº 49**
+da SEMA — assinada por **Benayoun, Roy e Sussmann** — acompanhada de um **manual de
+referência do programa** (nota nº 25, de *maio* de 1966, anterior à nota do método). O
+texto público de 1968 corresponde a uma exposição no Séminaire d'Économétrie do CNRS,
+em Paris, em 22/01/1968.
+
+**O que se fazia antes.** Somar notas ponderadas — aceitando, sem discutir, que
+qualquer déficit se compensa e que 49 pontos de vista cabem numa régua só.
+
+**A virada.** Desistir da régua: aceitar "$a$ sobreclassifica $b$" quando uma
+**coalizão suficiente** de critérios apoia e **nenhum protesta alto demais** — votação
+com direito de veto, não soma. E aceitar o que a soma proíbe: pares **incomparáveis**.
+Para escolher dentro da relação resultante, Roy importa da teoria dos grafos o
+**noyau** (kernel) — o método nasceu multidisciplinar.
+
+**A ideia reaproveitável.** Quando a régua única mente, troque "**quanto vale**" por
+"**o que supera o quê**" — relações antes de números. E note o contra-exemplo
+documentado de gênio solitário: três autores, uma consultoria, um manual de software
+(o paper diz "un programme baptisé ELECTRE", disponível na S.I.A., rodando em
+computador CDC para até 100 objetos). ELECTRE nasceu **ferramenta em produção**, e só
+depois virou literatura.
+
+**O nome.** O paper de 1968 diz apenas "um programa batizado ELECTRE" — buscamos a
+expansão *ÉLimination Et Choix Traduisant la REalité*, onipresente nos manuais, em
+**todas as 20 páginas do artigo: ela não está lá** (achado negativo, selado). Se o
+acrônimo teve certidão, ela mora nas notas internas da SEMA de 1966, que não
+alcançamos. (E "Electre" é, claro, o nome francês da Electra da tragédia grega — a
+piscadela é corrente, não documentada.)
+
+| Afirmação | Selo |
+|---|---|
+| Afiliação SEMA (nota de rodapé); exposição no Séminaire d'Économétrie do CNRS em 22/01/1968; problema de novas atividades com 49 points de vue; "un programme baptisé ELECTRE"; kernel de grafo; programa em CDC ≤ 100 objetos | ✓ Roy (1968), lido (PDF Numdam) |
+| Notas SEMA de 1966: método (nº 49, jun.; Benayoun/Roy/Sussmann) e manual do programa (nº 25, mai.) | ✓ constam da bibliografia do artigo lido; as notas em si não foram lidas |
+| Faísca de 1965 em planejamento de mídia na SEMA | ⏳ atribuição corrente, plausível pelas refs. de 1966 |
+| Expansão do acrônimo no paper de 1968 | ✓ **achado negativo**: não está no artigo; origem da expansão segue ⏳ |
 
 ## Fundamentos
 

@@ -1,6 +1,6 @@
 # 12 — Decisão em grupo: agregar pessoas sem esconder o conflito
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -21,6 +21,49 @@ Robustez conquistada (cap. 11), resta a realidade final: decisões importantes t
 agregação de preferências é um campo minado conhecido desde o século XVIII: maiorias
 que andam em círculo, vencedores que não são o favorito de ninguém, regras
 manipuláveis.
+
+## De onde isto veio
+
+**O aperto.** Este é o capítulo mais velho do livro: dois séculos antes de existir
+"MCDA", a **Académie Royale des Sciences** precisava eleger seus próprios membros — e
+a literatura conta que **Jean-Charles de Borda** (engenheiro militar, acadêmico)
+argumentou, num memorial apresentado à Académie (a versão impressa é de 1781), que a
+pluralidade simples podia eleger alguém que a **maioria detestava**, desde que a
+oposição se dividisse. O aperto era doméstico e concreto: a própria instituição usava
+uma regra de votação defeituosa para decidir quem entrava.
+
+**O que se fazia antes.** Pluralidade: conta-se só o 1º lugar de cada eleitor — e
+toda a informação sobre o resto da ordem vai para o lixo (é o "quem tem mais 1ºs" que
+o cap. 14 reencontra e recusa).
+
+**A virada.** Duas, rivais desde o berço. Borda: usar a **posição inteira** do ranking
+de cada eleitor (pontos por posição — o consenso). **Condorcet** (1785, no *Essai*
+sobre a probabilidade das decisões): usar os **duelos majoritários** par a par — e a
+descoberta desconcertante de que as maiorias podem andar em círculo (o paradoxo do
+capítulo). A rivalidade nunca se resolveu — em 1951, **Arrow** provou por quê: nenhuma
+regra satisfaz todos os requisitos razoáveis ao mesmo tempo (e **Copeland**, cuja
+regra usamos, circula atribuído a uma nota de seminário *não publicada* de 1951 — caso
+raro em que a fonte primária talvez seja inalcançável por natureza).
+
+**A ideia reaproveitável.** **Agregação de preferências tem teoremas de
+impossibilidade** — não existe regra neutra, logo a escolha da regra é parte da
+decisão e deve ser feita **antes** de ver os rankings (regra escolhida depois é regra
+manipulada). E: jogar fora a ordem abaixo do 1º lugar é jogar fora quase toda a
+informação — lição que atravessa deste capítulo ao 14 (a Prop. 2 do Apêndice C prova
+que o posto esperado da AEO *é* uma Borda média: o século XVIII vivo no método de
+2026).
+
+**O nome.** "Contagem de Borda", "paradoxo de Condorcet", "método de Copeland" — o
+campo nomeia as regras pelos autores; a *social choice theory* moderna (o nome do
+campo) nasce com o livro de Arrow.
+
+| Afirmação | Selo |
+|---|---|
+| Borda, memorial sobre eleições (impresso 1781; apresentação anterior à Académie) e a crítica à pluralidade | ⏳ atribuição corrente; primária aberta (Gallica) bloqueada deste ambiente — na fila |
+| Condorcet (1785), *Essai*, paradoxo dos ciclos | ⏳ metadados notórios; registro na fila |
+| Arrow (1951), teorema da impossibilidade | ✓ᵐ (obra notória; registro a conferir na fila) |
+| Copeland (1951) como nota de seminário não publicada (Michigan) | ⏳ atribuição corrente — possivelmente ❌ por natureza |
+| AIJ pela média geométrica: Aczél & Saaty (1983) | ⏳ metadados na fila |
 
 ## Fundamentos
 
