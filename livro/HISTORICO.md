@@ -33,6 +33,23 @@
 
 ## Edições
 
+### Edição 0.33 — 2026-08-13 · fila varrida até o fim pela rota Internet Archive (spec 033)
+
+- **Mais dois itens fechados por leitura**: **Condorcet (1785)** — folha de rosto e o
+  paradoxo na formulação original ("de duas quaisquer das três proposições resulta
+  uma conclusão contrária à terceira", *Discours préliminaire*) — selo ✓ no cap. 12;
+  **Churchman, Ackoff & Arnoff (1957)** — capítulo "Weighting Objectives" lido na
+  íntegra: método das comparações sucessivas (contraprova por redundância, vinte anos
+  antes do CR), a crítica aos "intangíveis" e o caso executivo — cap. 04 reescrito
+  com selo ✓; o artigo de 1954 corroborado pelos "Comments" do mesmo fascículo (✓ᵐ).
+- **Quatro itens esgotados pela rota e documentados**: Saaty (1977) e Hwang & Yoon
+  (1981) existem no IA só como empréstimo (403/401); Brans (1982) e Opricovic não têm
+  exemplar. Ficam abertos com o registro da tentativa — fechá-los agora exige paywall
+  ou biblioteca física.
+- Placar da fila: **7 de 11 itens fechados** (4 por leitura integral de fonte
+  primária: Roy, Franklin, Borda, Condorcet + o manual de 1957).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
+
 ### Edição 0.32 — 2026-08-13 · revisão editorial + fontes fechadas na fila (spec 032)
 
 - **Revisão de humanização** (livro inteiro): cortados os tiques verbais em cluster
