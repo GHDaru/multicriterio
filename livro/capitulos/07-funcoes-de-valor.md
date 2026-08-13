@@ -1,6 +1,6 @@
 # 07 — MAVT e Even Swaps: o valor não é linear
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -24,15 +24,21 @@ errar os pesos.
 
 ## De onde isto veio
 
-**O aperto.** A pré-história favorita do campo é uma carta: a literatura conta que
-**Benjamin Franklin**, em 1772, respondendo ao amigo Joseph Priestley (que agonizava
-sobre aceitar ou não um emprego), descreveu sua "álgebra moral ou prudencial" — prós e
-contras em colunas, riscando pares que se equivalem até a decisão ficar visível.
-(Buscamos a carta na fonte primária aberta nesta rodada; o acesso falhou do nosso
-ambiente, então **não citamos o texto** — só a atribuição, que segue na fila de
-verificação.) Dois séculos depois, o aperto moderno: a análise de decisão do pós-guerra
-tinha teoria da utilidade rigorosa para **uma** dimensão — e as decisões públicas dos
-anos 1960–70 (usinas, aeroportos, orçamentos) chegavam com dez.
+**O aperto.** A pré-história favorita do campo é uma carta — e nós a lemos. De Londres,
+em 19 de setembro de 1772, **Benjamin Franklin** responde a Joseph Priestley, que lhe
+pedira conselho num "assunto de tanta importância" (a carta não diz qual; a literatura
+conta que era uma oferta de emprego). A primeira frase já vale o capítulo: *"I cannot,
+for want of sufficient Premises, advise you **what** to determine, but if you please I
+will tell you **how**"* — não posso dizer *o que* decidir, mas posso dizer *como*. É a
+distinção apoio × decisão do cap. 00, dois séculos antes de Roy. O método que ele
+descreve: dividir meia folha em duas colunas, *Pró* e *Contra*; anotar os motivos ao
+longo de **três ou quatro dias** (porque as razões não comparecem todas à mente ao
+mesmo tempo — o diagnóstico psicológico vem antes do procedimento); estimar os pesos;
+riscar os que se equivalem ("se um pró vale dois contras, risco os três") até a
+balança ficar visível. E o nome, no fecho da carta: *"what may be called Moral or
+Prudential Algebra"*. Dois séculos depois, o aperto moderno: a análise de decisão do
+pós-guerra tinha teoria da utilidade rigorosa para **uma** dimensão — e as decisões
+públicas dos anos 1960–70 (usinas, aeroportos, orçamentos) chegavam com dez.
 
 **O que se fazia antes.** Ou uma dimensão de cada vez (e a soma implícita do SAW, com
 linearidade assumida em silêncio), ou nada de formal — comitê e retórica.
@@ -56,7 +62,8 @@ sequência inteira substitui o cálculo de pesos.
 
 | Afirmação | Selo |
 |---|---|
-| Franklin → Priestley (1772), "moral or prudential algebra" | ⏳ atribuição corrente; primária aberta existe, inacessível deste ambiente — item nº 1 da fila; sem citação verbatim até lá |
+| Franklin → Priestley, Londres, 19/09/1772: colunas Pró/Contra, 3–4 dias, riscar equivalências, "Moral or Prudential Algebra", "não o quê, mas como" | ✓ carta lida em *The Writings of Benjamin Franklin* (ed. Smyth), vol. V, pp. 437–438 — exemplar aberto no Internet Archive |
+| O assunto da carta era uma oferta de emprego a Priestley | ⏳ a carta não o diz; atribuição corrente |
 | Keeney & Raiffa (1976) como fundação axiomática multiatributo | ✓ᵐ (registro na bibliografia; conteúdo não lido) |
 | Hammond, Keeney & Raiffa (1998), Even Swaps na HBR | ✓ᵐ (URL na bibliografia) |
 | Contexto "decisões públicas dos anos 1960–70" | ⏳ narrativa corrente da história da análise de decisão |
@@ -115,7 +122,7 @@ nenhum vetor $w$.
 
 Funções de valor valem o esforço quando os desempenhos cobrem faixas largas (dinheiro,
 tempo, risco) ou quando há limiares reais (orçamento, mínimo habitável) — e são o
-antídoto para a crítica "seu modelo acha que tudo é linear". Even Swaps brilha com
+antídoto para a crítica "seu modelo acha que tudo é linear". Even Swaps rende com
 poucas alternativas e um decisor disposto a responder trocas honestas; cansa com muitas.
 Se a independência preferencial cai ("bairro só importa em apartamento grande"), a
 forma aditiva — SAW, TOPSIS, MAVT — perde a licença: as saídas clássicas são funções

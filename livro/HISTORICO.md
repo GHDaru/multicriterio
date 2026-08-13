@@ -15,23 +15,41 @@
 
 | Capítulo | Estado da arte capturado em | Etapa testada | Última revisão |
 |---|---|---|---|
-| 00 Introdução | 2026-07 | ✓ (etapa 00) | 2026-07-30 |
-| 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-07-30 |
-| 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-08-10 |
-| 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-08-10 |
-| 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-08-10 |
-| 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-08-10 |
-| 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-08-10 |
-| 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-08-10 |
+| 00 Introdução | 2026-07 | ✓ (etapa 00) | 2026-08-13 |
+| 01 O problema multicritério | 2026-07 | ✓ (etapa 01) | 2026-08-13 |
+| 02 Estruturação e dominância | 2026-07 | ✓ (etapa 02) | 2026-08-13 |
+| 03 Normalização e pesos | 2026-07 | ✓ (etapa 03) | 2026-08-13 |
+| 04 SAW — o método aditivo | 2026-07 | ✓ (etapa 04) | 2026-08-13 |
+| 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-08-13 |
+| 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-08-13 |
+| 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-08-13 |
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-10 |
-| 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-10 |
+| 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-13 |
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-10 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
-| 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-10 |
+| 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-13 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
-| 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 1 | 2026-08-10 |
+| 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
 
 ## Edições
+
+### Edição 0.32 — 2026-08-13 · revisão editorial + fontes fechadas na fila (spec 032)
+
+- **Revisão de humanização** (livro inteiro): cortados os tiques verbais em cluster
+  ("exatamente" ×30 → ×18, mantidos só os literais; "brilha" repetido variado),
+  corrigido o typo "plusalidade" (2×) no Apêndice C e atualizado o "iteração 1"
+  residual (cap. 14 e §8 do artigo) para iteração 2. Voz do livro (travessão, negrito
+  estrutural, "O que levar") preservada — é a voz do autor, não cacoete de IA.
+- **Fila de verificação: 5 itens fechados** pela rota Internet Archive (Gallica e
+  founders.archives.gov seguem bloqueados; as mesmas obras existem lá em edição
+  aberta): **Franklin → Priestley lida** (Smyth vol. V — colunas Pró/Contra, 3–4 dias,
+  "Moral or Prudential Algebra", e o "não o quê, mas como" que antecipa Roy em dois
+  séculos) e **Borda lido** (volume da Académie de 1781 — 21 eleitores, metáfora dos
+  atletas, e a nota de rodapé datando a apresentação em **16/06/1770**); Aczél &
+  Saaty (1983), Shannon (1948) e Arrow (1951) conferidos por registro (✓ᵐ). Selos
+  promovidos nos caps. 03, 07 e 12; nota de pesquisa atualizada (restam 5 itens,
+  incluindo o novo: Condorcet no Internet Archive).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
 
 ### Edição 0.31 — 2026-08-10 · "De onde isto veio" nos 11 capítulos de método (spec 031)
 

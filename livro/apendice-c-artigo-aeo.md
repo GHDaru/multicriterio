@@ -1,6 +1,6 @@
 # Apêndice C — Artigo (vivo): Agregação Estocástica Ordinal
 
-> **Artigo em desenvolvimento — iteração 2** · 2026-07-31 · contribuição original do
+> **Artigo em desenvolvimento — iteração 2** · última revisão 2026-08-13 · contribuição original do
 > autor do livro; redação e formalização assistidas por IA (Claude Code, Anthropic),
 > com curadoria humana. Nome do método é provisório. Todos os números desta versão são
 > reproduzidos pelos testes da etapa 14 do `decisor-zero` (semente 42, N = 20.000).
@@ -209,7 +209,7 @@ de caso a seguir, devem ser tratadas como empate.
 
 **Observação (ciclos).** A relação "vence o duelo" ($p_{ik} > 1/2$) não é transitiva
 em geral — herda a possibilidade de ciclos de Condorcet (cap. 12). O protocolo da §5
-existe precisamente porque vencedor de Condorcet estocástico, plusalidade de 1ºs e
+existe precisamente porque vencedor de Condorcet estocástico, pluralidade de 1ºs e
 posto esperado podem discordar — como de fato discordam nos nossos dados (§7).
 
 ### 5. Do dossiê à decisão: o protocolo
@@ -217,7 +217,7 @@ posto esperado podem discordar — como de fato discordam nos nossos dados (§7)
 A pergunta prática central: *com as contagens de 1ºs, 2ºs, …, quem "ficou em
 primeiro"?* As regras candidatas têm perfis distintos:
 
-- **Plusalidade de 1ºs** ($\max b_i^1$): intuitiva, mas ignora o resto da
+- **Pluralidade de 1ºs** ($\max b_i^1$): intuitiva, mas ignora o resto da
   distribuição — pode premiar uma alternativa polarizadora que também acumula últimos
   lugares.
 - **Posto esperado** ($\min \bar{r}_i$): usa a distribuição inteira e é transitiva
@@ -289,7 +289,7 @@ varredura do cap. 11, em que A1 reinava numa janela de 4,2 p.p.
 **As regras divergem**: A3 tem mais 1ºs *e* é o vencedor de Condorcet estocástico;
 A1 tem o melhor posto esperado — por 0,026. Pelo protocolo: a ordem final (posto
 esperado) abre com A1, o selo de robustez **não** fecha, e o relatório diz
-exatamente isso: *sob ignorância total de pesos, A3 é a aposta mais frequente para o
+isso, com todas as letras: *sob ignorância total de pesos, A3 é a aposta mais frequente para o
 topo, A1 a mais consistentemente bem colocada; a escolha entre os dois é uma escolha
 de perfil (pico × consistência), não de cálculo.* Note ainda a utilidade do modo sem
 ordem: A3, sempre 3º–4º nos métodos cardinais com os pesos do livro, é
@@ -322,7 +322,7 @@ estáveis ao prior neste caso; conclusões *quantitativas* (magnitudes, cauda) n
 
 ### 8. Limitações e agenda de iterações
 
-Esta é a **iteração 1** de um artigo vivo. Limitações conhecidas e agenda:
+Este é um artigo **vivo**, hoje na iteração 2. Limitações conhecidas e agenda:
 
 1. ~~**Prior**: comparar com o uniforme-no-simplexo e quantificar o impacto~~ —
    **concluído na iteração 2** (Prop. 5, tabela de médias e §7.4; Dirichlet genérico

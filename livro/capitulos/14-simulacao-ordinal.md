@@ -1,9 +1,9 @@
 # 14 — Agregação Estocástica Ordinal: decidir só com ordens
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 >
 > **Capítulo de contribuição original do autor** — método em desenvolvimento
-> (iteração 1); o artigo completo, com formalização, provas e experimentos, está no
+> (iteração 2); o artigo completo, com formalização, provas e experimentos, está no
 > [Apêndice C](../apendice-c-artigo-aeo.md). Este capítulo é a via didática.
 
 ## Objetivos de aprendizagem
@@ -52,7 +52,7 @@ evidência de que o aperto é real.
 
 **A ideia reaproveitável.** Sob informação parcial, **não colapse a incerteza num
 ponto: integre sobre o conjunto compatível e reporte a distribuição** — e declare o
-prior, porque "não escolher" também é uma escolha (a Prop. 5 mede exatamente o preço
+prior, porque "não escolher" também é uma escolha (a Prop. 5 mede o preço
 dela). O padrão serve a qualquer modelagem com insumo incompleto, de riscos a
 elicitação de especialistas.
 
@@ -128,8 +128,8 @@ primeiro?"):
 
 **Passo 4 — sem ordem de pesos (força intrínseca).** Repetindo sem declarar
 importância: A3 tem mais 1ºs (42,8%) **e** é o vencedor de Condorcet, mas A1 tem
-melhor posto esperado (1,993 × 2,019). **As regras divergem** — e é exatamente por
-isso que o protocolo manda reportar a divergência em vez de escondê-la: sob
+melhor posto esperado (1,993 × 2,019). **As regras divergem** — e é por isso que o
+protocolo manda reportar a divergência em vez de escondê-la: sob
 ignorância de pesos, A3 é a aposta de pico, A1 a de consistência; escolher entre eles
 é escolher um perfil de risco. (De quebra: A3, lanterna nos métodos cardinais do
 livro, é intrinsecamente forte — eram os *pesos do livro* que o desfavoreciam.)

@@ -153,8 +153,8 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   do prior uniforme-no-simplexo — a mesma matemática do cap. 14. A história do cap. 03
   e a do cap. 14 são a mesma ideia com 30 anos de distância: **ordem declarada +
   ignorância honesta sobre o resto**.
-- ⏳ **Entropia**: Shannon (1948), "A Mathematical Theory of Communication", *BSTJ* 27
-  — metadados universalmente conhecidos, mas não conferidos nesta sessão (fila). O uso
+- ✓ᵐ **Entropia**: Shannon (1948), "A Mathematical Theory of Communication", *BSTJ*
+  — DOI 10.1002/j.1538-7305.1948.tb00917.x conferido no CrossRef em 2026-08-13. O uso
   em pesos MCDM é atribuído a Hwang & Yoon (1981) e sucessores (⏳).
 
 ## Cap. 07 — MAVT e Even Swaps (Keeney & Raiffa)
@@ -165,11 +165,20 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   estendida de *uma* dimensão para várias.
 - ✓ᵐ Even Swaps: Hammond, Keeney & Raiffa (1998), *HBR* mar–abr (bibliografia) — a
   versão "de executivo" da MAVT.
-- ⏳ A pré-história favorita do campo: **Benjamin Franklin, carta a Joseph Priestley
-  (19/09/1772)**, descrevendo sua "moral or prudential algebra" (prós/cons em colunas,
-  riscar pares de peso igual) — os autores do Even Swaps a citam como ancestral. Fonte
-  primária aberta existe (founders.archives.gov) mas **inacessível deste ambiente**
-  (bloqueio de rede) — item nº 1 da fila. **Não publicar citação verbatim até lá.**
+- ✓ **Benjamin Franklin, carta a Joseph Priestley — LIDA em 2026-08-13** (em *The
+  Writings of Benjamin Franklin*, ed. Smyth, vol. V, pp. 437–438; exemplar aberto no
+  Internet Archive, item `writingsofbenjam05franuoft` — o founders.archives.gov segue
+  bloqueado deste ambiente, mas a mesma carta existe em edição aberta). O que a carta
+  diz (✓): datada de **Londres, 19 de setembro de 1772**; abre com *"I cannot, for
+  want of sufficient Premises, advise you what to determine, but if you please I will
+  tell you how"* — a distinção apoio × decisão de Roy, dois séculos antes; o método:
+  meia folha dividida em colunas *Pro*/*Con*, motivos anotados ao longo de **"three or
+  four Days Consideration"** (o diagnóstico vem antes: as razões não comparecem todas
+  à mente ao mesmo tempo), estimar "their respective Weights", riscar equivalências
+  ("If I find a Reason pro equal to some two Reasons con, I strike out the three"),
+  e decidir se nada novo surgir em mais um ou dois dias; o batismo, no fecho: *"what
+  may be called Moral or Prudential Algebra"*. O que a carta **não** diz: qual era o
+  "Affair of so much Importance" — a versão corrente (oferta de emprego) segue ⏳.
 
 ## Cap. 08 — PROMETHEE (Jean-Pierre Brans)
 
@@ -212,10 +221,22 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Cap. 12 — decisão em grupo (Borda, Condorcet, Copeland, Arrow, AIJ)
 
-- ⏳ **Borda (1781)**, "Mémoire sur les élections au scrutin", *Histoire de l'Académie
-  Royale des Sciences* — apresentado à Académie em 1770 segundo a literatura; a
-  eleição por pontos nasce da crítica à pluralidade em **eleições da própria
-  Académie**. Primária aberta (Gallica) bloqueada deste ambiente — fila.
+- ✓ **Borda, "Mémoire sur les élections au scrutin" — LIDO em 2026-08-13** (no volume
+  da *Histoire de l'Académie Royale des Sciences* referente a 1781; exemplar aberto no
+  Internet Archive, item `histoiredelacad81hist` — a Gallica segue 403 deste
+  ambiente). O que o volume traz (✓): o memorial ("par M. de Borda", Mémoires p. 657)
+  abre contra "uma opinião geralmente aceita, contra a qual não sei que jamais se
+  tenha feito objeção" — a de que a pluralidade indica a vontade dos eleitores:
+  verdadeira com dois candidatos, enganosa em todos os outros casos; o exemplo dos
+  **21 eleitores** (A vence com 8 contra 7 e 6, embora 13 prefiram B e C a ele); a
+  metáfora dos **"dois atletas"** que se exaurem um contra o outro e perdem para um
+  terceiro mais fraco; o diagnóstico da informação jogada fora (quem vota em B não diz
+  que lugar dá a C); e — o achado que nenhum resumo traz — a **nota de rodapé do
+  próprio memorial**: "as ideias contidas neste Memorial já foram apresentadas à
+  Académie há catorze anos, **em 16 de junho de 1770**" (o que também data a impressão
+  do volume: 1784). Além do memorial, o volume traz o resumo editorial da *Histoire*
+  (pp. 31–32) com o mesmo argumento. O que **não** está no que lemos: a motivação
+  "eleições da própria Académie" — segue ⏳ como atribuição corrente.
 - ⏳ **Condorcet (1785)**, *Essai sur l'application de l'analyse à la probabilité des
   décisions rendues à la pluralité des voix* — o paradoxo dos ciclos e o critério do
   vencedor par a par; contexto corrente: matemática iluminista a serviço do desenho de
@@ -226,9 +247,10 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   natureza; registrar exatamente assim.
 - ✓ᵐ **Arrow (1951)**, *Social Choice and Individual Values* — o teorema da
   impossibilidade que explica por que Borda e Copeland têm, cada um, pontos cegos.
-  (Metadados notórios; conferir registro na fila.)
-- ⏳ **AIJ**: a média geométrica como única agregação que preserva reciprocidade é
-  atribuída a **Aczél & Saaty (1983)**, *J. Math. Psychology* 27 — conferir metadados.
+  (Registro conferido no Open Library em 2026-08-13: 1ª edição 1951.)
+- ✓ᵐ **AIJ**: **Aczél & Saaty (1983)**, "Procedures for synthesizing ratio
+  judgements", *J. Math. Psychology* — DOI 10.1016/0022-2496(83)90028-7 conferido no
+  CrossRef em 2026-08-13. (Conteúdo não lido.)
 - 📖 Conexão que só aparece pesquisando junto: os capítulos 12 e 14 são os dois lados
   da mesma moeda de 1781 — Borda agrega **pessoas** por posições; a AEO agrega
   **critérios** por posições; e a Prop. 2 do Apêndice C prova que o posto esperado da
@@ -268,18 +290,24 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Fila de verificação (ordenada por dúvida fechada ÷ esforço)
 
+> **Rota de acesso que funciona deste ambiente** (descoberta em 2026-08-13): o
+> **Internet Archive** responde normalmente — Gallica e founders.archives.gov seguem
+> bloqueados, mas as mesmas obras existem lá em edições abertas. Procure a edição
+> antiga digitalizada antes de declarar uma fonte inalcançável.
+
 | # | Fonte a abrir | O que fecha | Acesso | Esforço |
 |---|---|---|---|---|
-| 1 | Franklin → Priestley, 19/09/1772 (founders.archives.gov, Papers of BF vol. 19) | A pré-história do cap. 07 (moral algebra) — cita-se verbatim em meio mundo; ⏳→✓ | Aberto; bloqueado deste ambiente — tentar de outra rede | baixo |
+| 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
 | 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | DOI na bibliografia; paywall provável | baixo |
 | 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | Springer (preview/biblioteca) | médio |
-| 4 | Borda (1781) na Gallica (Histoire de l'Académie, ano 1781, impresso 1784) | Cap. 12: texto e motivação real das eleições da Académie; ⏳→✓ | Aberto; Gallica 403 deste ambiente | médio |
+| 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |
-| 6 | Aczél & Saaty (1983) — registro DOI | Metadados do AIJ; ⏳→✓ᵐ | CrossRef | trivial |
-| 7 | Shannon (1948) + Arrow (1951) — registros | Metadados; ⏳→✓ᵐ | CrossRef/OpenLibrary | trivial |
+| 6 | ~~Aczél & Saaty (1983)~~ | **Fechado em 2026-08-13**: DOI 10.1016/0022-2496(83)90028-7 no CrossRef — ✓ᵐ | feito | — |
+| 7 | ~~Shannon (1948) + Arrow (1951)~~ | **Fechado em 2026-08-13**: DOI do BSTJ no CrossRef; registro Open Library (1951) — ✓ᵐ | feito | — |
 | 8 | Brans (1982), atas de "L'ingénierie de la décision" (Univ. Laval) | A conferência de batismo do PROMETHEE; ⏳→✓ | Difícil (atas locais) | alto |
 | 9 | Opricovic (1979/1990, Belgrado) | Origem pós-terremoto do VIKOR; ⏳→✓ ou ❌ definitivo | Muito difícil (servo-croata, não digitalizado) | alto |
 | 10 | Churchman & Ackoff (1954), *JORSA* 2(2) | Primeira formalização do SAW; ⏳→✓ | JSTOR/Informs | médio |
+| 11 | Condorcet (1785), *Essai* — procurar no Internet Archive | Cap. 12: o paradoxo lido na fonte; ⏳→✓ | Internet Archive (mesma rota de 1 e 4) | médio |
 
 **Regra de consumo** (para as rodadas que escreverem os capítulos): afirmação com selo
 ⏳ entra no texto **somente** no registro "a literatura atribui…"; ✓ pode afirmar

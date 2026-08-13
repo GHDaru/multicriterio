@@ -1,6 +1,6 @@
 # 03 — Normalização e pesos: os dois insumos de toda agregação
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -61,7 +61,8 @@ detector de colunas que discriminam.
 | Edwards & Barron (1994) publicam SMARTS/SMARTER corrigindo o SMART | ✓ᵐ (DOI verificado na bibliografia; conteúdo não lido) |
 | ROC como centroide: Barron & Barrett (1996) | ✓ᵐ (DOI na bibliografia) |
 | ROC ≡ média do prior do simplexo | ✓ prova própria (Apêndice C, Prop. 5, testada em código) |
-| Shannon (1948) como origem da entropia; importação para pesos via Hwang & Yoon (1981) | ⏳ metadados na fila de verificação |
+| Shannon (1948), "A Mathematical Theory of Communication", *Bell System Technical Journal* | ✓ᵐ (DOI 10.1002/j.1538-7305.1948.tb00917.x conferido no CrossRef) |
+| Importação da entropia para pesos MCDM via Hwang & Yoon (1981) | ⏳ atribuição corrente |
 
 ## Fundamentos
 

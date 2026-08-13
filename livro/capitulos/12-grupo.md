@@ -1,6 +1,6 @@
 # 12 — Decisão em grupo: agregar pessoas sem esconder o conflito
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -24,15 +24,23 @@ manipuláveis.
 
 ## De onde isto veio
 
-**O aperto.** Este é o capítulo mais velho do livro: dois séculos antes de existir
-"MCDA", a **Académie Royale des Sciences** precisava eleger seus próprios membros — e
-a literatura conta que **Jean-Charles de Borda** (engenheiro militar, acadêmico)
-argumentou, num memorial apresentado à Académie (a versão impressa é de 1781), que a
-pluralidade simples podia eleger alguém que a **maioria detestava**, desde que a
-oposição se dividisse. O aperto era doméstico e concreto: a própria instituição usava
-uma regra de votação defeituosa para decidir quem entrava.
+**O aperto.** Este é o capítulo mais velho do livro — e lemos o memorial na fonte.
+**Jean-Charles de Borda** (engenheiro militar, acadêmico) abre o "Mémoire sur les
+élections au scrutin" atacando "uma opinião geralmente aceita, contra a qual não sei
+que jamais se tenha feito objeção": a de que a pluralidade de votos indica a vontade
+dos eleitores. Verdadeira com dois candidatos, diz ele, falsa em todos os outros
+casos — e prova com o exemplo de 21 eleitores em que A vence com 8 votos contra 7 e
+6, embora 13 dos 21 prefiram *tanto* B *quanto* C a ele. A imagem que ele usa é de
+duelo: B e C são "dois atletas que, depois de exaurirem as forças um contra o outro,
+são vencidos por um terceiro mais fraco que qualquer um deles". Uma nota de rodapé do
+próprio memorial data a ideia: apresentada à Académie **em 16 de junho de 1770**,
+catorze anos antes da impressão (o volume da Académie referente a 1781 saiu em 1784).
+A literatura conta que a motivação eram as eleições da própria Académie — o memorial
+que lemos fala de eleições em geral, sem nomear a casa.
 
-**O que se fazia antes.** Pluralidade: conta-se só o 1º lugar de cada eleitor — e
+**O que se fazia antes.** Pluralidade: conta-se só o 1º lugar de cada eleitor. O
+diagnóstico do próprio Borda: quem vota em B "só se pronuncia sobre a superioridade
+de B em relação a todos, e não diz que lugar atribui a C entre os que não nomeia" —
 toda a informação sobre o resto da ordem vai para o lixo (é o "quem tem mais 1ºs" que
 o cap. 14 reencontra e recusa).
 
@@ -59,11 +67,12 @@ campo) nasce com o livro de Arrow.
 
 | Afirmação | Selo |
 |---|---|
-| Borda, memorial sobre eleições (impresso 1781; apresentação anterior à Académie) e a crítica à pluralidade | ⏳ atribuição corrente; primária aberta (Gallica) bloqueada deste ambiente — na fila |
-| Condorcet (1785), *Essai*, paradoxo dos ciclos | ⏳ metadados notórios; registro na fila |
-| Arrow (1951), teorema da impossibilidade | ✓ᵐ (obra notória; registro a conferir na fila) |
+| Borda, "Mémoire sur les élections au scrutin": crítica à pluralidade, exemplo dos 21 eleitores, metáfora dos atletas, apresentação em 16/06/1770 (nota do próprio memorial), impressão no volume de 1781 (saído em 1784) | ✓ lido no volume da Académie (exemplar aberto no Internet Archive), Mémoires p. 657 e resumo editorial da *Histoire* |
+| Motivação: as eleições da própria Académie | ⏳ atribuição corrente; o memorial lido não a nomeia |
+| Condorcet (1785), *Essai*, paradoxo dos ciclos | ⏳ metadados notórios; leitura na fila |
+| Arrow (1951), *Social Choice and Individual Values* | ✓ᵐ (registro conferido no Open Library) |
 | Copeland (1951) como nota de seminário não publicada (Michigan) | ⏳ atribuição corrente — possivelmente ❌ por natureza |
-| AIJ pela média geométrica: Aczél & Saaty (1983) | ⏳ metadados na fila |
+| AIJ pela média geométrica: Aczél & Saaty (1983), *J. Math. Psychology* | ✓ᵐ (DOI 10.1016/0022-2496(83)90028-7 conferido no CrossRef) |
 
 ## Fundamentos
 
