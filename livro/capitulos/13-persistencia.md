@@ -1,6 +1,6 @@
 # 13 — Do protótipo ao produto: Neon, deploy e o fim da trilha
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -68,6 +68,14 @@ quando o modelo relacional evoluir (hoje o problema vive em JSON validado — de
 registrada no modelo v0); **contas de usuário** (que destravam a decisão em grupo do
 cap. 12 no produto); **deploy gerenciado** (qualquer host que rode uvicorn e injete
 `DATABASE_URL` serve — o app não sabe onde está).
+
+O terceiro degrau saiu do papel: o produto tem `Dockerfile`, healthcheck configurado e
+runbook em [`app/DEPLOY.md`](https://github.com/GHDaru/multicriterio/blob/main/app/DEPLOY.md)
+— Railway servindo API e página no
+mesmo serviço, Neon como banco (ADR 0010). A medida de que a tese deste capítulo se
+sustenta é o tamanho do acoplamento com o provedor: **um processo que escuta em
+`$PORT` e recebe `DATABASE_URL`**. É só isso — e é por isso que o motor MCDA nunca
+precisou saber que existe nuvem.
 
 ### Leitura executiva
 
