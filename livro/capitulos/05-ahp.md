@@ -37,29 +37,42 @@ nem reconhece como suas).
 
 **A virada.** Ninguém sabe dizer "o preço pesa 0,35" — mas qualquer um diz, com
 convicção, "o preço importa umas 3× mais que a área". Saaty trocou a pergunta
-impossível por muitas perguntas fáceis (**pares**, não absolutos) e, em vez de proibir
-a contradição humana, resolveu **medi-la**: a redundância dos julgamentos (fazemos 6
-comparações para extrair 4 pesos) é o que permite calcular o quanto o decisor se
-contradisse — o CR. Deixou o governo em 1969, para a University of Pennsylvania, e
-construiu o método na década seguinte; a literatura data a cena fundadora em 1971, em
-planejamento de contingência para a Defesa — e a primeira aplicação de grande porte
-foi o plano de transporte do **Sudão** (1977), antes do livro de 1980.
+impossível por muitas perguntas fáceis (**pares**, não absolutos) e tomou a decisão de
+projeto que define o método: em vez de proibir a contradição humana, **medi-la**. O
+artigo de 1977 (que lemos) enuncia a premissa sem rodeios — apesar do melhor esforço
+das pessoas, seus sentimentos e preferências permanecem inconsistentes e intransitivos;
+o modelo, portanto, tem de acomodar a inconsistência, não pressupor sua ausência. A
+redundância dos julgamentos (6 comparações para extrair 4 pesos) é o que permite
+calcular o quanto o decisor se contradisse.
+
+Duas escolhas do artigo saem da mesma raiz cognitiva: a **hierarquia** existe para
+partir um problema grande em conjuntos pequenos, e a **escala 1–9** tem esse teto
+porque Saaty a ancora em Miller (1956) — a pessoa não compara mais de sete objetos
+(±2) ao mesmo tempo. O limite da mente não é queixa; é parâmetro de projeto.
 
 **A ideia reaproveitável.** Quando o insumo direto é inacessível, **colete julgamentos
 relativos redundantes e extraia deles duas coisas: o consenso interno (autovetor) e o
 grau de contradição (CR)**. O padrão serve fora daqui: avaliação por comparação pareada
 com checagem de consistência aparece hoje de ranqueamento de LLMs a priorização de
-backlog.
+backlog. E um segundo padrão, do mesmo artigo: **valide o método subjetivo contra
+problemas cuja resposta você já conhece.** Antes de aplicar a hierarquia a decisões
+reais, Saaty pediu a pessoas que comparassem aos pares coisas mensuráveis — as
+distâncias de seis cidades a Filadélfia, a intensidade luminosa de objetos a
+distâncias conhecidas de uma lâmpada — e comparou o autovetor com o valor real
+(Cairo: 0,263 estimado contra 0,278 verdadeiro; Tóquio: 0,397 contra 0,361). É o
+teste que quase nenhum método de elicitação faz de si mesmo.
 
 **O nome.** Descritivo: uma **hierarquia** (objetivo → critérios → alternativas)
 percorrida por um **processo analítico**. Sem lenda de batismo conhecida.
 
 | Afirmação | Selo |
 |---|---|
-| ACDA 1961–1969 (Kennedy/Johnson); saída em 1969 para a Univ. da Pennsylvania; frustração com modelos ignorados; Sudão 1977; livro 1980 | ✓ obituário INFORMS (fonte secundária aberta, lida na íntegra) |
-| Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ corrente; não confirmada em primária (candidata: introdução de Saaty 1977 — na fila) |
-| Nome da escola na Penn ("Wharton") | ⏳ não confirmado na fonte lida — por isso não afirmado no texto |
-| Redundância → CR como resposta à contradição humana | 📖 leitura editorial da arquitetura do método |
+| Afiliação **Wharton School**, University of Pennsylvania (folha de rosto do artigo de 1977) | ✓ Saaty (1977) lido |
+| Inconsistência humana como premissa de projeto; hierarquia e escala 1–9 ancoradas em Miller (1956), 7±2 | ✓ Saaty (1977) lido |
+| Validação contra respostas conhecidas (distâncias a Filadélfia, lei do inverso do quadrado, riqueza de nações) | ✓ Saaty (1977) lido, §exemplos |
+| Plano nacional de transporte do **Sudão** entre as aplicações recentes (junto com trabalho para a Marinha dos EUA e uma corporação mexicana) | ✓ Saaty (1977), conclusões |
+| ACDA 1961–1969 (Kennedy/Johnson); saída em 1969 para a Penn; frustração com modelos ignorados; livro 1980 | ✓ obituário INFORMS (fonte secundária aberta, lida na íntegra) |
+| Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ **achado negativo**: o artigo de 1977 não menciona 1971, DoD nem a ACDA em lugar nenhum — os agradecimentos citam apenas dois colegas e o parecerista. A cena segue como atribuição corrente, sem primária |
 
 ## Fundamentos
 
@@ -80,7 +93,16 @@ O AHP completo de Saaty também compara as *alternativas* par a par em cada crit
 agrega tudo. É aí que mora a crítica clássica: Belton & Gear (1983) mostraram que
 acrescentar uma alternativa irrelevante pode **inverter o ranking** das demais (rank
 reversal), e Dyer (1990) questionou o fundamento da agregação — debate respondido por
-Saaty no mesmo volume e vivo até hoje. Posição deste livro (ADR 0006): usar o AHP no
+Saaty no mesmo volume e vivo até hoje.
+
+Detalhe que a leitura da fonte revelou e que a literatura raramente conta: o
+**mecanismo** do rank reversal está descrito no artigo de 1977, seis anos antes da
+crítica. Saaty registra que tirar uma atividade da matriz de comparações **não
+redistribui o peso dela proporcionalmente** entre as demais, e ilustra com uma medição
+de riqueza de nações — removida a URSS (0,230), os pesos restantes não são apenas
+reescalonados: a razão EUA/Japão sai de 3,47 para 2,74. Ele documentou a instabilidade
+como propriedade da matriz; Belton & Gear mostraram que ela chega a virar o pódio.
+Achado e crítica são a mesma estrutura vista com sinais opostos. Posição deste livro (ADR 0006): usar o AHP no
 que ele tem de mais sólido — **derivar pesos de critérios** — e alimentar com eles os
 métodos de ranking cujas premissas já conhecemos (SAW, cap. 04); o rank reversal volta
 em detalhe no cap. 11.
