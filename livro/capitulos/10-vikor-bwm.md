@@ -1,6 +1,6 @@
 # 10 — VIKOR e BWM: compromisso honesto, pesos com menos perguntas
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -22,13 +22,18 @@ para 4 critérios, 36 para 9; decisores cansam, e julgamento cansado é julgamen
 
 Dois métodos, dois apertos — com quarenta anos e um contraste instrutivo entre eles.
 
-**O aperto (VIKOR).** A literatura atribui o método a **Serafim Opricovic**,
-engenheiro civil em Belgrado, e situa sua origem no planejamento de **reconstrução
-pós-terremoto** na Iugoslávia (a partir do fim dos anos 1970): recursos escassos,
-alternativas irreconciliáveis e nenhum luxo de eleger um "vencedor" frágil — quando
-tudo é urgente, proclamar um campeão por 0,17 de índice é irresponsabilidade. As
-fontes primárias (tese e relatórios em servo-croata) não foram alcançadas — procuramos
-e não achamos acesso; tudo nesta origem fica no registro "a literatura atribui".
+**O aperto (VIKOR).** **Serafim Opricovic** assina pela Faculdade de Engenharia Civil
+de Belgrado — e o aperto dele era de engenharia de recursos, não de escritório. A
+medida que está no coração do VIKOR (a distância $L_p$ de que S e R são os casos
+$p=1$ e $p=\infty$) aparece pela primeira vez em 1980, num trabalho com Lucien
+Duckstein sobre **otimização multiobjetivo no desenvolvimento de bacias
+hidrográficas**: água, o problema clássico em que nenhum critério pode ser sacrificado
+até o fim e ninguém aceita um vencedor por margem mínima. Uma correção que vale
+registrar: a versão corrente atribui a origem do VIKOR ao planejamento de
+**reconstrução pós-terremoto**; o que a literatura documenta é o pós-terremoto como
+**aplicação** madura do método (Opricovic & Tzeng, 2002), duas décadas depois da
+semente hidrológica. A história boa não é a que se repete — é a que a bibliografia
+sustenta.
 
 **O aperto (BWM).** Quarenta anos depois, o problema é de fadiga: **Jafar Rezaei**
 (TU Delft, logística — afiliação corrente) via decisores desistirem no meio das
@@ -52,13 +57,16 @@ não um campeão. Do BWM: **pontos de referência extremos baratearam a elicita�
 (o mesmo princípio dos dois polos do TOPSIS, aplicado a perguntas em vez de
 distâncias).
 
-**O nome.** VIKOR é acrônimo servo-croata — *VIšekriterijumsko KOmpromisno
-Rangiranje*, "ordenação de compromisso multicritério" (atribuição corrente). BWM é
-literal: *Best-Worst Method*.
+**O nome.** VIKOR é acrônimo sérvio — *VIšekriterijumsko KOmpromisno Rangiranje*,
+"ordenação de compromisso multicritério" (atribuição corrente). BWM é literal:
+*Best-Worst Method*. Repare que a palavra do meio é a tese do método: **compromisso**,
+no sentido de acordo por concessões mútuas, não de meio-termo preguiçoso.
 
 | Afirmação | Selo |
 |---|---|
-| Opricovic, Belgrado, origem pós-terremoto (fim dos anos 1970) | ⏳ atribuição corrente; primárias em servo-croata — ❌ não alcançadas |
+| Afiliação Faculdade de Engenharia Civil de Belgrado; a medida $L_p$ do VIKOR introduzida em Duckstein & Opricovic (1980), sobre bacias hidrográficas; linhagem da solução de compromisso em Yu (1973) e do ótimo em Pareto (1896) | ✓ Opricovic & Tzeng (2007), *EJOR* 178(2) — lido |
+| Pós-terremoto como **aplicação** documentada (Opricovic & Tzeng, 2002, *Computer-Aided Civil and Infrastructure Engineering*) | ✓ referência do artigo lido |
+| Pós-terremoto como **origem** do método (fim dos anos 1970) | ⏳ atribuição corrente que a leitura não sustenta — a semente documentada é hidrológica; a monografia de Belgrado (em sérvio) segue ❌ não alcançada |
 | Opricovic & Tzeng (2004), o comparativo que internacionalizou o VIKOR | ✓ᵐ (DOI na bibliografia; conteúdo não lido) |
 | Rezaei (2015), *Omega*; afiliação TU Delft | ✓ᵐ o paper (bibliografia); ⏳ a afiliação e a motivação narrada |
 | Expansão servo-croata do acrônimo | ⏳ corrente |

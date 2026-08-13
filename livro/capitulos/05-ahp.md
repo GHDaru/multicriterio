@@ -22,13 +22,22 @@ vetor de pesos — e, melhor, **denuncia quando as respostas se contradizem**.
 
 ## De onde isto veio
 
-**O aperto.** Segundo o obituário da INFORMS (fonte aberta, lida), **Thomas Saaty** —
-matemático formado em teoria de filas — passou **1961–1969 na Arms Control and
-Disarmament Agency** do Departamento de Estado americano, nas administrações Kennedy e
-Johnson, cercado de cientistas de primeira linha, trabalhando nas negociações de
-desarmamento com a União Soviética. E saiu frustrado: os modelos eram cada vez mais
-sofisticados, e os negociadores simplesmente **não os usavam**. Oito anos vendo a
-melhor matemática disponível ser ignorada por quem decidia de verdade.
+**O aperto.** No fim dos anos 1960, **Thomas Saaty** dirigia projetos de pesquisa da
+Arms Control and Disarmament Agency, no Departamento de Estado americano — as
+negociações de desarmamento com a União Soviética. Tinha uma agenda ambiciosa e, nas
+palavras de quem contou a história depois, um orçamento generoso: recrutou alguns dos
+maiores teóricos dos jogos e da utilidade do mundo. **Três deles ganhariam o Nobel de
+Economia** — Gerard Debreu, John Harsanyi e Reinhard Selten.
+
+E não funcionou. O próprio Saaty, relembrando o episódio anos mais tarde, apontou duas
+coisas: as teorias e modelos dos cientistas eram gerais e abstratos demais para se
+adaptarem à necessidade concreta de **trocar um sistema de armas por outro**; e a
+posição americana era redigida por advogados que dominavam o direito, mas não eram
+melhores que os cientistas na hora de dizer **quanto valia** cada arma em negociação.
+Guarde a cena: os melhores modelos do planeta, uma sala cheia de futuros laureados, e
+ninguém capaz de responder à pergunta que a mesa fazia. Anos depois, já lecionando na
+Wharton, ele continuava incomodado com a ausência de um jeito prático e sistemático de
+estabelecer prioridades — e foi isso que o levou a construir um.
 
 **O que se fazia antes.** Dois caminhos, ambos falhando na mesa de negociação: pedir
 números absolutos a especialistas (que eles não têm — o cap. 03 mostrou o chute que
@@ -73,7 +82,8 @@ percorrida por um **processo analítico**. Sem lenda de batismo conhecida.
 | Plano nacional de transporte do **Sudão** entre as aplicações recentes (junto com trabalho para a Marinha dos EUA e uma corporação mexicana) | ✓ Saaty (1977), conclusões |
 | ACDA 1961–1969 (Kennedy/Johnson); saída em 1969 para a Penn; frustração com modelos ignorados; livro 1980 | ✓ obituário INFORMS (fonte secundária aberta, lida na íntegra) |
 | Antes das cátedras, passagens pela ACDA, pelo **Office of Naval Research**, pela embaixada americana em Londres e pelo Navy Management Office; doutorado em Yale; Wharton até ser recrutado pela Katz School (Pittsburgh) em 1979 | ✓ obituário da IJAHP (Assad, 2017 — acesso aberto, lido) |
-| Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ **achado negativo**: o artigo de 1977 não menciona 1971, DoD nem a ACDA em lugar nenhum — os agradecimentos citam apenas dois colegas e o parecerista. A cena segue como atribuição corrente, sem primária |
+| ACDA no fim dos anos 1960; orçamento generoso e recrutamento de Debreu, Harsanyi e Selten (futuros Nobel); o relato de Saaty (1996) sobre modelos abstratos demais para trocas de armamento e sobre os advogados que redigiam a posição americana; o incômodo persistente na Wharton como motivação | ✓ Forman & Gass (2001), *Operations Research* 49(4) — exposição histórica lida, citando Saaty (1996) |
+| Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ **achado negativo em quatro fontes**: não aparece no artigo de 1977, nem em Saaty (1990), nem em Saaty (2013), nem na exposição histórica de Forman & Gass — que conta a origem sem essa cena. A versão documentada acima **substitui** a atribuição corrente no corpo do capítulo |
 
 ## Fundamentos
 

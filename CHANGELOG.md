@@ -11,6 +11,11 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Fila encerrada (spec 038)**: Forman & Gass 2001 e Opricovic & Tzeng 2007 lidos —
+  cap. 05 conta a gênese documentada do AHP (ACDA, os três futuros Nobel, o relato de
+  Saaty) e retira a cena de 1971; cap. 10 corrige a origem do VIKOR (semente
+  hidrológica de 1980; pós-terremoto é aplicação de 2002). 11/11 itens da fila
+  resolvidos, 9 por leitura de fonte.
 - **Obituário IJAHP (spec 037, raia leve)**: fonte aberta e alcançável; cap. 05 ganha
   ONR / embaixada em Londres / Navy Management Office / Yale / Katz 1979. A cena de
   1971 segue não documentada.

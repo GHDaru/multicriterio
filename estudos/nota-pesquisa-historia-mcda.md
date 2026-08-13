@@ -115,6 +115,19 @@ O que a fonte lida sustenta (✓, com registro "segundo o obituário da INFORMS"
   a 2,74). Saaty documenta a instabilidade; a crítica de 1983 mostra que ela vira o
   pódio.
 
+**Forman & Gass (2001), "The Analytic Hierarchy Process — An Exposition",
+*Operations Research* 49(4), 469–486 — LIDO em 2026-08-13** (exemplar fornecido pelo
+Steward). É a exposição histórica que faltava, e conta a gênese assim (✓): no fim dos
+anos 1960 Saaty dirigia projetos de pesquisa da ACDA no Departamento de Estado; a
+agenda e o orçamento generoso permitiram recrutar teóricos dos jogos e da utilidade de
+primeira linha — **três deles, Gerard Debreu, John Harsanyi e Reinhard Selten,
+viriam a ganhar o Nobel**. O resultado decepcionou, e os autores citam o relato do
+próprio Saaty (1996): os modelos dos cientistas eram gerais e abstratos demais para a
+necessidade concreta de avaliar trocas entre sistemas de armas, e a posição americana
+era redigida por advogados que entendiam de direito mas não avaliavam melhor o valor
+das armas em negociação. Anos depois, já na Wharton, o incômodo com a falta de um
+método prático e sistemático de priorização o levou a criar o AHP.
+
 **Obituário da IJAHP (Assad, 2017; DOI 10.13033/ijahp.v9i2.496 — acesso aberto, lido
 em 2026-08-13)** acrescenta, e reforça a linha militar: antes das cátedras, Saaty
 passou pela ACDA, pelo **Office of Naval Research**, pela embaixada dos EUA em Londres
@@ -126,10 +139,14 @@ menciona 1971 nem planejamento de contingência.
 Atribuição corrente que a leitura **derrubou como não documentada** (⏳):
 
 - ⏳ A cena fundadora datada: "no outono de 1971, trabalhando em planejamento de
-  contingência para o DoD". **Achado negativo**: busca no texto integral do artigo de
-  1977 não encontra 1971, DoD, ACDA nem desarmamento; os agradecimentos citam apenas
-  J. P. Bennett, D. H. Krantz e o parecerista. A candidata mais provável agora é o
-  prefácio do livro de 1980.
+  contingência para o DoD". **Achado negativo em quatro fontes lidas**: não aparece no
+  artigo de 1977 (cujos agradecimentos citam só J. P. Bennett, D. H. Krantz e o
+  parecerista), nem em Saaty (1990, *EJOR* 48(1)), nem em Saaty (2013, *Operations
+  Research* 61(5)), nem na exposição histórica de Forman & Gass — que narra a origem
+  **sem** essa cena. Conclusão prática: o capítulo passa a contar a versão
+  documentada (ACDA → Wharton), e a cena de 1971 sai do corpo do texto. Se alguém
+  quiser fechá-la, resta o prefácio do livro de 1980 e o volume de 1996 que Forman &
+  Gass citam.
 
 **Elementos para a seção** — aperto: um matemático de teoria de filas passa oito anos
 vendo negociadores de armas **ignorarem** modelos matematicamente impecáveis; antes:
@@ -279,12 +296,20 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 - ✓ᵐ Opricovic & Tzeng (2004), *EJOR* 156(2) (bibliografia) — o artigo comparativo que
   internacionalizou o VIKOR.
-- ⏳ A origem corrente do VIKOR: Serafim Opricovic, engenharia civil em Belgrado, anos
-  1979–1990 — programação de compromisso (Yu/Zeleny) aplicada a **planejamento de
-  reconstrução pós-terremoto** (recursos escassos, alternativas irreconciliáveis); o
-  nome é acrônimo servo-croata de *VIšekriterijumsko KOmpromisno Rangiranje*
-  (ordenação de compromisso multicritério). Fonte primária (tese/relatórios em
-  servo-croata) — ❌ não alcançada; registrar sempre como "a literatura atribui".
+- ✓ **Opricovic & Tzeng (2007), *EJOR* 178(2), 514–529 — LIDO em 2026-08-13**
+  (exemplar fornecido pelo Steward). O que sustenta (✓): afiliação **Faculdade de
+  Engenharia Civil, Bulevar revolucije 73, Belgrado**; a medida $L_p$ que gera S e R
+  foi **introduzida por Duckstein & Opricovic (1980), "Multiobjective optimization in
+  river basin development", *Water Resources Research* 16(1)** — a semente técnica do
+  VIKOR é de **recursos hídricos**; linhagem declarada: solução de compromisso de Yu
+  (1973), ótimo de Pareto (1896); e "compromisso" definido no texto como acordo por
+  **concessões mútuas**.
+- ⚠ **Correção da atribuição corrente**: a origem "pós-terremoto" não se sustenta como
+  gênese. O que a bibliografia documenta é o pós-terremoto como **aplicação**:
+  Opricovic & Tzeng (2002), "Multicriteria planning of post-earthquake sustainable
+  reconstruction", *Computer-Aided Civil and Infrastructure Engineering* 17(3) — vinte
+  anos depois do trabalho hidrológico. Provável conflação na literatura didática entre
+  aplicação famosa e origem. A monografia de Belgrado (em sérvio) segue ❌.
 - ✓ᵐ Rezaei (2015), *Omega* 53 (bibliografia). ⏳ Contexto corrente: TU Delft, logística;
   o aperto é o **custo de elicitação** do AHP (n(n−1)/2 comparações, inconsistência
   crescendo com a matriz) → virada: comparar todos só contra os **dois extremos**
@@ -393,16 +418,27 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 |---|---|---|---|---|
 | 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
 | 2 | ~~Saaty (1977), *JMP* 15(3)~~ | **Fechado em 2026-08-13** por leitura integral (exemplar fornecido pelo Steward): Wharton ✓, premissa da inconsistência ✓, Miller 7±2 ✓, validações contra respostas conhecidas ✓, Sudão/Marinha/corporação mexicana ✓, semente do rank reversal ✓. **A cena de 1971/DoD não está no artigo** (achado negativo) — segue ⏳, agora com a introdução do livro de 1980 como candidata | feito | — |
-| 2b | Saaty (1980), *The Analytic Hierarchy Process*, prefácio/introdução | Última candidata para a cena fundadora "1971, DoD"; ⏳→✓ ou ❌ definitivo | Exemplar no IA é só-empréstimo; precisa de conta com acesso ou biblioteca | baixo |
+| 2b | ~~Cena de "1971, DoD"~~ | **Resolvido de outro jeito em 2026-08-13**: Forman & Gass (2001) dá a gênese documentada (ACDA → Wharton, com o relato de Saaty de 1996) e o capítulo passa a contar essa. A cena de 1971 fica ⏳ e **fora do corpo do texto** — não é mais bloqueio para nada. Reabrir só por curiosidade, com o prefácio de 1980 ou o volume de 1996 | resolvido | — |
 | 3 | ~~Hwang & Yoon (1981), prefácio~~ | **Fechado em 2026-08-13** por leitura (exemplar do Steward): Kansas State ✓, Fairleigh Dickinson ✓, sequência do vol. 164 ✓, 17 métodos ✓, ONR/DoE ✓, MacCrimmon ✓, turma de 1980 ✓, TOPSIS após ELECTRE no sumário ✓. Falta só a **seção do TOPSIS em si** (o exemplar cobre a matéria de abertura) — e a cena da ideia continua ❌ | feito | — |
 | 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |
 | 6 | ~~Aczél & Saaty (1983)~~ | **Fechado em 2026-08-13**: DOI 10.1016/0022-2496(83)90028-7 no CrossRef — ✓ᵐ | feito | — |
 | 7 | ~~Shannon (1948) + Arrow (1951)~~ | **Fechado em 2026-08-13**: DOI do BSTJ no CrossRef; registro Open Library (1951) — ✓ᵐ | feito | — |
 | 8 | ~~Brans (1982), Université Laval~~ | **Fechado em 2026-08-13** pela referência dos próprios autores no artigo lido: Colloque d'aide à la décision, Laval, **Août 1982**, comunicação "L'ingénierie de la décision…" (✓, com correção do que era nome do colóquio × título da comunicação). As atas em si seguem não lidas — reabrir só se alguém quiser o texto da comunicação | feito | — |
-| 9 | Opricovic (1979/1990, Belgrado) | Origem pós-terremoto do VIKOR; ⏳→✓ ou ❌ definitivo | **Tentado em 2026-08-13**: nada no IA; segue muito difícil (servo-croata, não digitalizado) | alto |
+| 9 | ~~Origem do VIKOR~~ | **Fechado em 2026-08-13** por Opricovic & Tzeng (2007), lido: Belgrado ✓, a medida $L_p$ vinda de Duckstein & Opricovic (1980) sobre bacias hidrográficas ✓, e a **correção** de que o pós-terremoto é aplicação (2002), não gênese. A monografia sérvia segue ❌ — mas já não é necessária | feito | — |
 | 10 | ~~Churchman & Ackoff (1954/1957)~~ | **Fechado em 2026-08-13**: o capítulo "Weighting Objectives" do manual de 1957 lido na íntegra via IA (✓ — comparações sucessivas, "intangíveis", caso executivo); o artigo de 1954 corroborado pelos "Comments" de Smith no mesmo fascículo, citados no manual (✓ᵐ) | feito | — |
 | 11 | ~~Condorcet (1785), *Essai*~~ | **Fechado em 2026-08-13** por leitura dos trechos-chave via IA: folha de rosto + a combinação cíclica no *Discours préliminaire* (pp. lvj–lvij) — ✓ | feito | — |
+
+**Situação em 2026-08-13**: a fila original está **encerrada** — 11 de 11 itens
+resolvidos, 9 deles por leitura de fonte (Roy 1968, Franklin 1772, Borda 1781,
+Condorcet 1785, Churchman & Ackoff 1954, o manual de 1957, Saaty 1977, Hwang & Yoon
+1981, Brans & Vincke 1985, Opricovic & Tzeng 2007, Forman & Gass 2001). O que
+permanece em aberto não é fila de verificação, é curiosidade: a cena de 1971 do AHP
+(⏳, fora do corpo do texto) e a monografia sérvia de Opricovic (❌, dispensável). O
+saldo mais valioso não foram as confirmações — foram as **quatro correções** que a
+leitura impôs ao que já estava escrito: o SAW tem cena de invenção; a aditividade
+nasceu com seus casos de falha; "L'ingénierie de la décision" era a comunicação, não o
+colóquio; e o VIKOR não nasceu de terremoto.
 
 **Regra de consumo** (para as rodadas que escreverem os capítulos): afirmação com selo
 ⏳ entra no texto **somente** no registro "a literatura atribui…"; ✓ pode afirmar
