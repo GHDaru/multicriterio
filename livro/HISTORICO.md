@@ -25,13 +25,31 @@
 | 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-08-13 |
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-13 |
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-13 |
-| 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-10 |
+| 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-13 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-08-13 |
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-13 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
 | 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
 
 ## Edições
+
+### Edição 0.38 — 2026-08-13 · fila encerrada: caps. 05 e 10 fecham suas origens (spec 038)
+
+- **Forman & Gass (2001) lido** — a gênese do AHP sai do "a literatura atribui" e vira
+  narrativa documentada no cap. 05: no fim dos anos 1960, dirigindo pesquisa da ACDA,
+  Saaty recrutou teóricos de primeira linha (**Debreu, Harsanyi e Selten**, futuros
+  Nobel) e o resultado decepcionou — pelo relato dele próprio, modelos abstratos
+  demais para avaliar trocas entre sistemas de armas, e advogados redigindo a posição
+  americana sem saber avaliá-las melhor. O incômodo, anos depois na Wharton, gerou o
+  método. A cena de "1971, DoD" some do corpo do texto: **não aparece em nenhuma das
+  quatro fontes lidas**, inclusive nas duas retrospectivas do próprio Saaty.
+- **Opricovic & Tzeng (2007) lido** — e o cap. 10 ganha uma correção de origem: a
+  medida $L_p$ que gera S e R vem de **Duckstein & Opricovic (1980), sobre bacias
+  hidrográficas**; o planejamento pós-terremoto é **aplicação** documentada de 2002,
+  não a gênese que a literatura didática repete. Belgrado confirmado.
+- **A fila de verificação está encerrada**: 11 de 11 itens resolvidos, 9 por leitura
+  de fonte. Saldo da rodada inteira: quatro correções ao que já estava publicado.
+- **IA**: agente **Claude Code (Anthropic)**; fontes fornecidas pelo Steward.
 
 ### Edição 0.37 — 2026-08-13 · obituário da IJAHP (raia leve, spec 037)
 
