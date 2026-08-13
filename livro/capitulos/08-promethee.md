@@ -1,6 +1,6 @@
 # 08 — PROMETHEE: preferência par a par e fluxos
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -48,12 +48,16 @@ outranking — o conserta onde doía).
 **O nome.** A expansão consta do título do paper de 1985: *Preference Ranking
 Organisation METHod (for Enrichment Evaluations)* — e o acrônimo pisca para o titã
 que roubou o fogo; a intenção mitológica é corrente, mas não a encontramos afirmada
-pelos autores em fonte primária.
+pelos autores em fonte primária. Detalhe de registro que rima com o SAW: o título
+completo no catálogo da *Management Science* começa com "**Note**—" — o paper de
+referência do PROMETHEE entrou na revista como nota, assim como a axiomatização de
+Fishburn entrou na *Operations Research* como carta ao editor (cap. 04). Duas peças
+fundadoras do campo, publicadas pela porta lateral.
 
 | Afirmação | Selo |
 |---|---|
 | Apresentação em 1982, conferência "L'ingénierie de la décision", Université Laval (Québec) | ⏳ atribuição corrente; atas na fila (esforço alto) |
-| Brans & Vincke (1985), *Management Science* — paper de referência | ✓ᵐ (registro na bibliografia; conteúdo não lido) |
+| Brans & Vincke (1985), *Management Science* — paper de referência, catalogado como "Note—…" | ✓ᵐ (registro na bibliografia; título completo conferido no Unpaywall/Semantic Scholar em 2026-08-13; conteúdo não lido) |
 | Motivação "responder à opacidade do ELECTRE" | 📖 leitura editorial (coerente com a arquitetura do método) |
 | Alusão mitológica intencional no nome | ⏳ corrente, não confirmada |
 

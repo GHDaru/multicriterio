@@ -63,7 +63,7 @@ descrições, não batismos — método sem inventor tampouco tem cerimônia de 
 | Afirmação | Selo |
 |---|---|
 | Método das comparações sucessivas, caso executivo trabalhado e a crítica aos "intangíveis" | ✓ capítulo "Weighting Objectives" lido em Churchman, Ackoff & Arnoff (1957) — exemplar aberto no Internet Archive |
-| Artigo de 1954 no *JORSA* 2(2) ("approximate measure of value") | ✓ᵐ corroborado pelo manual lido, que cita os "Comments" de Smith no mesmo fascículo (pp. 181–187); o artigo em si não foi lido |
+| Artigo de 1954 no *JORSA* 2(2): "An Approximate Measure of Value" | ✓ᵐ DOI 10.1287/opre.2.2.172 conferido no Unpaywall (2026-08-13) + corroborado pelo manual lido, que cita os "Comments" de Smith no mesmo fascículo (pp. 181–187); o artigo em si não foi lido |
 | Fishburn (1967) axiomatiza a utilidade aditiva, publicado como carta ao editor | ✓ᵐ (DOI e formato verificados na bibliografia; conteúdo não lido) |
 | "Método folk, teoria a posteriori" | 📖 leitura editorial do arco |
 

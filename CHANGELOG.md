@@ -11,6 +11,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Varredura OA legal (spec 034, raia leve)**: DOIs em aberto conferidos no
+  Unpaywall/Semantic Scholar (sem cópia aberta para os 3 paywalled); DOI direto do
+  artigo de 1954 no cap. 04 e o achado "Note—" do paper do PROMETHEE no cap. 08.
 - **Fila de verificação varrida (spec 033)**: Condorcet (1785) e Churchman, Ackoff &
   Arnoff (1957) lidos na fonte via Internet Archive — selos ✓ e reescritas nos caps.
   04 e 12 (comparações sucessivas como ancestral do CR; o paradoxo na formulação

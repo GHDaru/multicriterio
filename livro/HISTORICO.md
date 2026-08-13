@@ -23,7 +23,7 @@
 | 05 AHP | 2026-07 | ✓ (etapa 05) | 2026-08-13 |
 | 06 TOPSIS | 2026-07 | ✓ (etapa 06) | 2026-08-13 |
 | 07 MAVT e Even Swaps | 2026-07 | ✓ (etapa 07) | 2026-08-13 |
-| 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-10 |
+| 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-13 |
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-13 |
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-10 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
@@ -32,6 +32,17 @@
 | 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
 
 ## Edições
+
+### Edição 0.34 — 2026-08-13 · varredura Unpaywall/Semantic Scholar (raia leve, spec 034)
+
+- Pedido de usar Sci-Hub **recusado** (violaria direitos autorais); em seu lugar, os
+  DOIs em aberto passaram pelo Unpaywall e pelo Semantic Scholar (rotas legais de
+  acesso aberto). Sem cópia OA para Saaty 1977, Churchman & Ackoff 1954 e Brans &
+  Vincke 1985 — mas a varredura rendeu dois metadados: o DOI direto do artigo de 1954
+  (10.1287/opre.2.2.172, cap. 04) e o título catalogado completo do paper do
+  PROMETHEE — "**Note**—…" — que entrou na *Management Science* como nota, rimando
+  com a carta ao editor de Fishburn (cap. 08 registra o paralelo).
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
 
 ### Edição 0.33 — 2026-08-13 · fila varrida até o fim pela rota Internet Archive (spec 033)
 
