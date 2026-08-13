@@ -11,6 +11,9 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Obituário IJAHP (spec 037, raia leve)**: fonte aberta e alcançável; cap. 05 ganha
+  ONR / embaixada em Londres / Navy Management Office / Yale / Katz 1979. A cena de
+  1971 segue não documentada.
 - **Três fontes lidas (spec 036)**: Churchman & Ackoff 1954, Hwang & Yoon 1981
   (prefácio) e Brans & Vincke 1985 — caps. 04, 06 e 08 reescritos na origem. Duas
   correções de conteúdo: o SAW **tem** cena de invenção (a réplica aos "trapped
