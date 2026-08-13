@@ -11,6 +11,10 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Deploy do produto (spec 039, ADR 0010, raia infra)**: `Dockerfile`,
+  `.dockerignore`, `railway.json` e runbook `app/DEPLOY.md` (Railway servindo API +
+  front, Neon via `DATABASE_URL`, healthcheck `/health`, rollback e dry-run
+  documentados). O livro segue estático no GitHub Pages, sem mudança.
 - **Fila encerrada (spec 038)**: Forman & Gass 2001 e Opricovic & Tzeng 2007 lidos —
   cap. 05 conta a gênese documentada do AHP (ACDA, os três futuros Nobel, o relato de
   Saaty) e retira a cena de 1971; cap. 10 corrige a origem do VIKOR (semente

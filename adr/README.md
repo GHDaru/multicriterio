@@ -15,3 +15,4 @@ mérito. Formato: contexto → decisão → alternativas avaliadas → consequê
 | [0007](0007-rodada-aprofundamento.md) | Rodada de aprofundamento: specs 014–027, uma por capítulo | Aceito |
 | [0008](0008-contribuicao-aeo.md) | Capítulo de contribuição original (AEO) e artigo vivo | Aceito |
 | [0009](0009-principio-nenhum-metodo-cai-do-ceu.md) | Princípio VIII: "Nenhum método cai do céu" (emenda v1.1.0) | Aceito |
+| [0010](0010-deploy-railway-neon.md) | Deploy do produto: Railway (backend + front) e Neon (banco) | Aceito |

@@ -28,10 +28,27 @@
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-13 |
 | 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-08-13 |
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-13 |
-| 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
+| 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-08-13 |
 | 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
 
 ## Edições
+
+### Edição 0.39 — 2026-08-13 · o produto vai ao ar: Railway + Neon (spec 039, ADR 0010)
+
+- Nascem os artefatos de deploy do **produto** (o livro já estava publicado desde a
+  rodada 003): `Dockerfile`, `.dockerignore`, `railway.json` (builder Dockerfile,
+  healthcheck em `/health`, restart on-failure) e o runbook `app/DEPLOY.md`, com
+  verificação obrigatória pós-deploy, rollback por redeploy e dry-run de esquema por
+  branch do Neon.
+- **Decisão (ADR 0010)**: backend e frontend no mesmo serviço do Railway — o front é
+  um HTML sem build servido pela própria API, e separá-lo hoje custaria CORS, duas
+  URLs e dois pipelines para ganhar CDN em um arquivo. O Vercel fica registrado com
+  gatilho de revisão explícito.
+- Cap. 13 registra o degrau cumprido e a medida do acoplamento com o provedor: um
+  processo que escuta em `$PORT` e recebe `DATABASE_URL`.
+- Limites declarados no runbook: sem migrações (o start faz `create_all`), sem
+  autenticação no v0, dependências sem pin.
+- **IA**: agente **Claude Code (Anthropic)**; execução do deploy e segredos: Steward.
 
 ### Edição 0.38 — 2026-08-13 · fila encerrada: caps. 05 e 10 fecham suas origens (spec 038)
 

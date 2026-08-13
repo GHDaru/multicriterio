@@ -1,0 +1,9 @@
+# Nada de segredo, cache ou banco local dentro da imagem (Princípio V).
+.env
+*.db
+decisor.db
+tests/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
