@@ -143,10 +143,12 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   Neumann & Morgenstern → sistemas axiomáticos; amalgamação → Arrow; survey de
   Edwards 1954 — o mesmo Edwards do cap. 03, já em 1957 na bibliografia da soma
   ponderada).
-- ✓ᵐ O artigo de **1954** ("An approximate measure of value", *JORSA* 2(2)): não
-  lido, mas corroborado pelo manual lido — a bibliografia do capítulo cita os
-  "Comments" de N. M. Smith no **mesmo fascículo** (*JORSA* 2, nº 2, pp. 181–187,
-  maio de 1954), a discussão publicada do artigo.
+- ✓ᵐ O artigo de **1954** ("An Approximate Measure of Value", *JORSA* 2(2)): não
+  lido, mas duplamente conferido — DOI 10.1287/opre.2.2.172 no Unpaywall
+  (2026-08-13), e a bibliografia do manual lido cita os "Comments" de N. M. Smith no
+  **mesmo fascículo** (*JORSA* 2, nº 2, pp. 181–187, maio de 1954), a discussão
+  publicada do artigo. Sem cópia de acesso aberto legal (Unpaywall/Semantic Scholar
+  negativos).
 - ✓ᵐ Fishburn (1967), *Operations Research* 15(3) — a fundação axiomática citada no
   livro (bibliografia). Curiosidade estrutural ✓ᵐ: é publicado na seção de notas do
   periódico — a teoria chegou **depois** da prática, para dizer *quando* a soma é
@@ -196,7 +198,11 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Cap. 08 — PROMETHEE (Jean-Pierre Brans)
 
-- ✓ᵐ Brans & Vincke (1985), *Management Science* 31(6) (bibliografia).
+- ✓ᵐ Brans & Vincke (1985), *Management Science* 31(6) (bibliografia). Detalhe de
+  registro conferido no Unpaywall/Semantic Scholar (2026-08-13): o título catalogado
+  completo é "**Note**—A Preference Ranking Organisation Method: The PROMETHEE Method
+  for MCDM" — o paper de referência entrou na revista como *nota*, rimando com a
+  carta ao editor de Fishburn (cap. 04).
 - ⏳ A origem corrente: Brans apresenta o PROMETHEE em **1982**, numa conferência na
   **Université Laval (Québec)** — "L'ingénierie de la décision" — organizada por
   Nadeau/Landry; a escola belga (VUB/ULB) buscava um outranking **mais simples e mais
@@ -318,7 +324,7 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 | # | Fonte a abrir | O que fecha | Acesso | Esforço |
 |---|---|---|---|---|
 | 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
-| 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | **Tentado em 2026-08-13**: sem exemplar aberto no IA (os livros de Saaty lá são só-empréstimo, busca interna bloqueada); resta paywall Elsevier ou biblioteca física | baixo |
+| 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | **Tentado em 2026-08-13**: sem exemplar aberto no IA (livros de Saaty só-empréstimo); sem cópia OA legal (Unpaywall e Semantic Scholar negativos); resta paywall Elsevier ou biblioteca física | baixo |
 | 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | **Tentado em 2026-08-13**: sem exemplar no IA (o volume irmão de 1979, Hwang & Masud, existe mas é só-empréstimo, 403); resta Springer/biblioteca | médio |
 | 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |
