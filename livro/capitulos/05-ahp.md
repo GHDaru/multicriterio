@@ -72,6 +72,7 @@ percorrida por um **processo analítico**. Sem lenda de batismo conhecida.
 | Validação contra respostas conhecidas (distâncias a Filadélfia, lei do inverso do quadrado, riqueza de nações) | ✓ Saaty (1977) lido, §exemplos |
 | Plano nacional de transporte do **Sudão** entre as aplicações recentes (junto com trabalho para a Marinha dos EUA e uma corporação mexicana) | ✓ Saaty (1977), conclusões |
 | ACDA 1961–1969 (Kennedy/Johnson); saída em 1969 para a Penn; frustração com modelos ignorados; livro 1980 | ✓ obituário INFORMS (fonte secundária aberta, lida na íntegra) |
+| Antes das cátedras, passagens pela ACDA, pelo **Office of Naval Research**, pela embaixada americana em Londres e pelo Navy Management Office; doutorado em Yale; Wharton até ser recrutado pela Katz School (Pittsburgh) em 1979 | ✓ obituário da IJAHP (Assad, 2017 — acesso aberto, lido) |
 | Cena fundadora "outono de 1971, planejamento de contingência (DoD)" | ⏳ **achado negativo**: o artigo de 1977 não menciona 1971, DoD nem a ACDA em lugar nenhum — os agradecimentos citam apenas dois colegas e o parecerista. A cena segue como atribuição corrente, sem primária |
 
 ## Fundamentos

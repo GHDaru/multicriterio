@@ -115,6 +115,14 @@ O que a fonte lida sustenta (✓, com registro "segundo o obituário da INFORMS"
   a 2,74). Saaty documenta a instabilidade; a crítica de 1983 mostra que ela vira o
   pódio.
 
+**Obituário da IJAHP (Assad, 2017; DOI 10.13033/ijahp.v9i2.496 — acesso aberto, lido
+em 2026-08-13)** acrescenta, e reforça a linha militar: antes das cátedras, Saaty
+passou pela ACDA, pelo **Office of Naval Research**, pela embaixada dos EUA em Londres
+e pelo **Navy Management Office**; doutorado em matemática por Yale, com
+pós-graduação na Sorbonne; esteve na **Wharton** até ser recrutado em **1979** pela
+Katz School (Universidade de Pittsburgh) pelo decano H. J. Zoffer. Também não
+menciona 1971 nem planejamento de contingência.
+
 Atribuição corrente que a leitura **derrubou como não documentada** (⏳):
 
 - ⏳ A cena fundadora datada: "no outono de 1971, trabalhando em planejamento de

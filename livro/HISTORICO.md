@@ -33,6 +33,15 @@
 
 ## Edições
 
+### Edição 0.37 — 2026-08-13 · obituário da IJAHP (raia leve, spec 037)
+
+- O obituário de Saaty na IJAHP (Assad, 2017) é **acesso aberto e alcançável** desta
+  máquina: acrescenta ao cap. 05 as passagens pelo **Office of Naval Research**, pela
+  embaixada dos EUA em Londres e pelo Navy Management Office, o doutorado em Yale e a
+  ida de Wharton para a Katz School (Pittsburgh) em 1979. Também **não** menciona a
+  cena de 1971 — que segue ⏳ com o livro de 1980 como candidata.
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
+
 ### Edição 0.36 — 2026-08-13 · três fontes lidas: caps. 04, 06 e 08 na origem (spec 036)
 
 - **Churchman & Ackoff (1954) lido** — e o cap. 04 muda de tese. A soma ponderada não
