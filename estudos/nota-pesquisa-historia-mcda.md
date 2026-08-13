@@ -90,13 +90,38 @@ O que a fonte lida sustenta (✓, com registro "segundo o obituário da INFORMS"
   consolidador é de **1980** (*The Analytic Hierarchy Process*, McGraw-Hill — metadados
   também em `bibliografia.md`, exemplar no Internet Archive).
 
-Atribuições correntes **não confirmadas em fonte primária** (⏳ — vieram de resumos de
-busca, e resumo de busca não é fonte):
+**Saaty (1977), *J. Math. Psychology* 15(3), 234–281 — LIDO em 2026-08-13**
+(exemplar fornecido pelo Steward). O que o artigo traz (✓):
 
-- ⏳ O nome da escola ser "Wharton School" no período de Saaty na Penn.
+- Folha de rosto: **"University of Pennsylvania, Wharton School, Philadelphia"** — o
+  item ⏳ "Wharton" fecha aqui.
+- A premissa de projeto, enunciada no corpo: apesar do melhor esforço das pessoas,
+  seus sentimentos e preferências permanecem inconsistentes e intransitivos — daí
+  medir a inconsistência em vez de proibi-la.
+- **Miller (1956)** citado como âncora do 7±2: justifica tanto a decomposição
+  hierárquica quanto o teto da escala 1–9.
+- **Validação contra respostas conhecidas**: distâncias de seis cidades a Filadélfia
+  (autovetor × milhas reais: Cairo 0,263 × 0,278; Tóquio 0,397 × 0,361), lei do
+  inverso do quadrado com objetos a 9/15/21/28 jardas de uma lâmpada, e riqueza de
+  nações.
+- **Aplicações declaradas nas conclusões**: plano nacional de transporte do **Sudão**,
+  atitudes de planejadores de uma corporação mexicana, trabalho com a **Marinha dos
+  EUA**, teses sobre parque energético (Blair) e racionamento (Mariano), e análise de
+  "limits to growth" para a NSF. (A Fig. 3 do artigo é uma hierarquia de projetos de
+  transporte em planejamento nacional — presumivelmente a do Sudão, 📖.)
+- **Semente do rank reversal, seis anos antes de Belton & Gear**: o artigo registra
+  que retirar uma atividade da matriz **não redistribui seu peso proporcionalmente**,
+  com o exemplo da riqueza de nações (removida a URSS, a razão EUA/Japão vai de 3,47
+  a 2,74). Saaty documenta a instabilidade; a crítica de 1983 mostra que ela vira o
+  pódio.
+
+Atribuição corrente que a leitura **derrubou como não documentada** (⏳):
+
 - ⏳ A cena fundadora datada: "no outono de 1971, trabalhando em planejamento de
-  contingência para o DoD". Candidata a confirmação: o prefácio/intro de Saaty (1977),
-  *J. Math. Psychology* 15(3) (✓ᵐ na bibliografia).
+  contingência para o DoD". **Achado negativo**: busca no texto integral do artigo de
+  1977 não encontra 1971, DoD, ACDA nem desarmamento; os agradecimentos citam apenas
+  J. P. Bennett, D. H. Krantz e o parecerista. A candidata mais provável agora é o
+  prefácio do livro de 1980.
 
 **Elementos para a seção** — aperto: um matemático de teoria de filas passa oito anos
 vendo negociadores de armas **ignorarem** modelos matematicamente impecáveis; antes:
@@ -324,7 +349,8 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 | # | Fonte a abrir | O que fecha | Acesso | Esforço |
 |---|---|---|---|---|
 | 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
-| 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | **Tentado em 2026-08-13**: sem exemplar aberto no IA (livros de Saaty só-empréstimo); sem cópia OA legal (Unpaywall e Semantic Scholar negativos); resta paywall Elsevier ou biblioteca física | baixo |
+| 2 | ~~Saaty (1977), *JMP* 15(3)~~ | **Fechado em 2026-08-13** por leitura integral (exemplar fornecido pelo Steward): Wharton ✓, premissa da inconsistência ✓, Miller 7±2 ✓, validações contra respostas conhecidas ✓, Sudão/Marinha/corporação mexicana ✓, semente do rank reversal ✓. **A cena de 1971/DoD não está no artigo** (achado negativo) — segue ⏳, agora com a introdução do livro de 1980 como candidata | feito | — |
+| 2b | Saaty (1980), *The Analytic Hierarchy Process*, prefácio/introdução | Última candidata para a cena fundadora "1971, DoD"; ⏳→✓ ou ❌ definitivo | Exemplar no IA é só-empréstimo; precisa de conta com acesso ou biblioteca | baixo |
 | 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | **Tentado em 2026-08-13**: sem exemplar no IA (o volume irmão de 1979, Hwang & Masud, existe mas é só-empréstimo, 403); resta Springer/biblioteca | médio |
 | 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |

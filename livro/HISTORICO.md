@@ -26,12 +26,31 @@
 | 08 PROMETHEE | 2026-07 | ✓ (etapa 08) | 2026-08-13 |
 | 09 ELECTRE | 2026-07 | ✓ (etapa 09) | 2026-08-13 |
 | 10 VIKOR e BWM | 2026-07 | ✓ (etapa 10) | 2026-08-10 |
-| 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-07-31 |
+| 11 Sensibilidade e rank reversal | 2026-07 | ✓ (etapa 11) | 2026-08-13 |
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-13 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-07-31 |
 | 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
 
 ## Edições
+
+### Edição 0.35 — 2026-08-13 · Saaty (1977) lido: o cap. 05 na fonte (spec 035)
+
+- O artigo seminal do AHP foi lido na íntegra (exemplar fornecido pelo Steward) e o
+  cap. 05 passa a falar da fonte, não de segunda mão. Fechado o ⏳ **"Wharton"** (está
+  na folha de rosto); entram com selo ✓ a premissa de projeto (a inconsistência humana
+  é acomodada, não proibida), a âncora em **Miller (1956)** para a hierarquia e o teto
+  da escala 1–9, as **validações contra respostas conhecidas** (distâncias a
+  Filadélfia, lei do inverso do quadrado, riqueza de nações) e as aplicações
+  declaradas (Sudão, Marinha dos EUA, corporação mexicana, NSF).
+- **Dois achados que a literatura didática não conta**: (1) a **semente do rank
+  reversal está no próprio artigo de 1977**, seis anos antes de Belton & Gear — Saaty
+  registra que retirar uma atividade não redistribui seu peso proporcionalmente
+  (removida a URSS do exemplo de riqueza, a razão EUA/Japão vai de 3,47 a 2,74); os
+  caps. 05 e 11 passam a registrar isso. (2) **Achado negativo**: a cena fundadora
+  "outono de 1971, planejamento de contingência para o DoD" **não aparece** no artigo
+  — nem 1971, nem DoD, nem ACDA; os agradecimentos citam dois colegas e o parecerista.
+  A atribuição continua ⏳, com a introdução do livro de 1980 como última candidata.
+- **IA**: agente **Claude Code (Anthropic)**; curadoria humana no gate.
 
 ### Edição 0.34 — 2026-08-13 · varredura Unpaywall/Semantic Scholar (raia leve, spec 034)
 

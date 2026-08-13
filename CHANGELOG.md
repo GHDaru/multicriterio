@@ -11,6 +11,10 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Saaty (1977) lido (spec 035)**: cap. 05 reescrito a partir da fonte — Wharton
+  confirmado, premissa da inconsistência, Miller 7±2, validações contra respostas
+  conhecidas, aplicações declaradas; a semente do rank reversal encontrada no próprio
+  artigo (caps. 05 e 11); achado negativo: a cena "1971/DoD" não está lá.
 - **Varredura OA legal (spec 034, raia leve)**: DOIs em aberto conferidos no
   Unpaywall/Semantic Scholar (sem cópia aberta para os 3 paywalled); DOI direto do
   artigo de 1954 no cap. 04 e o achado "Note—" do paper do PROMETHEE no cap. 08.

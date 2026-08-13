@@ -1,6 +1,6 @@
 # 11 — Sensibilidade, robustez e rank reversal: quando confiar no ranking
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-31 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -37,7 +37,7 @@ Três instrumentos, todos baratos:
   *relativa* das originais muda. A vulnerabilidade nasce de toda referência **relativa
   ao conjunto**: min/max da normalização (SAW), ideal/anti-ideal (TOPSIS —
   García-Cascales & Lamata, 2012), estrutura de comparações (AHP — Belton & Gear,
-  1983).
+  1983; o mecanismo já aparece descrito no próprio Saaty de 1977, cap. 05).
 
 (Bibliografia completa e status de validação: `livro/bibliografia.md`.)
 
