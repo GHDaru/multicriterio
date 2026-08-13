@@ -1,6 +1,6 @@
 # 09 — ELECTRE: concordância, discordância e o direito de veto
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -15,7 +15,7 @@
 Todos os métodos até aqui — até o PROMETHEE II — terminam somando algo. Consequência:
 um apartamento em bairro inaceitável pode vencer se for barato o bastante. Para muitas
 decisões reais isso é inadmissível ("segurança não se negocia", "abaixo do mínimo
-legal não entra"). O ELECTRE nasce exatamente desta recusa: **preferência global não
+legal não entra"). O ELECTRE nasce desta recusa: **preferência global não
 precisa ser uma soma** — pode ser um sistema de votação com direito de veto.
 
 ## De onde isto veio

@@ -1,6 +1,6 @@
 # 06 — TOPSIS: perto do ideal, longe do pior
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -89,7 +89,7 @@ do cap. 03 (passo 2 daquele capítulo); após ponderar e extrair $A^+$/$A^-$:
 Ranking: **A1 > A4 > A3 > A2** — o mesmo pódio do SAW com estes pesos (cap. 04, passo
 3). Concordância aqui é propriedade *deste problema* (a corrida era apertada mas as
 duas réguas apontaram igual), não lei: métodos legítimos podem divergir, e o cap. 11
-mede exatamente isso. *Os quatro $C_i$ e a concordância com a pymcdm (a 10⁻⁶) são
+mede isso. *Os quatro $C_i$ e a concordância com a pymcdm (a 10⁻⁶) são
 testes da etapa 06.*
 
 ## Quando usar (e quando não)
@@ -124,7 +124,7 @@ Fornecedores, pesos 0,40/0,20/0,25/0,15: **C = F2 0,7536 > F3 0,5282 > F1 0,2264
 mesmo pódio do SAW, com a folga de F2 ainda mais visível na régua geométrica (F2 fica
 a três quartos do caminho até o ideal; F1, a menos de um quarto). O ideal aqui combina
 o custo de F3, a latência de F2, o SLA de F1 e o suporte de F3 — um fornecedor que não
-existe, e é exatamente essa a função dele: servir de farol, não de opção. *Teste
+existe, e essa é a função dele: servir de farol, não de opção. *Teste
 `test_segundo_dominio_f2_tres_quartos_do_ideal` da etapa 06, validado contra a pymcdm.*
 
 ## Verificação

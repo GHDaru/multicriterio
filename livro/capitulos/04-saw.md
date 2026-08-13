@@ -1,6 +1,6 @@
 # 04 — SAW: o método aditivo (e o primeiro ranking do livro)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -133,7 +133,7 @@ independentes, compensação aceitável, decisor disposto a declarar pesos. É t
 auditável e barato. Não use quando compensar é inaceitável (outranking, caps. 08–09),
 quando há interação forte entre critérios (MAUT, cap. 07) ou quando ninguém consegue
 declarar pesos com um mínimo de convicção — nesse caso o problema é de elicitação, e
-métodos como o AHP (cap. 05) existem exatamente para extrair pesos de comparações mais
+métodos como o AHP (cap. 05) existem para extrair pesos de comparações mais
 simples. E lembre o cap. 03: o resultado herda as escolhas de normalização e de
 técnica de pesos — o passo 4 acima é a prova.
 
@@ -181,7 +181,7 @@ vitória robusta, que o cap. 11 vai medir com instrumento (varredura de pesos).
 ## Apêndice A — o método aditivo nas ferramentas
 
 - **pymcdm** implementa o SAW como `WSM(normalization_function=...)` — a normalização é
-  parâmetro explícito, exatamente a tese do cap. 03; nossa etapa 04 valida os escores
+  parâmetro explícito, a tese do cap. 03 em código; nossa etapa 04 valida os escores
   contra ela em teste (<https://github.com/kotbaton/pymcdm>).
 - **scikit-criteria** o expõe como `WeightedSumModel`, dentro de um pipeline em que
   scaler e inversão de direção são passos declarados

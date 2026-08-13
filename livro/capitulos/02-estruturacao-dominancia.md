@@ -1,6 +1,6 @@
 # 02 — Estruturação: de valores a critérios (e o veredito da dominância)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -16,7 +16,7 @@
 
 No capítulo 01, os quatro critérios do caso âncora caíram do céu. Decisões reais não
 começam com critérios: começam com desconforto ("preciso morar melhor") e com uma lista
-de opções. Dois erros nascem exatamente aqui. O primeiro é **medir o que é fácil em vez
+de opções. Dois erros nascem aqui. O primeiro é **medir o que é fácil em vez
 do que importa** — "número de quartos" é fácil de contar, mas o que você quer mesmo é
 espaço utilizável. O segundo é **contar a mesma coisa duas vezes** — "preço" e "preço
 por m²" parecem dois critérios, mas carregam a mesma informação, e qualquer método
@@ -36,7 +36,7 @@ quando uma sociedade inteira está "melhor" — sem ter como somar a satisfaçã
 diferentes numa conta só.
 
 **O que se fazia antes.** Somava-se assim mesmo: a tradição utilitarista comparava e
-agregava utilidades de indivíduos distintos como se fossem a mesma moeda — exatamente o
+agregava utilidades de indivíduos distintos como se fossem a mesma moeda — o
 "somar R$ com m²" do nosso cap. 01, em escala nacional.
 
 **A virada.** Recusar a soma e ainda assim afirmar algo: se uma mudança melhora alguém

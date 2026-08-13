@@ -1,6 +1,6 @@
 # 01 — O problema multicritério
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-30 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -100,7 +100,7 @@ entra: critério que não discrimina as alternativas (todas empatam) só adicion
 
 ### Leitura executiva
 
-Todo método MCDA — do SAW ao ELECTRE — consome exatamente o mesmo objeto: matriz $X$,
+Todo método MCDA — do SAW ao ELECTRE — consome o mesmo objeto: matriz $X$,
 direções e pesos $w$. Quem domina a modelagem troca de método em uma linha de código;
 quem a atropela produz rankings sem sentido com qualquer método. **O que levar** hoje:
 antes de perguntar "qual método usar?", pergunte "minha matriz está bem definida — cada
@@ -121,7 +121,7 @@ expõe o bug e a correção (part-task practice; gabarito no docstring do teste)
 A mesma anatomia serve à escolha de fornecedor de nuvem (cap. 00): $m = 3$
 alternativas, $n = 4$ critérios — Custo mensal (R$/mês ↓), Latência (ms ↓), SLA (% ↑),
 Suporte (1–5 ↑). E a tentação ingênua falha do mesmo jeito, com um requinte: a soma
-crua dá 12.147,95 para F1, 9.123,50 para F2 e 7.664,00 para F3 — "elege" exatamente o
+crua dá 12.147,95 para F1, 9.123,50 para F2 e 7.664,00 para F3 — "elege" o
 fornecedor **mais caro**, porque a coluna de custo (milhares) engole latência, SLA e
 suporte (dezenas ou menos). Unidades diferentes, mesmo absurdo. *Reproduzido pelo
 teste `test_segundo_dominio_fornecedor` da etapa 01.*

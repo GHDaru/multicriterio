@@ -1,6 +1,6 @@
 # 00 — Introdução: por que sua intuição não escala
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-07-30 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -50,7 +50,7 @@ Duas ideias fundadoras atravessam o livro inteiro:
   visível um jeito diferente de pensar o trade-off.
 - **Preferências são construídas, não descobertas.** Keeney & Raiffa (1976) mostram que
   pesos e funções de valor não existem prontos na cabeça do decisor; são *elicitados* por
-  procedimentos explícitos. Métodos diferem exatamente em **como** elicitam e **como**
+  procedimentos explícitos. Métodos diferem em **como** elicitam e **como**
   agregam — e é por isso que podem discordar entre si (cap. 11).
 
 (Bibliografia completa e status de validação: [`livro/bibliografia.md`](../bibliografia.md).)

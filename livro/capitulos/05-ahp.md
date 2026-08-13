@@ -1,6 +1,6 @@
 # 05 — AHP: pesos por comparações par a par (e o detector de incoerência)
 
-> **Estado da arte capturado em 2026-07** · última revisão 2026-08-10 · [histórico](../HISTORICO.md)
+> **Estado da arte capturado em 2026-07** · última revisão 2026-08-13 · [histórico](../HISTORICO.md)
 
 ## Objetivos de aprendizagem
 
@@ -114,7 +114,7 @@ soltas não têm como se contradizer; comparações par a par têm, e o CR flagr
 
 **Passo 5 — fechando o ciclo**: os pesos AHP no SAW do cap. 04 dão
 **A4 (0,5939) > A1 (0,5263) > A2 (0,4838) > A3 (0,4629)** — terceiro vetor defensável,
-terceiro pódio diferente. A pergunta "então qual ranking vale?" é exatamente o cap. 11.
+terceiro pódio diferente. A pergunta "então qual ranking vale?" é o assunto do cap. 11.
 *Todos os números são reproduzidos pelos testes da etapa 05.*
 
 ## Quando usar (e quando não)

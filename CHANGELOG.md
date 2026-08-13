@@ -11,6 +11,12 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Revisão editorial + fontes (spec 032)**: passe de humanização no livro inteiro
+  (tiques verbais, typos, "iteração 1" residual); Franklin (1772) e Borda (1781)
+  **lidos na fonte** via Internet Archive com selos promovidos ⏳→✓ nos caps. 07 e 12
+  (achados: o "não o quê, mas como" de Franklin; a apresentação de Borda datada de
+  16/06/1770 pela nota do próprio memorial); Shannon/Arrow/Aczél-Saaty ✓ᵐ; fila de
+  verificação com 5 itens fechados.
 - **Seções "De onde isto veio" (spec 031)**: os 11 capítulos de método (02–10, 12, 14)
   ganham a seção histórica do Princípio VIII, com os 5 elementos e tabela de selos —
   toda afirmação limitada ao selo registrado na nota de pesquisa.
