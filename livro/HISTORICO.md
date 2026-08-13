@@ -33,6 +33,30 @@
 
 ## Edições
 
+### Edição 0.36 — 2026-08-13 · três fontes lidas: caps. 04, 06 e 08 na origem (spec 036)
+
+- **Churchman & Ackoff (1954) lido** — e o cap. 04 muda de tese. A soma ponderada não
+  é "método sem cena de invenção": ela entra na literatura por uma **réplica** a um
+  trabalho que media valor por "estados-armadilha" (ganhar ou perder uma guerra), com
+  o contraexemplo do enxadrista que quer perder para alguém de quem gosta. Correção
+  registrada: as hipóteses de aditividade e **seus casos de falha** já estão no artigo
+  de 1954 — não é verdade que a teoria só chegou com Fishburn em 1967.
+- **Hwang & Yoon (1981) lido** (prefácio e sumário) — o cap. 06 troca o ❌ por
+  contexto documentado: sequência do levantamento anterior dos autores, **dezessete**
+  métodos classificados, financiamento do **Office of Naval Research** e do DoE,
+  dívida com MacCrimmon, e o rascunho **testado numa turma de 1980**. Persiste (agora
+  bem menor) a lacuna: o prefácio não narra o momento da ideia das duas distâncias.
+- **Brans & Vincke (1985) lido** — a conferência de 1982 se confirma pela referência
+  dos próprios autores, **com correção**: "L'ingénierie de la décision" é o título da
+  comunicação de Brans em Laval (agosto de 1982), não o nome do colóquio. Também
+  confirmado: o objetivo declarado de no máximo dois parâmetros com significado
+  econômico (era leitura editorial, vira ✓) e a submissão em junho de 1982 para
+  publicação só em 1985.
+- Nota de pesquisa: a conexão nº 1 (financiamento militar) passa de suposição a
+  documento em três fontes independentes. Placar da fila: **10 de 11 itens fechados**;
+  restam Opricovic (VIKOR) e a cena de 1971 do AHP (item 2b).
+- **IA**: agente **Claude Code (Anthropic)**; fontes fornecidas pelo Steward.
+
 ### Edição 0.35 — 2026-08-13 · Saaty (1977) lido: o cap. 05 na fonte (spec 035)
 
 - O artigo seminal do AHP foi lido na íntegra (exemplar fornecido pelo Steward) e o

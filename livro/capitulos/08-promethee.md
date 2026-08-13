@@ -23,27 +23,39 @@ diferença.
 ## De onde isto veio
 
 **O aperto.** O outranking já existia (o ELECTRE, cap. 09, é quinze anos mais velho) —
-e era esse o problema. A literatura conta que **Jean-Pierre Brans**, da escola belga,
-apresentou o PROMETHEE em **1982**, numa conferência na Université Laval (Québec)
-chamada, apropriadamente, *L'ingénierie de la décision*: a segunda geração de um campo
-respondendo à crítica que a primeira acumulara — limiares de concordância e
-discordância que o decisor aceitava sem entender.
+e era esse o problema. **Jean-Pierre Brans**, da Universidade de Bruxelas, apresentou
+a ideia em **agosto de 1982**, num colóquio de apoio à decisão na Université Laval, em
+Québec; sua contribuição lá se chamava "a engenharia da decisão: a elaboração de
+instrumentos de apoio à decisão" — o próprio artigo de 1985, que lemos, cita essa
+comunicação. O nome do que ele foi fazer descreve o aperto: depois de quinze anos de
+outranking, faltava **engenharia** — instrumentos que o dono do problema conseguisse
+operar.
+
+Vale notar o ritmo dessas coisas: o artigo que consagrou o método foi **recebido em
+junho de 1982** pela *Management Science* e só saiu em **junho de 1985**, depois de
+duas revisões. Três anos entre a ideia apresentada e a página impressa.
 
 **O que se fazia antes.** ELECTRE: sobreclassificação com parâmetros globais ($c^*$,
 $d^*$, vetos) potentes, mas opacos — mexa em $d^*$ de 0,4 para 0,65 (nosso cap. 09 faz
 isso) e explique a um comitê o que exatamente mudou na *preferência* de alguém.
 
-**A virada.** Colocar os parâmetros **onde o decisor tem intuição**: por critério, uma
-função que traduz a *diferença de desempenho* em preferência — com limiares que
-significam algo dizível ("abaixo de R$ 2 mil é a mesma coisa"; "acima de R$ 200 mil a
-preferência satura"). Seis formas de função, escolhidas pelo dono do problema, não
+**A virada.** Colocar os parâmetros **onde o decisor tem intuição** — e isso está
+declarado como objetivo no resumo do artigo, não é leitura nossa: o método quer ser o
+mais fácil possível de entender para quem decide, e por isso cada critério estendido
+exige **no máximo dois parâmetros, ambos com significado econômico**. São limiares que
+se dizem em português ("abaixo de R$ 2 mil é a mesma coisa"; "acima de R$ 200 mil a
+preferência satura"), em seis formas de função escolhidas pelo dono do problema, não
 pelo analista.
 
 **A ideia reaproveitável.** **Interpretabilidade de parâmetro é requisito, não
 cosmética**: um modelo cujos parâmetros o dono da decisão consegue discutir é um
-modelo que sobrevive à reunião. E a meta-lição da segunda geração: aceitar a crítica
-ao antecessor e responder **dentro** do paradigma (o PROMETHEE não abandona o
-outranking — o conserta onde doía).
+modelo que sobrevive à reunião. O próprio artigo fecha com a evidência disso — nas
+aplicações relatadas (serviços de hospitais canadenses, projetos de ensino na
+Bélgica), o que os autores destacam não é precisão numérica, e sim que os praticantes
+**aceitaram e entenderam** o método. E a meta-lição da segunda geração: aceitar a
+crítica ao antecessor e responder **dentro** do paradigma (o PROMETHEE não abandona o
+outranking — o conserta onde doía; aliás Brans, Roy e Vincke já haviam assinado juntos
+um trabalho sobre apoio multicritério em 1975 — as duas escolas se conheciam bem).
 
 **O nome.** A expansão consta do título do paper de 1985: *Preference Ranking
 Organisation METHod (for Enrichment Evaluations)* — e o acrônimo pisca para o titã
@@ -56,9 +68,11 @@ fundadoras do campo, publicadas pela porta lateral.
 
 | Afirmação | Selo |
 |---|---|
-| Apresentação em 1982, conferência "L'ingénierie de la décision", Université Laval (Québec) | ⏳ atribuição corrente; atas na fila (esforço alto) |
-| Brans & Vincke (1985), *Management Science* — paper de referência, catalogado como "Note—…" | ✓ᵐ (registro na bibliografia; título completo conferido no Unpaywall/Semantic Scholar em 2026-08-13; conteúdo não lido) |
-| Motivação "responder à opacidade do ELECTRE" | 📖 leitura editorial (coerente com a arquitetura do método) |
+| Comunicação de Brans em **agosto de 1982**, colóquio de apoio à decisão na Université Laval (Québec), intitulada "L'ingénierie de la décision: l'élaboration d'instruments d'aide à la décision" | ✓ citada pelos próprios autores nas referências do artigo de 1985, lido (⚠ correção: "L'ingénierie de la décision" é o título da comunicação, não o nome do colóquio) |
+| Recebido em junho de 1982, publicado em junho de 1985 após duas revisões; catalogado como "Note—…"; afiliações VUB / Université Libre de Bruxelles | ✓ artigo lido (rodapé de submissão e cabeçalho) |
+| Objetivo declarado: ser o mais compreensível possível para quem decide; no máximo dois parâmetros por critério, com significado econômico | ✓ resumo do artigo lido |
+| Aplicações relatadas (hospitais no Canadá, projetos de ensino na Bélgica) enfatizando aceitação pelos praticantes; coautoria Brans–Roy–Vincke em 1975 | ✓ §7 e referências do artigo lido |
+| Motivação "responder à opacidade do ELECTRE" | 📖 leitura editorial (coerente com o objetivo declarado acima) |
 | Alusão mitológica intencional no nome | ⏳ corrente, não confirmada |
 
 ## Fundamentos

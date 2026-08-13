@@ -11,6 +11,11 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Três fontes lidas (spec 036)**: Churchman & Ackoff 1954, Hwang & Yoon 1981
+  (prefácio) e Brans & Vincke 1985 — caps. 04, 06 e 08 reescritos na origem. Duas
+  correções de conteúdo: o SAW **tem** cena de invenção (a réplica aos "trapped
+  states") e a aditividade já veio com seus casos de falha em 1954; "L'ingénierie de
+  la décision" era o título da comunicação de Brans, não o nome do colóquio de Laval.
 - **Saaty (1977) lido (spec 035)**: cap. 05 reescrito a partir da fonte — Wharton
   confirmado, premissa da inconsistência, Miller 7±2, validações contra respostas
   conhecidas, aplicações declaradas; a semente do rank reversal encontrada no próprio

@@ -136,14 +136,23 @@ conhecida (📖).
 
 ## Cap. 06 — TOPSIS (Hwang & Yoon)
 
-- ✓ᵐ Hwang, C.-L.; Yoon, K. (1981). *Multiple Attribute Decision Making*, Springer,
-  LNEMS 186 (bibliografia; Springer). O TOPSIS aparece dentro de um **survey-taxonomia**
-  de métodos MADM — não como artigo isolado.
-- ⏳ Os autores estavam na **Kansas State University**; o livro nasce do esforço de
-  **catalogar** o campo então disperso (engenharia de sistemas/OR), e o TOPSIS é
-  proposto como método novo no meio do catálogo.
-- ❌ Não achei fonte para uma "cena fundadora" datada do TOPSIS (quem pediu, que
-  decisão concreta motivou). A seção do cap. 06 deve assumir a lacuna em voz alta.
+- ✓ **Hwang & Yoon (1981), *Multiple Attribute Decision Making*, LNEMS 186 — prefácio
+  e sumário LIDOS em 2026-08-13** (exemplar fornecido pelo Steward). O que trazem (✓):
+  prefácio datado de **Fall 1980**, assinado por **C. L. Hwang (Kansas State
+  University, Manhattan, Kansas)** — o ⏳ da afiliação fecha aqui — e **Kwangsun Yoon
+  (Fairleigh Dickinson University, Teaneck, New Jersey)**; o livro é **sequência** do
+  levantamento anterior dos mesmos autores sobre decisão multiobjetivo (nº 164 da
+  série); classifica **dezessete** métodos MADM principais, "metade clássicos, metade
+  recentes"; **financiamento parcial do Office of Naval Research e do Department of
+  Energy**; dívida declarada com os levantamentos pioneiros de **Kenneth R.
+  MacCrimmon (1968 e 1973)**; o primeiro rascunho foi usado na turma de **"Advanced
+  Topics in Operations Research" da primavera de 1980**, com seis alunos creditados
+  por testarem e avaliarem criticamente muitos dos métodos. No sumário, TOPSIS é o
+  item 2.3.5, **logo depois do ELECTRE** (2.3.4), entre os métodos que consomem
+  preferência cardinal sobre atributos.
+- ❌ **Persiste**: o prefácio dá o contexto, mas **não narra** o momento em que a ideia
+  das duas distâncias surgiu nem uma encomenda concreta que a tenha motivado. O cap.
+  06 mantém a lacuna admitida — agora bem menor e mais precisa.
 
 **Elementos** — aperto (registro ⏳/📖): dois pesquisadores catalogando dezenas de
 métodos incomensuráveis; antes: SAW (régua aditiva) e ELECTRE (relações); virada:
@@ -168,12 +177,22 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   Neumann & Morgenstern → sistemas axiomáticos; amalgamação → Arrow; survey de
   Edwards 1954 — o mesmo Edwards do cap. 03, já em 1957 na bibliografia da soma
   ponderada).
-- ✓ᵐ O artigo de **1954** ("An Approximate Measure of Value", *JORSA* 2(2)): não
-  lido, mas duplamente conferido — DOI 10.1287/opre.2.2.172 no Unpaywall
-  (2026-08-13), e a bibliografia do manual lido cita os "Comments" de N. M. Smith no
-  **mesmo fascículo** (*JORSA* 2, nº 2, pp. 181–187, maio de 1954), a discussão
-  publicada do artigo. Sem cópia de acesso aberto legal (Unpaywall/Semantic Scholar
-  negativos).
+- ✓ **Churchman & Ackoff (1954), "An Approximate Measure of Value", *JORSA* 2(2),
+  172–187 — LIDO em 2026-08-13** (exemplar fornecido pelo Steward). O que o artigo
+  traz (✓): afiliação **Case Institute of Technology**, recebido em **20/10/1953**;
+  o artigo é uma **réplica** a um trabalho que media valor por "estados-armadilha"
+  (*trapped states* — ganhar ou perder uma guerra como exemplo), e a objeção é que
+  definir valor por "vencer" inverte a ordem das coisas, com o contraexemplo do
+  enxadrista que quer perder para alguém de quem gosta; a proposta separa **eficiência
+  de um curso de ação** e **importância do desfecho**, maximizando a eficiência total
+  ponderada, com pesos elicitados de escolhas declaradas e aplicável a qualquer número
+  de objetivos e decisores; as hipóteses A-1 a A-3 estão enunciadas, e a **aditividade
+  (A-3) vem com seus casos de falha** (desfechos que se implicam ou são mutuamente
+  exclusivos). Nota de rodapé: comentários convidados de **Nicholas M. Smith Jr.** no
+  mesmo fascículo (p. 181) — o que a bibliografia do manual de 1957 já sugeria.
+  **Correção que a leitura impõe**: não é verdade que "a teoria só chegou em 1967" —
+  as condições de validade nasceram com o método; Fishburn deu a axiomatização
+  completa.
 - ✓ᵐ Fishburn (1967), *Operations Research* 15(3) — a fundação axiomática citada no
   livro (bibliografia). Curiosidade estrutural ✓ᵐ: é publicado na seção de notas do
   periódico — a teoria chegou **depois** da prática, para dizer *quando* a soma é
@@ -223,16 +242,27 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Cap. 08 — PROMETHEE (Jean-Pierre Brans)
 
-- ✓ᵐ Brans & Vincke (1985), *Management Science* 31(6) (bibliografia). Detalhe de
-  registro conferido no Unpaywall/Semantic Scholar (2026-08-13): o título catalogado
-  completo é "**Note**—A Preference Ranking Organisation Method: The PROMETHEE Method
-  for MCDM" — o paper de referência entrou na revista como *nota*, rimando com a
-  carta ao editor de Fishburn (cap. 04).
-- ⏳ A origem corrente: Brans apresenta o PROMETHEE em **1982**, numa conferência na
-  **Université Laval (Québec)** — "L'ingénierie de la décision" — organizada por
-  Nadeau/Landry; a escola belga (VUB/ULB) buscava um outranking **mais simples e mais
-  interpretável** que o ELECTRE (funções de preferência com parâmetros que o decisor
-  entende: limiares de indiferença e preferência).
+- ✓ **Brans & Vincke (1985), *Management Science* 31(6), 647–656 — LIDO em 2026-08-13**
+  (exemplar fornecido pelo Steward). O que o artigo traz (✓): afiliações **V.U.B.
+  University of Brussels** e **Free University of Brussels**; catalogado como
+  "**Note**" (e "todas as Notas são arbitradas"); rodapé de submissão: aceito por
+  Alexander H. G. Rinnooy Kan, **recebido em junho de 1982**, três meses com os
+  autores para duas revisões — publicação em junho de 1985; o resumo declara o
+  objetivo de ser **o mais compreensível possível para quem decide**, com no máximo
+  **dois parâmetros por critério estendido, ambos de significado econômico** (o que
+  era 📖 vira ✓); PROMETHEE I dá pré-ordem parcial, II dá pré-ordem total; §7 relata
+  aplicações de Dujardin (projetos de ensino na Bélgica) e D'Avignon et al. (serviços
+  de hospitais canadenses), enfatizando que os praticantes **aceitaram e entenderam**
+  os métodos.
+- ✓ **A conferência de 1982 confirmada pela referência dos próprios autores** —
+  e com uma **correção**: a citação é "BRANS, J. P., *L'ingénierie de la décision:
+  l'élaboration d'instruments d'aide à la décision*, **Colloque d'aide à la décision**,
+  Université Laval, Québec, **Août 1982**". Ou seja, "L'ingénierie de la décision" é o
+  título da **comunicação de Brans**, não o nome do colóquio — o cap. 08 dizia o
+  contrário e foi corrigido. As atas em si continuam não lidas.
+- ✓ Nas referências do mesmo artigo: **Brans, Roy e Vincke assinam juntos** "Aide à la
+  décision multicritère" (*Rev. Belge de Statistique, d'Informatique et de RO*, 1975) —
+  evidência direta de que as escolas belga e francesa se cruzavam uma década antes.
 - 📖 Leitura editorial: PROMETHEE é a **segunda geração** do outranking — aceita a
   crítica de que os limiares do ELECTRE eram opacos e responde com seis formas de
   função escolhidas *pelo decisor*.
@@ -324,10 +354,15 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Conexões entre as histórias (o motivo de pesquisar junto)
 
-1. **A Guerra Fria paga a conta duas vezes**: Saaty inventa o AHP após oito anos de
-   ACDA (✓ obituário INFORMS); a análise de decisão de Raiffa herda a linhagem
-   RAND/von Neumann (⏳). Dois métodos "gerenciais" com certidão de nascimento militar-
-   diplomática.
+1. **A conta militar aparece em quase todos** (e agora com documento, não com
+   suposição): Saaty inventa o AHP após oito anos de ACDA (✓ obituário) e cita
+   trabalho com a Marinha dos EUA no artigo de 1977 (✓); o catálogo de Hwang & Yoon
+   que apresenta o TOPSIS é financiado pelo **Office of Naval Research** e pelo DoE
+   (✓ prefácio); o artigo fundador da soma ponderada é uma réplica a um trabalho que
+   media valor por "ganhar ou perder uma guerra" (✓ Churchman & Ackoff 1954); e a
+   análise de decisão de Raiffa herda a linhagem RAND/von Neumann (⏳). O campo que
+   hoje escolhe fornecedor e apartamento foi pago, em boa parte, por marinha e
+   diplomacia nuclear.
 2. **Consultoria e academia alternam a dianteira**: ELECTRE nasce numa consultoria
    (SEMA, ✓) e vira campo acadêmico; PROMETHEE nasce na academia respondendo à
    opacidade do primeiro (⏳); BWM nasce na academia para baratear o que o AHP
@@ -351,12 +386,12 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 | 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
 | 2 | ~~Saaty (1977), *JMP* 15(3)~~ | **Fechado em 2026-08-13** por leitura integral (exemplar fornecido pelo Steward): Wharton ✓, premissa da inconsistência ✓, Miller 7±2 ✓, validações contra respostas conhecidas ✓, Sudão/Marinha/corporação mexicana ✓, semente do rank reversal ✓. **A cena de 1971/DoD não está no artigo** (achado negativo) — segue ⏳, agora com a introdução do livro de 1980 como candidata | feito | — |
 | 2b | Saaty (1980), *The Analytic Hierarchy Process*, prefácio/introdução | Última candidata para a cena fundadora "1971, DoD"; ⏳→✓ ou ❌ definitivo | Exemplar no IA é só-empréstimo; precisa de conta com acesso ou biblioteca | baixo |
-| 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | **Tentado em 2026-08-13**: sem exemplar no IA (o volume irmão de 1979, Hwang & Masud, existe mas é só-empréstimo, 403); resta Springer/biblioteca | médio |
+| 3 | ~~Hwang & Yoon (1981), prefácio~~ | **Fechado em 2026-08-13** por leitura (exemplar do Steward): Kansas State ✓, Fairleigh Dickinson ✓, sequência do vol. 164 ✓, 17 métodos ✓, ONR/DoE ✓, MacCrimmon ✓, turma de 1980 ✓, TOPSIS após ELECTRE no sumário ✓. Falta só a **seção do TOPSIS em si** (o exemplar cobre a matéria de abertura) — e a cena da ideia continua ❌ | feito | — |
 | 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |
 | 6 | ~~Aczél & Saaty (1983)~~ | **Fechado em 2026-08-13**: DOI 10.1016/0022-2496(83)90028-7 no CrossRef — ✓ᵐ | feito | — |
 | 7 | ~~Shannon (1948) + Arrow (1951)~~ | **Fechado em 2026-08-13**: DOI do BSTJ no CrossRef; registro Open Library (1951) — ✓ᵐ | feito | — |
-| 8 | Brans (1982), atas de "L'ingénierie de la décision" (Univ. Laval) | A conferência de batismo do PROMETHEE; ⏳→✓ | **Tentado em 2026-08-13**: nenhum exemplar no IA; segue difícil (atas locais) | alto |
+| 8 | ~~Brans (1982), Université Laval~~ | **Fechado em 2026-08-13** pela referência dos próprios autores no artigo lido: Colloque d'aide à la décision, Laval, **Août 1982**, comunicação "L'ingénierie de la décision…" (✓, com correção do que era nome do colóquio × título da comunicação). As atas em si seguem não lidas — reabrir só se alguém quiser o texto da comunicação | feito | — |
 | 9 | Opricovic (1979/1990, Belgrado) | Origem pós-terremoto do VIKOR; ⏳→✓ ou ❌ definitivo | **Tentado em 2026-08-13**: nada no IA; segue muito difícil (servo-croata, não digitalizado) | alto |
 | 10 | ~~Churchman & Ackoff (1954/1957)~~ | **Fechado em 2026-08-13**: o capítulo "Weighting Objectives" do manual de 1957 lido na íntegra via IA (✓ — comparações sucessivas, "intangíveis", caso executivo); o artigo de 1954 corroborado pelos "Comments" de Smith no mesmo fascículo, citados no manual (✓ᵐ) | feito | — |
 | 11 | ~~Condorcet (1785), *Essai*~~ | **Fechado em 2026-08-13** por leitura dos trechos-chave via IA: folha de rosto + a combinação cíclica no *Discours préliminaire* (pp. lvj–lvij) — ✓ | feito | — |

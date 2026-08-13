@@ -24,48 +24,60 @@ capítulo não é "como calcular" (é uma linha), e sim **o que essa linha assum
 
 ## De onde isto veio
 
-**O aperto.** O SAW é o único método deste livro **sem cena de invenção** — e isso é a
-história. Somar notas ponderadas é o que comitês, professores e concursos fazem
-espontaneamente há séculos; ninguém precisou inventar o gesto. O aperto era outro:
-saber **quando o gesto natural é legítimo** — e quem estava preso nisso era a nascente
-pesquisa operacional gerencial dos anos 1950, tentando transformar "avaliação por
-pontos" de folclore administrativo em instrumento defensável.
+**O aperto.** A soma ponderada entra na literatura gerencial por uma **briga** — e o
+motivo da briga é o que ensina. Em outubro de 1953, **C. West Churchman e Russell
+Ackoff**, do Case Institute of Technology, submetem uma resposta a um trabalho recente
+que propunha medir valor a partir de "estados-armadilha" (*trapped states*): situações
+de onde o sistema não sai mais, sendo ganhar ou perder uma guerra o exemplo. A objeção
+deles é curta e demolidora: definir valor último em termos de *vencer* é pôr o carro
+diante dos bois. O contraexemplo que usam é doméstico — um enxadrista pode querer
+**perder** a partida para um adversário a quem quer bem. Vitória precisa ser definida
+em função do que se valoriza, e não o contrário.
 
-**O que se fazia antes.** A mesma soma sem saber o que ela assumia — ou, pior,
-**cifrão em tudo**. O manual que formalizou o procedimento para gerentes (Churchman,
-Ackoff & Arnoff, *Introduction to Operations Research*, 1957 — capítulo "Weighting
-Objectives", que lemos na íntegra) abre atacando exatamente esse hábito e o apelido
-dado aos objetivos que resistem: *"intangíveis" — mas "intangible" quer dizer
-"intocável", e esses objetivos só são intocáveis pelo método do cifrão*; medem-se por
-outros métodos. A dupla já havia proposto a "medida aproximada de valor" num artigo de
-1954 (*JORSA* 2(2), cuja discussão no mesmo fascículo — os "Comments" de N. M. Smith,
-pp. 181–187 — o manual cita); a fundação matemática só chegou em 1967, com Fishburn
-enunciando as condições da utilidade aditiva — publicadas, detalhe saboroso, como
-**carta ao editor** da *Operations Research*.
+**O que se fazia antes.** Ou o valor amarrado a um desfecho binário (a crítica acima),
+ou — na prática das empresas — **cifrão em tudo**. O manual que os dois assinam três
+anos depois com Arnoff (*Introduction to Operations Research*, 1957, capítulo
+"Weighting Objectives", também lido) abre justamente contra esse hábito e contra o
+apelido dado aos objetivos que resistem à conversão: chamá-los de "intangíveis" é
+confundir *intocável pelo dinheiro* com *impossível de medir*. Segurança, boa vontade,
+o custo de uma lesão: medem-se por outro método.
 
-**A virada.** Duas, na verdade. A de 1957: nota solta precisa de **contraprova** — o
-"método das comparações sucessivas" atribui valores tentativos e depois os testa
-contra combinações ("você prefere $O_1$, ou $O_2$+$O_3$+$O_4$ juntos?"), ajustando até
-a coerência e normalizando pela soma — vinte anos antes do CR do cap. 05, a mesma
-ideia de julgamento redundante como detector de contradição. A de 1967: perceber que
-a pergunta científica não era "como somar?" (trivial), e sim "**o que precisa ser
-verdade para que somar seja válido?**" — independência preferencial, escala de
-intervalo, compensação aceitável. A teoria veio *depois* da prática, para delimitá-la.
+**A virada.** Separar a decisão em **duas medidas independentes** — a eficiência de um
+curso de ação para produzir cada desfecho, e a importância de cada desfecho — e
+escolher o que maximiza a eficiência total ponderada. É o $\sum_j w_j r_{ij}$ deste
+capítulo, com os pesos elicitados das escolhas declaradas de quem decide, aplicável a
+qualquer número de objetivos e de decisores. E, no mesmo artigo, a honestidade que a
+literatura posterior costuma esquecer: as três hipóteses estão enunciadas (A-1 a A-3),
+e a de aditividade vem **acompanhada dos casos em que falha** — se um desfecho implica
+o outro, ou se os dois são mutuamente exclusivos (ganhar exatamente 10 mil e ganhar
+exatamente 20 mil ao ano), somar valores não significa nada. A axiomatização completa
+viria em 1967 com Fishburn — publicada, detalhe saboroso, como **carta ao editor** da
+*Operations Research*; mas as condições de validade nasceram junto com o método, não
+depois dele.
 
-**A ideia reaproveitável.** Quando um procedimento folk funciona, o trabalho rigoroso
-não é substituí-lo — é **explicitar as condições em que ele vale** e detectar quando
-elas caem. Vale para heurísticas de engenharia, regras de bolso clínicas, prompts que
-"simplesmente funcionam": formalizar é desenhar a cerca, não demolir a casa.
+Do manual de 1957 vem a segunda virada, prática: nota solta precisa de **contraprova**.
+O "método das comparações sucessivas" atribui valores tentativos e os testa contra
+combinações ("você prefere $O_1$, ou $O_2$+$O_3$+$O_4$ juntos?"), ajustando até a
+coerência e normalizando pela soma — vinte anos antes do CR do cap. 05, a mesma ideia
+de julgamento redundante como detector de contradição.
 
-**O nome.** SAW (*Simple Additive Weighting*) e WSM (*Weighted Sum Model*) são
-descrições, não batismos — método sem inventor tampouco tem cerimônia de nome.
+**A ideia reaproveitável.** Duas. (1) **Defina valor antes de definir vitória.** Quando
+alguém propõe medir sucesso por um desfecho ("bater a meta", "vencer o concorrente",
+"passar no teste"), a pergunta que desarma é a do enxadrista: e se o desfecho não for
+o que se valoriza? (2) **Publique a hipótese junto com o caso em que ela falha.** A
+aditividade nasceu com sua própria bula; foi a literatura de repetição que perdeu a
+bula pelo caminho.
+
+**O nome.** SAW (*Simple Additive Weighting*) e WSM (*Weighted Sum Model*) são rótulos
+posteriores e descritivos: o artigo de 1954 não batiza nada, só chama o que propõe de
+uma medida **aproximada** de valor — a modéstia está no título.
 
 | Afirmação | Selo |
 |---|---|
+| Churchman & Ackoff (1954), Case Institute of Technology, recebido em 20/10/1953; a réplica aos "trapped states"; o enxadrista que quer perder; as duas medidas (eficiência × importância); hipóteses A-1 a A-3 com os casos de falha da aditividade | ✓ artigo lido (*JORSA* 2(2), 172–187; DOI 10.1287/opre.2.2.172) |
+| Comentários convidados de Nicholas M. Smith Jr. no mesmo fascículo (p. 181) | ✓ nota de rodapé do artigo lido |
 | Método das comparações sucessivas, caso executivo trabalhado e a crítica aos "intangíveis" | ✓ capítulo "Weighting Objectives" lido em Churchman, Ackoff & Arnoff (1957) — exemplar aberto no Internet Archive |
-| Artigo de 1954 no *JORSA* 2(2): "An Approximate Measure of Value" | ✓ᵐ DOI 10.1287/opre.2.2.172 conferido no Unpaywall (2026-08-13) + corroborado pelo manual lido, que cita os "Comments" de Smith no mesmo fascículo (pp. 181–187); o artigo em si não foi lido |
 | Fishburn (1967) axiomatiza a utilidade aditiva, publicado como carta ao editor | ✓ᵐ (DOI e formato verificados na bibliografia; conteúdo não lido) |
-| "Método folk, teoria a posteriori" | 📖 leitura editorial do arco |
 
 ## Fundamentos
 
