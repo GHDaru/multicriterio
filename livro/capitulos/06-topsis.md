@@ -23,15 +23,29 @@ geométrica.
 ## De onde isto veio
 
 **O aperto.** O TOPSIS não nasceu num artigo triunfal — nasceu **dentro de um
-catálogo**. Hwang & Yoon (a literatura os situa na Kansas State University) passaram o
-fim dos anos 1970 fazendo o trabalho ingrato de organizar um campo disperso: seu livro
-de 1981 (*Multiple Attribute Decision Making*, LNEMS 186) é uma taxonomia de dezenas
-de métodos que não conversavam entre si. O aperto era o do cartógrafo: mapear tudo — e
-descobrir, no meio do mapa, um território vazio.
+catálogo**, e o prefácio do livro (que lemos) mostra de que tipo. **Ching-Lai Hwang**,
+da Kansas State University, e **Kwangsun Yoon**, então na Fairleigh Dickinson
+University, assinam em Fall 1980 a *continuação* de um levantamento anterior deles
+mesmo: depois de mapear a decisão multiobjetivo (volume 164 da mesma série),
+atacavam agora a multiatributo. A empreitada tinha financiamento do **Office of Naval
+Research e do Department of Energy**, herdeiros da mesma pesquisa operacional militar
+que aparece nos caps. 04 e 05, e reconhece dívida com os levantamentos pioneiros de
+Kenneth MacCrimmon (1968 e 1973). O aperto era o do cartógrafo: **dezessete** métodos
+principais para classificar, metade clássicos e metade recém-chegados, propostos por
+pesquisadores de disciplinas que não conversavam entre si.
 
-**O que se fazia antes.** Os dois polos que o catálogo deixava claros: o SAW **somava**
-virtudes numa régua absoluta; o ELECTRE **relacionava** pares sem régua nenhuma.
-Faltava a intuição do meio — "melhor" como posição no espaço.
+E há um detalhe de origem que raramente se conta de um método famoso: o rascunho do
+livro foi **material de aula**. Serviu à turma de "Advanced Topics in Operations
+Research" da primavera de 1980, e o prefácio credita seis alunos por testarem e
+avaliarem criticamente muitos dos métodos. O TOPSIS nasce nesse ambiente — não numa
+encomenda, mas numa sala onde dezessete métodos estavam sendo postos à prova lado a
+lado.
+
+**O que se fazia antes.** Os dois polos que o catálogo deixava claros — e a taxonomia
+do livro os põe em prateleiras vizinhas, o ELECTRE logo antes do TOPSIS, entre os
+métodos que consomem preferência cardinal sobre atributos: o SAW **somava** virtudes
+numa régua absoluta; o ELECTRE **relacionava** pares sem régua nenhuma. Faltava a
+intuição do meio — "melhor" como posição no espaço.
 
 **A virada.** Geometria com **dois polos**: a melhor alternativa é a que fica perto do
 ideal **e** longe do anti-ideal — as duas exigências ao mesmo tempo, porque estar
@@ -41,19 +55,21 @@ as duas medidas).
 **A ideia reaproveitável.** Duas. (1) Quando critérios brigam, meça contra **os dois
 extremos** — referências duplas detectam o que uma referência única esconde (o
 anti-ideal é o que o cap. 11 vai sacudir no rank reversal). (2) A meta-lição do
-catálogo: **organizar exaustivamente um campo é um gerador de métodos** — o buraco na
-taxonomia é uma agenda de pesquisa. Não temos, porém, cena fundadora datada do TOPSIS
-(quem pediu, que decisão concreta o motivou): procuramos e não achamos — a lacuna fica
-admitida em voz alta.
+catálogo: **organizar exaustivamente um campo é um gerador de métodos** — quem arruma
+a prateleira enxerga a lacuna que ninguém tinha visto, e o buraco na taxonomia vira
+agenda de pesquisa. Ainda assim, uma ressalva de honestidade: o prefácio conta o
+contexto (o levantamento, a turma, o financiamento), mas **não narra o momento** em
+que a ideia das duas distâncias apareceu, nem uma decisão concreta que a tenha
+encomendado. O contexto está documentado; a cena, não.
 
 **O nome.** Acrônimo descritivo, batizado no livro de 1981: *Technique for Order
 Preference by Similarity to Ideal Solution*.
 
 | Afirmação | Selo |
 |---|---|
-| Hwang & Yoon (1981), LNEMS 186, livro-taxonomia onde o TOPSIS é proposto | ✓ᵐ (registro Springer na bibliografia; conteúdo não lido — prefácio na fila) |
-| Afiliação Kansas State University | ⏳ atribuição corrente |
-| Cena fundadora datada do TOPSIS | ❌ procurei e não achei — lacuna admitida |
+| Prefácio datado de Fall 1980; Hwang na **Kansas State University** e Yoon na **Fairleigh Dickinson University**; sequência do levantamento anterior dos autores (vol. 164 da série); **dezessete** métodos classificados, metade clássicos; financiamento do **Office of Naval Research** e do **Department of Energy**; dívida com os levantamentos de MacCrimmon (1968, 1973); rascunho usado na turma de "Advanced Topics in OR" da primavera de 1980, com seis alunos creditados por testar métodos | ✓ prefácio e sumário de Hwang & Yoon (1981) lidos |
+| TOPSIS catalogado logo depois do ELECTRE, entre os métodos de preferência cardinal sobre atributos | ✓ sumário do livro lido (itens 2.3.4 e 2.3.5) |
+| Momento/encomenda que originou a ideia das duas distâncias | ❌ não narrado no prefácio; procurei e não achei |
 | "Catálogo como gerador de métodos" | 📖 leitura editorial |
 
 ## Fundamentos
