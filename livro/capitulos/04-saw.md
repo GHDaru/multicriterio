@@ -31,16 +31,26 @@ saber **quando o gesto natural é legítimo** — e quem estava preso nisso era 
 pesquisa operacional gerencial dos anos 1950, tentando transformar "avaliação por
 pontos" de folclore administrativo em instrumento defensável.
 
-**O que se fazia antes.** A mesma soma — sem saber o que ela assumia. A literatura
-atribui a Churchman & Ackoff (1954) a primeira formalização gerencial do procedimento
-("uma medida aproximada de valor"); a fundação matemática só chegou em 1967, com
-Fishburn enunciando as condições da utilidade aditiva — publicadas, detalhe saboroso,
-como **carta ao editor** da *Operations Research*.
+**O que se fazia antes.** A mesma soma sem saber o que ela assumia — ou, pior,
+**cifrão em tudo**. O manual que formalizou o procedimento para gerentes (Churchman,
+Ackoff & Arnoff, *Introduction to Operations Research*, 1957 — capítulo "Weighting
+Objectives", que lemos na íntegra) abre atacando exatamente esse hábito e o apelido
+dado aos objetivos que resistem: *"intangíveis" — mas "intangible" quer dizer
+"intocável", e esses objetivos só são intocáveis pelo método do cifrão*; medem-se por
+outros métodos. A dupla já havia proposto a "medida aproximada de valor" num artigo de
+1954 (*JORSA* 2(2), cuja discussão no mesmo fascículo — os "Comments" de N. M. Smith,
+pp. 181–187 — o manual cita); a fundação matemática só chegou em 1967, com Fishburn
+enunciando as condições da utilidade aditiva — publicadas, detalhe saboroso, como
+**carta ao editor** da *Operations Research*.
 
-**A virada.** Perceber que a pergunta científica não era "como somar?" (trivial), e
-sim "**o que precisa ser verdade para que somar seja válido?**" — independência
-preferencial, escala de intervalo, compensação aceitável. A teoria veio *depois* da
-prática, para delimitá-la.
+**A virada.** Duas, na verdade. A de 1957: nota solta precisa de **contraprova** — o
+"método das comparações sucessivas" atribui valores tentativos e depois os testa
+contra combinações ("você prefere $O_1$, ou $O_2$+$O_3$+$O_4$ juntos?"), ajustando até
+a coerência e normalizando pela soma — vinte anos antes do CR do cap. 05, a mesma
+ideia de julgamento redundante como detector de contradição. A de 1967: perceber que
+a pergunta científica não era "como somar?" (trivial), e sim "**o que precisa ser
+verdade para que somar seja válido?**" — independência preferencial, escala de
+intervalo, compensação aceitável. A teoria veio *depois* da prática, para delimitá-la.
 
 **A ideia reaproveitável.** Quando um procedimento folk funciona, o trabalho rigoroso
 não é substituí-lo — é **explicitar as condições em que ele vale** e detectar quando
@@ -52,7 +62,8 @@ descrições, não batismos — método sem inventor tampouco tem cerimônia de 
 
 | Afirmação | Selo |
 |---|---|
-| Churchman & Ackoff (1954) como primeira formalização gerencial | ⏳ atribuição corrente; primária na fila de verificação |
+| Método das comparações sucessivas, caso executivo trabalhado e a crítica aos "intangíveis" | ✓ capítulo "Weighting Objectives" lido em Churchman, Ackoff & Arnoff (1957) — exemplar aberto no Internet Archive |
+| Artigo de 1954 no *JORSA* 2(2) ("approximate measure of value") | ✓ᵐ corroborado pelo manual lido, que cita os "Comments" de Smith no mesmo fascículo (pp. 181–187); o artigo em si não foi lido |
 | Fishburn (1967) axiomatiza a utilidade aditiva, publicado como carta ao editor | ✓ᵐ (DOI e formato verificados na bibliografia; conteúdo não lido) |
 | "Método folk, teoria a posteriori" | 📖 leitura editorial do arco |
 

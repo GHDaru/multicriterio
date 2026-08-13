@@ -11,6 +11,11 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Fila de verificação varrida (spec 033)**: Condorcet (1785) e Churchman, Ackoff &
+  Arnoff (1957) lidos na fonte via Internet Archive — selos ✓ e reescritas nos caps.
+  04 e 12 (comparações sucessivas como ancestral do CR; o paradoxo na formulação
+  original); Saaty 1977, Hwang & Yoon 1981, Brans 1982 e Opricovic documentados como
+  inalcançáveis pela rota (só-empréstimo ou sem exemplar). Placar: 7/11 fechados.
 - **Revisão editorial + fontes (spec 032)**: passe de humanização no livro inteiro
   (tiques verbais, typos, "iteração 1" residual); Franklin (1772) e Borda (1781)
   **lidos na fonte** via Internet Archive com selos promovidos ⏳→✓ nos caps. 07 e 12

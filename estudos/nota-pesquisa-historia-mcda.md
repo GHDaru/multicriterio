@@ -130,9 +130,23 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 
 ## Cap. 04 — SAW / soma ponderada
 
-- ⏳ A prática de "nota × peso, soma" é atribuída na literatura a **Churchman & Ackoff
-  (1954)**, "An approximate measure of value" (*JORSA* 2(2)) como primeira
-  formalização em decisão gerencial — não confirmada em fonte primária.
+- ✓ **Churchman, Ackoff & Arnoff (1957), *Introduction to Operations Research*, cap.
+  "Weighting Objectives" (pp. 136–154) — LIDO em 2026-08-13** (exemplar aberto no
+  Internet Archive, item `introductiontoo00chur`). O que o capítulo traz (✓): a
+  abertura ataca o hábito de medir tudo em dinheiro e o apelido "intangíveis"
+  ("'intangible' quer dizer 'intocável', e esses objetivos só são intocáveis pelo
+  método do cifrão"); o **método das comparações sucessivas** (ranquear; valores
+  tentativos 1,00/0,80/0,50/0,30; testar $O_1$ vs $O_2$+$O_3$+$O_4$ e ajustar até a
+  coerência; normalizar pela soma) — julgamento redundante como contraprova, vinte
+  anos antes do CR; caso executivo trabalhado (comitê, objetivos de 5 anos, utilidade
+  = Σ peso×valor, política B vence com 0,650); e a nota de linhagem (Pareto → von
+  Neumann & Morgenstern → sistemas axiomáticos; amalgamação → Arrow; survey de
+  Edwards 1954 — o mesmo Edwards do cap. 03, já em 1957 na bibliografia da soma
+  ponderada).
+- ✓ᵐ O artigo de **1954** ("An approximate measure of value", *JORSA* 2(2)): não
+  lido, mas corroborado pelo manual lido — a bibliografia do capítulo cita os
+  "Comments" de N. M. Smith no **mesmo fascículo** (*JORSA* 2, nº 2, pp. 181–187,
+  maio de 1954), a discussão publicada do artigo.
 - ✓ᵐ Fishburn (1967), *Operations Research* 15(3) — a fundação axiomática citada no
   livro (bibliografia). Curiosidade estrutural ✓ᵐ: é publicado na seção de notas do
   periódico — a teoria chegou **depois** da prática, para dizer *quando* a soma é
@@ -237,10 +251,16 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
   do volume: 1784). Além do memorial, o volume traz o resumo editorial da *Histoire*
   (pp. 31–32) com o mesmo argumento. O que **não** está no que lemos: a motivação
   "eleições da própria Académie" — segue ⏳ como atribuição corrente.
-- ⏳ **Condorcet (1785)**, *Essai sur l'application de l'analyse à la probabilité des
-  décisions rendues à la pluralité des voix* — o paradoxo dos ciclos e o critério do
-  vencedor par a par; contexto corrente: matemática iluminista a serviço do desenho de
-  instituições, às vésperas da Revolução.
+- ✓ **Condorcet (1785), *Essai sur l'application de l'analyse à la probabilité des
+  décisions rendues à la pluralité des voix* — LIDO (trechos-chave) em 2026-08-13**
+  (exemplar aberto no Internet Archive, item `essaisurlapplica00cond`). O que o texto
+  traz (✓): folha de rosto — Imprimerie Royale, Paris, 1785, "Par M. le Marquis de
+  Condorcet, Secrétaire perpétuel de l'Académie des Sciences"; no *Discours
+  préliminaire* (pp. lvj–lvij), a eleição entre três candidatos A, B, C decomposta
+  nas **seis proposições par a par**, as oito combinações possíveis, e a identificação
+  da combinação cíclica: "de duas quaisquer das três proposições resulta uma
+  conclusão contrária à terceira" — o paradoxo, na formulação original. O contexto
+  "matemática iluminista a serviço do desenho de instituições" segue 📖/⏳.
 - ⏳ **Copeland (1951)**: a regra vitórias−derrotas circula atribuída a uma **nota de
   seminário não publicada** (University of Michigan, "A 'reasonable' social welfare
   function") — caso raro em que a fonte primária talvez seja ❌ inalcançável por
@@ -298,16 +318,16 @@ Similarity to Ideal Solution*) — ✓ᵐ (consta do livro de 1981).
 | # | Fonte a abrir | O que fecha | Acesso | Esforço |
 |---|---|---|---|---|
 | 1 | ~~Franklin → Priestley, 19/09/1772~~ | **Fechado em 2026-08-13** por leitura (Smyth, *Writings*, vol. V, via Internet Archive): método, datas, batismo e o "não o quê, mas como" — ✓; o assunto da carta segue ⏳ | feito | — |
-| 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | DOI na bibliografia; paywall provável | baixo |
-| 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | Springer (preview/biblioteca) | médio |
+| 2 | Saaty (1977), *JMP* 15(3), introdução | A cena fundadora do AHP ("1971, DoD") e o próprio relato de origem; ⏳→✓ | **Tentado em 2026-08-13**: sem exemplar aberto no IA (os livros de Saaty lá são só-empréstimo, busca interna bloqueada); resta paywall Elsevier ou biblioteca física | baixo |
+| 3 | Hwang & Yoon (1981), prefácio + seção do TOPSIS | Contexto do catálogo, afiliação, batismo do acrônimo; ⏳/❌→✓ | **Tentado em 2026-08-13**: sem exemplar no IA (o volume irmão de 1979, Hwang & Masud, existe mas é só-empréstimo, 403); resta Springer/biblioteca | médio |
 | 4 | ~~Borda (1781)~~ | **Fechado em 2026-08-13** por leitura (volume da Académie via Internet Archive): crítica à pluralidade, 21 eleitores, atletas, e a nota de rodapé com **16/06/1770** — ✓; motivação "eleições da Académie" segue ⏳ | feito | — |
 | 5 | ~~Roy (1968), páginas restantes~~ | **Fechado em 2026-08-10**: acrônimo não é soletrado no artigo (achado negativo ✓); bônus — refs. [3]/[4] confirmam as notas SEMA de 1966 (Benayoun/Roy/Sussmann + manual do programa) e o C.D.C. de até 100 objetos | feito | — |
 | 6 | ~~Aczél & Saaty (1983)~~ | **Fechado em 2026-08-13**: DOI 10.1016/0022-2496(83)90028-7 no CrossRef — ✓ᵐ | feito | — |
 | 7 | ~~Shannon (1948) + Arrow (1951)~~ | **Fechado em 2026-08-13**: DOI do BSTJ no CrossRef; registro Open Library (1951) — ✓ᵐ | feito | — |
-| 8 | Brans (1982), atas de "L'ingénierie de la décision" (Univ. Laval) | A conferência de batismo do PROMETHEE; ⏳→✓ | Difícil (atas locais) | alto |
-| 9 | Opricovic (1979/1990, Belgrado) | Origem pós-terremoto do VIKOR; ⏳→✓ ou ❌ definitivo | Muito difícil (servo-croata, não digitalizado) | alto |
-| 10 | Churchman & Ackoff (1954), *JORSA* 2(2) | Primeira formalização do SAW; ⏳→✓ | JSTOR/Informs | médio |
-| 11 | Condorcet (1785), *Essai* — procurar no Internet Archive | Cap. 12: o paradoxo lido na fonte; ⏳→✓ | Internet Archive (mesma rota de 1 e 4) | médio |
+| 8 | Brans (1982), atas de "L'ingénierie de la décision" (Univ. Laval) | A conferência de batismo do PROMETHEE; ⏳→✓ | **Tentado em 2026-08-13**: nenhum exemplar no IA; segue difícil (atas locais) | alto |
+| 9 | Opricovic (1979/1990, Belgrado) | Origem pós-terremoto do VIKOR; ⏳→✓ ou ❌ definitivo | **Tentado em 2026-08-13**: nada no IA; segue muito difícil (servo-croata, não digitalizado) | alto |
+| 10 | ~~Churchman & Ackoff (1954/1957)~~ | **Fechado em 2026-08-13**: o capítulo "Weighting Objectives" do manual de 1957 lido na íntegra via IA (✓ — comparações sucessivas, "intangíveis", caso executivo); o artigo de 1954 corroborado pelos "Comments" de Smith no mesmo fascículo, citados no manual (✓ᵐ) | feito | — |
+| 11 | ~~Condorcet (1785), *Essai*~~ | **Fechado em 2026-08-13** por leitura dos trechos-chave via IA: folha de rosto + a combinação cíclica no *Discours préliminaire* (pp. lvj–lvij) — ✓ | feito | — |
 
 **Regra de consumo** (para as rodadas que escreverem os capítulos): afirmação com selo
 ⏳ entra no texto **somente** no registro "a literatura atribui…"; ✓ pode afirmar

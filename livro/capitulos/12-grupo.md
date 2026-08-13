@@ -46,9 +46,12 @@ o cap. 14 reencontra e recusa).
 
 **A virada.** Duas, rivais desde o berço. Borda: usar a **posição inteira** do ranking
 de cada eleitor (pontos por posição — o consenso). **Condorcet** (1785, no *Essai*
-sobre a probabilidade das decisões): usar os **duelos majoritários** par a par — e a
-descoberta desconcertante de que as maiorias podem andar em círculo (o paradoxo do
-capítulo). A rivalidade nunca se resolveu — em 1951, **Arrow** provou por quê: nenhuma
+sobre a probabilidade das decisões, que também lemos): usar os **duelos majoritários**
+par a par — e a descoberta desconcertante de que as maiorias podem andar em círculo.
+No *Discours préliminaire*, ele decompõe a eleição entre três candidatos nas seis
+proposições par a par e encontra a combinação em que "de duas quaisquer das três
+proposições resulta uma conclusão contrária à terceira" — o paradoxo do capítulo, na
+formulação original. A rivalidade nunca se resolveu — em 1951, **Arrow** provou por quê: nenhuma
 regra satisfaz todos os requisitos razoáveis ao mesmo tempo (e **Copeland**, cuja
 regra usamos, circula atribuído a uma nota de seminário *não publicada* de 1951 — caso
 raro em que a fonte primária talvez seja inalcançável por natureza).
@@ -69,7 +72,7 @@ campo) nasce com o livro de Arrow.
 |---|---|
 | Borda, "Mémoire sur les élections au scrutin": crítica à pluralidade, exemplo dos 21 eleitores, metáfora dos atletas, apresentação em 16/06/1770 (nota do próprio memorial), impressão no volume de 1781 (saído em 1784) | ✓ lido no volume da Académie (exemplar aberto no Internet Archive), Mémoires p. 657 e resumo editorial da *Histoire* |
 | Motivação: as eleições da própria Académie | ⏳ atribuição corrente; o memorial lido não a nomeia |
-| Condorcet (1785), *Essai*, paradoxo dos ciclos | ⏳ metadados notórios; leitura na fila |
+| Condorcet (1785), *Essai* (Imprimerie Royale, Paris): decomposição par a par e a combinação cíclica no *Discours préliminaire* | ✓ lido (exemplar aberto no Internet Archive) |
 | Arrow (1951), *Social Choice and Individual Values* | ✓ᵐ (registro conferido no Open Library) |
 | Copeland (1951) como nota de seminário não publicada (Michigan) | ⏳ atribuição corrente — possivelmente ❌ por natureza |
 | AIJ pela média geométrica: Aczél & Saaty (1983), *J. Math. Psychology* | ✓ᵐ (DOI 10.1016/0022-2496(83)90028-7 conferido no CrossRef) |
