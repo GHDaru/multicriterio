@@ -30,8 +30,29 @@
 | 12 Decisão em grupo | 2026-07 | ✓ (etapa 12) | 2026-08-13 |
 | 13 Do protótipo ao produto | 2026-07 | ✓ (etapa 13) | 2026-08-13 |
 | 14 AEO (contribuição original) | 2026-07 | ✓ (etapa 14) · artigo iteração 2 | 2026-08-13 |
+| Apêndice D — método em sala | 2026-08 | ✓ (etapa 15) | 2026-08-14 |
 
 ## Edições
+
+### Edição 0.40 — 2026-08-14 · Apêndice D: o método do autor em sala (spec 040)
+
+- Nasce o **Apêndice D** — o exercício conduzido pelo autor com seus alunos (escolher
+  um carro popular zero, 2026) transcrito na ordem em que aconteceu, junto com o
+  **método de oito passos** dele e a explicação de cada um. Resultado do exercício:
+  Mobi 7,87 > Onix 7,59 > Kwid 6,69 > 208 5,44.
+- Nasce a **etapa 15** (`15-criterizacao`): motor puro do método (interpolação,
+  fórmula do máximo, de-para, pesos por grafo de dominância, medida resumo,
+  influência efetiva, varredura, desconto para empatar) e **20 testes** que
+  reproduzem todos os números do apêndice, inclusive as três descobertas de
+  sensibilidade.
+- **Três achados do exercício** que não estavam nos capítulos: a regra do *piso
+  levantado*; o diagnóstico de *influência efetiva* (peso × amplitude — a Segurança
+  foi declarada 2ª e exerce a 4ª); e a constatação de que a criterização é decisão
+  de peso disfarçada (o piso da Confiança troca o vencedor por 0,011).
+- **Pendência declarada (Princípio VIII)**: a seção "De onde isto veio" do apêndice
+  está incompleta por decisão do autor, que indicará depois de onde adaptou cada
+  passo. O parentesco apontado é leitura editorial (📖), sem atribuição em nome dele.
+- **IA**: agente **Claude Code (Anthropic)**; método, condução e dados: Steward.
 
 ### Edição 0.39 — 2026-08-13 · o produto vai ao ar: Railway + Neon (spec 039, ADR 0010)
 

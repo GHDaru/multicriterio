@@ -11,6 +11,12 @@ Todas as mudanças notáveis do **Decisor** são registradas aqui. Formato basea
 
 ### Added
 
+- **Apêndice D — método do autor em sala (spec 040)**: exercício do carro popular
+  transcrito passo a passo (8 passos, do enunciado à sensibilidade) + etapa 15
+  (`15-criterizacao`) com motor puro e 20 testes reproduzindo todos os números.
+  Achados: regra do piso levantado, influência efetiva (peso × amplitude) e a
+  criterização como decisão de peso disfarçada. Proveniência dos passos: pendente,
+  declarada.
 - **Deploy do produto (spec 039, ADR 0010, raia infra)**: `Dockerfile`,
   `.dockerignore`, `railway.json` e runbook `app/DEPLOY.md` (Railway servindo API +
   front, Neon via `DATABASE_URL`, healthcheck `/health`, rollback e dry-run
